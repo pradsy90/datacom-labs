@@ -150,7 +150,7 @@ If you are receiving this error, you need to get SSH installed on your machine a
 
 It is possible that you have other issues as you try to use Vagrant and VirtualBox together.  Keep a close eye out for any error messages along the way.  If you see an error message, stop working on the lab and figure out how to fix that error before moving on. 
 
-== Thought Questions
+== Thought Questions (No Need to Answer for the Lab)
 === Basics
 . What is virtualization?
 . What does Vagrant do for us in this lab?
