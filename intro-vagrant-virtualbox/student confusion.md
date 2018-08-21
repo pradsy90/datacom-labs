@@ -1,4 +1,4 @@
-Ryan
+Notes
 -----
 
 * Didn't have enough space allocated in a Windows Bootcamp partition to complete the lab
