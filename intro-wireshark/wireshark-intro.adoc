@@ -35,6 +35,7 @@ By the end of this lesson, you will be able to:
 .Starting a packet capture in Wireshark
 image::start-capture.png[Starting a packet capture in Wireshark]
 
+
 * Double-click on your active interface to begin a packet capture.
 * Let the packet capture run while complete the following steps:
 ** Open your web browser and visit your favorite websites.
