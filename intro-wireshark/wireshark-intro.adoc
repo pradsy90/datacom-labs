@@ -204,7 +204,7 @@ In addition to the packet-by-packet inspection you can do to gather specific inf
 
 == Questions
 
-=== Quick questions
+=== Quick questions (May end up on the Exam?)
 
 . What data is stored in the Ethernet header?
 . What data is in the network layer (IP) header?
