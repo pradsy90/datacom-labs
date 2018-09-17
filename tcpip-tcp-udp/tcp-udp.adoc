@@ -248,7 +248,7 @@ completely from your system. Answer "y" to confirm deletion.
    file. Would TCP or UDP be better used for a file transfer like this, and why?
 . How many packets did UDP take to send the message? What about TCP? Can you explain why?
 
-=== Critical thinking
+=== Critical thinking (Possible Exam Questions)
 
 [start=14]
 . What are two important differences between TCP and UDP when sending short messages?
