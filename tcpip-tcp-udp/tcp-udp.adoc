@@ -202,7 +202,7 @@ regular command prompt.
 * Run "`> vagrant destroy`" to turn off the machines and delete them
 completely from your system. Answer "y" to confirm deletion.
 
-== Questions (Answer 1-13 for your Lab)
+== Questions (Reflect on questions // Not due for the lab)
 
 . What are the IP addresses of Alice and Bob?
 
