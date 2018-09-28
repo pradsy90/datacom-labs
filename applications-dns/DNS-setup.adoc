@@ -174,12 +174,6 @@ In addition to DNS, you can manually set up host records for your local machine 
  192.168.100.25  bob
 
 * Save and close the file, now try to `ping bob`. What is the result now?
-* Try to ping `google.com`. What is the result? What is Google's IP address?
-* Now edit the hosts file again to include the following line:
-
- 127.0.0.1  www.google.com
-
-* Save and close the hosts file and ping google.com one more time. What IP address is pinged when you do this?
 
 === Cleanup (Optional)
 
