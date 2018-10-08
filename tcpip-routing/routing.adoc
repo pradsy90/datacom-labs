@@ -267,7 +267,7 @@ destined for the 192.168.3.0/24 network will be directed through the
 * Run `alice$ tracepath 192.168.20.11`
 ** The command will fail. Look back at the network diagram. Use the
 diagram to help explain why this fails in your submission. Run
-`alice$ netstat -rn` and include a screenshot of the output in your
+`alice$ netstat -rn` and make sure to include a screenshot of the output in your
 answer.
 
 === Router Configuration
