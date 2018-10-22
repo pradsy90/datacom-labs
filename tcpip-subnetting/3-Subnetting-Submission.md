@@ -24,12 +24,4 @@ CIDR:
 
 6\) A Google employee in Mountain View, California has an IP address of 192.168.0.1/24, and an IBM employee in Beijing has an IP address of 192.168.0.2/24. These host addresses are in the same subnet network address space. Will these employees' machines be able to communicate? Explain your answer.
 
-7\) Describe the `ping` command.
-
-8\) Describe the `sudo` command.
-
-9\) Ping google.com. Paste the output in a screenshot. What does the output tell you?
-
-10\) What parts of this exercise was most confusing? This could be a concept that was not explained clearly, a command that did not work as you expected, or anything else that you think could be improved.
-
-11\) What error message did you receive in response to your `ping 192.1268.100.24` when Bob and Alice were on different subnets, and you had deleted the default route? Briefly explain what this error means.
+7\) What error message did you receive in response to your `ping 192.1268.100.24` when Bob and Alice were on different subnets, and you had deleted the default route? Briefly explain what this error means.
