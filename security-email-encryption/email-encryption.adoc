@@ -102,7 +102,7 @@ I'll be using Gmail as an example here, but Mailvelope works for others, includi
 image::mailvelope-compose.png[Compose button]
 
 [start=15]
-. Select the recipient of your message (e.g., ryan@schuetzler.net)
+. Select the recipient of your message (e.g., germonprez@gmail.com)
 .. If your intended recipient is not showing up, make sure you have imported their public key.
 
 NOTE: You must select all recipients in the Mailvelope Compose window or they will not be able to read the encrypted message.
