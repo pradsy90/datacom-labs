@@ -7,8 +7,6 @@ ifndef::bound[:imagesdir: figs]
 For this lab, you will use public key encryption to send and receive encrypted emails.
 To send and receive encrypted emails requires that both you and your communication partner have created a public and private _key pair_ and have shared your *public* keys with each other.
 The private key in a key pair should always be kept private (hence the name).
-If you do not have another communication partner, or are completing this for one of my courses, you can send me an encrypted email at ryan@schuetzler.net.
-You can find my public key next to the little key icon at https://keybase.io/rschuetzler.
 
 == Learning Objectives
 
