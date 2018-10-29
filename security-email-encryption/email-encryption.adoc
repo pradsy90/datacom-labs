@@ -75,7 +75,6 @@ Don't make the mistake https://nakedsecurity.sophos.com/2017/09/23/adobe-securit
 To send encrypted messages, you need to have the recipient's public key.
 Once you have a text-friendly form of their public key, you can import it into Mailvelope.
 You can do that either as a file or by copying the text.
-My public key is available at https://keybase.io/rschuetzler/pgp_keys.asc?fingerprint=565df5e50b4ca56c8c08aadfd149ca54b652a40f
 
 [start=10]
 . Go to the "Import Keys" tab of Mailvelope.
