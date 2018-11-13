@@ -57,7 +57,7 @@ image::IMG10.png[EC2 Dashboard]
 ON MAC
 Use your terminal/command tool to navigate to the folder where your pem key is: 
 
-$ chmod 400 YourName.pem 
+'$ chmod 400 YourName.pem'
 
 Login to the EC2 instance 
 > ssh -i "YourName.pem" ec2-user@your.ip.address.here
