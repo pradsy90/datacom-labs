@@ -6,8 +6,7 @@ This lab is to introduce Cloud Computing, using the AWS Cloud environment from A
 
 When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. However, you won’t have access to all of these services as your instructor will have set up administrative policies to only enable access to certain areas. 
 
-.Starting a packet capture in Wireshark
-image::IMG1.png[Starting a packet capture in Wireshark]
+image::IMG1.png
 
 On the dashboard, click on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
 
