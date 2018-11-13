@@ -52,7 +52,8 @@ image::IMG9.png[Key Pair]
 
 Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, click on the cell and name your machine. 
 
-<<IMG 9>>
+.EC2 Dashboard
+image::IMG10.png[EC2 Dashboard]
 
 On the dashboard note your public IP address below. You will need this to access your machine. Note: this will change every time a server is restarted. 
 
@@ -76,13 +77,15 @@ ec2-user@your.ip.address
 
 Scroll down to connection-SSH-auth and browse to your newly created ppk key. 
 
-<<IMG 10>>
+.Putty
+image::IMG11.png[Putty]
 
 Before you click Open, you should scroll back up to Terminal and name and save your connection so you don’t have to locate your ppk key every time. Click Open. 
 
 Whether on a Mac or Windows, you are now logged on: 
 
-<<IMG 11>>
+.EC2 SSH
+image::IMG12.png[EC2 SSH]
 
 Now that you are on your AWS cloud instance, you will revisit few of your prior labs. First, you should have noticed a few other servers in your EC2 dashboard. Can you ping the other servers? Are you on the same subnet? Work with a partner in class and see if you can ping each other (you will have to exchange your IP addresses). 
 
@@ -93,7 +96,8 @@ Next, we are going revisit the Apache Web Server lab. Install the Apache Web Ser
 
 In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. Once logged in, you should see the following dashboard. 
 
-<<IMG 12>>
+.S3 Dashboard
+image::IMG13.png[S3 Dashboard]
 
 Once in S3, you will see a bucket named isqa3400. You can click on that bucket and you’ll see an image of a panda in there. You could download it from the S3 interface but I’d actually like you to download it to your EC2 instance. You can do this very easily via the wget command. Return to your instance and type: 
 
@@ -101,15 +105,18 @@ Once in S3, you will see a bucket named isqa3400. You can click on that bucket a
 
 The point is to simply demonstrate the connection of resources in the AWS space.  Now, create your own S3 bucket. You are given full S3 access so only modify your own bucket (policy). 
 
-<<IMG 13>>
+.Create Bucket Part 1
+image::IMG14.png[Create Bucket]
 
 Create an S3 bucket (use your name as the Bucket Name as this needs to be globally unique) 
 
-<<IMG 14>>
+.Create Bucket Part 2
+image::IMG15.png[Create Bucket Part 2]
 
 Keep defaults and click Next
 
-<<IMG 15>>
+.Create Bucket Part 3
+image::IMG16.png[Create Bucket Part 3]
 
 Keep defaults and click Next and then Create Bucket
 
@@ -117,7 +124,8 @@ Upload a picture (keep all defaults in the upload process) into the S3 bucket (t
 
 Finally, turn your S3 into a static website. 
 
-<<IMG 16>>
+.Static Website
+image::IMG17.png[Static Website]
 
 Click the Properties tab of your bucket and then click Static website hosting. Include index.html as the name for the Index Document. 
 
@@ -136,17 +144,14 @@ you will have to set the bucket permissions to be public. Add the following in t
     ]
 }
 
-<<IMG 17>>
+.Bucket Policy
+image::IMG18.png[Bucket Policy]
 
 Accept the warning and save the changes. 
 
 Finally, create an index.html and upload it to the bucket – again keep all the defaults in the upload process. See if wget for the index.html page works. Visit the page as identified as the Endpoint in Properties. 
 
-<<IMG 18>>
+.S3 Endpoint
+image::IMG19.png[S3 Endpoint]
 
 Finally, provide a picture of how you believe resources/policies were administered for this lab. 
-
-
-
-
-
