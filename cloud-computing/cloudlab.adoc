@@ -12,36 +12,43 @@ image::IMG1.png[AWS Dashboard]
 
 On the dashboard, click on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
 
-.AWS Dashboard
-image::IMG2.png[AWS Dashboard]
+.AMI Choice
+image::IMG2.png[AMI Choice]
 
 Choose the first Amazon API. This is a distribution of Linux, specific to AWS. 
 
-<<IMG 3>>
+.Instance Type
+image::IMG3.png[Instance Type]
 
 You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
 
-<<IMG 4>>
+.Instance Details 
+image::IMG4.png[Instance Details]
 
 For the Configure Details page, leave the defaults and click Next. 
 
-<<IMG 5>>
+.Storage
+image::IMG5.png[Storage]
 
 For the Add Storage, leave defaults and click Next. 
 
-<<IMG 6>>
+.Tags
+image::IMG6.png[Tags]
 
 For the Add Tags, leave defaults and click Next. 
 
-<<IMG 7>>
+.Security Group
+image::IMG7.png[Security Group]
 
 For Configure Security Group, your instructor will have set up a 3400 Security Group. Make sure to select this group. You will see that this group will give you the ability to run HTTP (both port 80 and 8080), SSH, and Ping traffic. Click Review and Launch
 
-<<IMG 8>>
+.Review
+image::IMG8.png[Review]
 
 Click Launch. When you click Launch, you will be asked to Choose/Select a key pair. 
 
-<<IMG 9>>
+.Key Pair
+image::IMG9.png[Key Pair]
 
 Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, click on the cell and name your machine. 
 
