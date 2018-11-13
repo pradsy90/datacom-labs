@@ -1,4 +1,4 @@
-:imagesdir: http://example.com/images
+:imagesdir: https://github.com/germonprez/datacom-labs/tree/develop/cloud-computing/img
 
 This lab is to introduce Cloud Computing, using the AWS Cloud environment from Amazon. As a participant in this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. 
 
