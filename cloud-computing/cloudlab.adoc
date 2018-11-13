@@ -2,9 +2,7 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is to introduce Cloud Computing, using the AWS Cloud environment from Amazon. As a participant in this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. 
-
-When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. However, you won’t have access to all of these services as your instructor will have set up administrative policies to only enable access to certain areas. 
+This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. However, you won’t have access to all of these services as your instructor will have set up administrative policies to only enable access to certain areas. 
 
 .AWS Dashboard
 image::IMG1.png[AWS Dashboard]
@@ -14,7 +12,7 @@ image::IMG1.png[AWS Dashboard]
 .AMI Choice
 image::IMG2.png[AMI Choice]
 
-* Choose the first Amazon API. This is a distribution of Linux, specific to AWS. 
+* Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
 
 .Instance Type
 image::IMG3.png[Instance Type]
@@ -24,17 +22,17 @@ image::IMG3.png[Instance Type]
 .Instance Details 
 image::IMG4.png[Instance Details]
 
-* For the Configure Details page, leave the defaults and click Next. 
+* Configure Details -- leave defaults and click Next. 
 
 .Storage
 image::IMG5.png[Storage]
 
-* For the Add Storage, leave defaults and click Next. 
+* Storage -- leave defaults and click Next. 
 
 .Tags
 image::IMG6.png[Tags]
 
-* For the Add Tags, leave defaults and click Next. 
+* Tags -- leave defaults and click Next. 
 
 .Security Group
 image::IMG7.png[Security Group]
@@ -49,18 +47,17 @@ image::IMG8.png[Review]
 .Key Pair
 image::IMG9.png[Key Pair]
 
-* Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, click on the cell and name your machine. 
+* Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, name your machine. 
 
 .EC2 Dashboard
 image::IMG10.png[EC2 Dashboard]
 
-* On the dashboard note your public IP address below. You will need this to access your machine. Note: this will change every time a server is restarted. 
-
-* Now that you have your server running, you have your pem key, and you have your IP address, you can login to your machine. 
+* On the dashboard note your public IP address below. You will need this to access your machine. Note that this IP address will change every time a server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your machine. 
 
 ON MAC
-Use your terminal/command tool to navigate to the folder where your pem key is
-> chmod 400 YourName.pem 
+Use your terminal/command tool to navigate to the folder where your pem key is: 
+
+$ chmod 400 YourName.pem 
 
 Login to the EC2 instance 
 > ssh -i "YourName.pem" ec2-user@your.ip.address.here
