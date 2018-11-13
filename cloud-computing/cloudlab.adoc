@@ -8,8 +8,10 @@ When you first login to AWS, you will see the AWS dashboard. This is all of the 
 
 .AWS Dashboard
 image::IMG1.png[AWS Dashboard]
+
 [%hardbreaks]
 [%hardbreaks]
+
 On the dashboard, click on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
 
 .AMI Choice
