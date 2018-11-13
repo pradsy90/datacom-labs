@@ -1,0 +1,138 @@
+This lab is to introduce Cloud Computing, using the AWS Cloud environment from Amazon. As a participant in this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. 
+
+When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. However, you won’t have access to all of these services as your instructor will have set up administrative policies to only enable access to certain areas. 
+
+<<IMG 1>>
+
+On the dashboard, click on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
+
+<<IMG 2>>
+
+Choose the first Amazon API. This is a distribution of Linux, specific to AWS. 
+
+<<IMG 3>>
+
+You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
+
+<<IMG 4>>
+
+For the Configure Details page, leave the defaults and click Next. 
+
+<<IMG 5>>
+
+For the Add Storage, leave defaults and click Next. 
+
+<<IMG 6>>
+
+For the Add Tags, leave defaults and click Next. 
+
+<<IMG 7>>
+
+For Configure Security Group, your instructor will have set up a 3400 Security Group. Make sure to select this group. You will see that this group will give you the ability to run HTTP (both port 80 and 8080), SSH, and Ping traffic. Click Review and Launch
+
+<<IMG 8>>
+
+Click Launch. When you click Launch, you will be asked to Choose/Select a key pair. 
+
+<<IMG 9>>
+
+Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, click on the cell and name your machine. 
+
+<<IMG 9>>
+
+On the dashboard note your public IP address below. You will need this to access your machine. Note: this will change every time a server is restarted. 
+
+Now that you have your server running, you have your pem key, and you have your IP address, you can login to your machine. 
+
+ON MAC
+Use your terminal/command tool to navigate to the folder where your pem key is
+> chmod 400 YourName.pem 
+
+Login to the EC2 instance 
+> ssh -i "YourName.pem" ec2-user@your.ip.address.here
+
+ON WINDOWS
+Download Putty and PuttyGen. Using PuttyGen you have to convert the pem key that you have to a ppk key that Putty will understand. There is a tutorial provided from Amazon here: 
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html 
+
+Once you have converted your key to a ppk key, open Putty and in the hostname/address type: 
+
+ec2-user@your.ip.address
+
+Scroll down to connection-SSH-auth and browse to your newly created ppk key. 
+
+<<IMG 10>>
+
+Before you click Open, you should scroll back up to Terminal and name and save your connection so you don’t have to locate your ppk key every time. Click Open. 
+
+Whether on a Mac or Windows, you are now logged on: 
+
+<<IMG 11>>
+
+Now that you are on your AWS cloud instance, you will revisit few of your prior labs. First, you should have noticed a few other servers in your EC2 dashboard. Can you ping the other servers? Are you on the same subnet? Work with a partner in class and see if you can ping each other (you will have to exchange your IP addresses). 
+
+Next, we are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 8080. Note that Amazon Linux uses the ‘yum install’ command and not ‘apt install’ as we have been doing with Ubuntu. 
+
+1)	Install the Apache web server and run the server on port 8080
+2)	Show the home page on port 8080
+
+In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. Once logged in, you should see the following dashboard. 
+
+<<IMG 12>>
+
+Once in S3, you will see a bucket named isqa3400. You can click on that bucket and you’ll see an image of a panda in there. You could download it from the S3 interface but I’d actually like you to download it to your EC2 instance. You can do this very easily via the wget command. Return to your instance and type: 
+
+> wget https://s3-us-west-1.amazonaws.com/isqa3400/panda.jpg
+
+The point is to simply demonstrate the connection of resources in the AWS space.  Now, create your own S3 bucket. You are given full S3 access so only modify your own bucket (policy). 
+
+<<IMG 13>>
+
+Create an S3 bucket (use your name as the Bucket Name as this needs to be globally unique) 
+
+<<IMG 14>>
+
+Keep defaults and click Next
+
+<<IMG 15>>
+
+Keep defaults and click Next and then Create Bucket
+
+Upload a picture (keep all defaults in the upload process) into the S3 bucket (try and keep the image small). Return to your server and try and wget your own and someone else’s picture. 
+
+Finally, turn your S3 into a static website. 
+
+<<IMG 16>>
+
+Click the Properties tab of your bucket and then click Static website hosting. Include index.html as the name for the Index Document. 
+
+you will have to set the bucket permissions to be public. Add the following in the Permissions tab (change example-bucket with the name of your bucket): 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::nameofyourbucket/*"
+        }
+    ]
+}
+
+<<IMG 17>>
+
+Accept the warning and save the changes. 
+
+Finally, create an index.html and upload it to the bucket – again keep all the defaults in the upload process. See if wget for the index.html page works. Visit the page as identified as the Endpoint in Properties. 
+
+<<IMG 18>>
+
+Finally, provide a picture of how you believe resources/policies were administered for this lab. 
+
+
+
+
+
