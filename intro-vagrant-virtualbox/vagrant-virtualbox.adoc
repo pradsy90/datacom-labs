@@ -97,7 +97,7 @@ Your Ubuntu virtual machine is now running.
 You will not see a graphical user interface (GUI) because by default, Vagrant virtual machines are "headless."
 There are ways to turn on the GUI, but for now it is not needed.
 
-=== Step 6: Connect to the Ubuntu Virtual Machine with SSH
+=== Step 4: Connect to the Ubuntu Virtual Machine with SSH
 
 Secure Shell (SSH) is a secure protocol for connecting to a remote machine to run commands.
 A guest OS is treated much like a remote machine.
@@ -119,7 +119,7 @@ image::ssh-success.png[title="SSH Connected"]
 * Connecting to a machine with SSH is commonly called an SSH session. You close
   your session when you close the window or log out of the machine.
 
-### Step 7: Suspend, Resume, and Destroy
+### Step 5: Suspend, Resume, and Destroy
 
 * Run `$ exit` or press Ctrl+D to leave the SSH session. You will be back at your regular command prompt.
 * Run `> vagrant suspend` to suspend your machine. Suspending the machine saves its running state to your hard drive and allows you to bring it back up quickly.
