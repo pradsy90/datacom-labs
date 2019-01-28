@@ -185,7 +185,7 @@ You can use the same filters to identify traffic for any computer on your networ
 
 ==== Find your pings
 
-During the packet capture, you should have run the `ping` command to send several pings to some computer my server at www.schuetzler.net. Now we'll find those pings to see what they look like at the packet level.
+During the packet capture, you should have run the `ping` command to send several pings to some computer the server at www.schuetzler.net. Now we'll find those pings to see what they look like at the packet level.
 
 * Apply a new filter for `icmp`. ICMP, or the Internet Control Message Protocol, is a set of tools for troubleshooting networks. One of those tools is `ping`.
 * Find a message where the data is an ICMP echo (ping) request.
