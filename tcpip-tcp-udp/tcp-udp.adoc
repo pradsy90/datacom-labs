@@ -107,7 +107,7 @@ The backslash tells the shell that you're going to keep typing parts of the comm
 * Start wireshark (with `tshark` on Alice)
 * Use `netcat` to set up listening on a UDP port on Alice.
 ** The `-u` tells netcat we'll be using UDP.
-** Finall, `-l 4242` tells netcat to listen on port 4242.
+** Finally, `-l 4242` tells netcat to listen on port 4242.
 
  $ netcat -ul 4242
 
@@ -132,9 +132,6 @@ and find the directory you created for this lab. There you should find a
 file named `udp-short.pcap`. This file should contain all of the packets sent
 between Alice and Bob while your tshark session was running. Open that
 file in Wireshark.
-
-* Answer the questions in the submission file regarding your short UDP
-message.
 
 === Examining TCP
 
@@ -180,8 +177,7 @@ the following command:
 * You should see the contents of the file appear in Alice's terminal.
 * Press Ctrl-C on both VMs to stop netcat, then wait for your tshark
 session to end.
-* Open `udp-long.pcap` in Wireshark on your host, and use it to answer
-the questions in the submission document
+* Open `udp-long.pcap` in Wireshark on your host.
 
 ==== TCP
 
@@ -191,7 +187,6 @@ output.
 * On Bob, send the contents of `dangerous.txt` over TCP to Alice
 * Wait for your `tshark` session to end, then open `tcp-long.pcap` in
 Wireshark on your host.
-* Answer the questions in the submission file
 
 === Cleanup (Optional)
 
