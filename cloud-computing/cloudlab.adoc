@@ -90,7 +90,7 @@ image::IMG12.png[EC2 SSH]
 1)	Install the Apache web server and run the server on port 8080
 2)	Show the home page on port 8080
 
-* In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. This is a different way of managing resources versus me builing your EC2 intance. Once logged in, you should see the following dashboard. 
+* In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. This is a different way of managing resources versus me builing your EC2 intance. Once logged in, you should see a dashboard like the following. 
 
 .S3 Dashboard
 image::IMG13.png[S3 Dashboard]
@@ -104,9 +104,8 @@ image::IMG13.png[S3 Dashboard]
 * Finally, updated your EC2 index.html page to include your S3 image. 
 
 QUESTIONS TO ANSWER: 
-- Can you ping other machines in your same VPC (region)? 
-- Can you ping other machings across VPCs? 
-- Explain what is going on with respect to subnets and virtual private clouds (regions).
-
-- Explain what is going on resource-wise in this lab. How are resources currently being distributed and managed? 
+* Can you ping other machines in your same VPC (region)? 
+* Can you ping other machings across VPCs? 
+* Explain what is going on with respect to subnets and virtual private clouds (regions). 
+* Explain what is going on resource-wise in this lab. How are resources currently being distributed and managed? 
 
