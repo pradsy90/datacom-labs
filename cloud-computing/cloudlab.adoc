@@ -7,52 +7,54 @@ This lab is to introduce Cloud Computing using the AWS Cloud environment from Am
 .AWS Dashboard
 image::IMG1.png[AWS Dashboard]
 
-* On the dashboard, click on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
+Everyone in the class will see the dashboard but your instructure will be responsible for setting up your EC2 instance. While you don't need to do the following, these are the steps that your instructor will go through when setting up your instance: 
+
+* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
 
 .AMI Choice
 image::IMG2.png[AMI Choice]
 
-* Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
+* I will choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
 
 .Instance Type
 image::IMG3.png[Instance Type]
 
-* You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
+* You have many options for the size of your virtual machine. I will choose the t2.micro free tier and click Next. 
 
 .Instance Details 
 image::IMG4.png[Instance Details]
 
-* Configure Details -- leave defaults and click Next. 
+* Configure Details -- I will leave the defaults and click Next. Note thought that this is where I can assign a particular subnet. 
 
 .Storage
 image::IMG5.png[Storage]
 
-* Storage -- leave defaults and click Next. 
+* Storage -- I will leave t defaheults and click Next. 
 
 .Tags
 image::IMG6.png[Tags]
 
-* Tags -- leave defaults and click Next. 
+* Tags -- I will leave the defaults and click Next. 
 
 .Security Group
 image::IMG7.png[Security Group]
 
-* For Configure Security Group, your instructor will have set up a 3400 Security Group. Make sure to select this group. You will see that this group will give you the ability to run HTTP (both port 80 and 8080), SSH, and Ping traffic. Click Review and Launch
+* For Configure Security Group, I have set up a 3400 Security Group. You will see that this group will give you the ability to run HTTP (both port 80 and 8080), SSH, and Ping traffic. I'll then click Review and Launch
 
 .Review
 image::IMG8.png[Review]
 
-* Click Launch. When you click Launch, you will be asked to Choose/Select a key pair. 
+* When I click Launch, I am asked to Choose/Select a key pair. 
 
 .Key Pair
 image::IMG9.png[Key Pair]
 
-* Create a new key pair and enter your name for the key pair. Download the pem key to your local computer. Once you do this, return to your EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, name your machine. 
+* For each person, I create a new key pair and enter your name for the key pair. I downloaded them and emailed them to you. Once I do this, I can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, I also name your machine. 
 
 .EC2 Dashboard
 image::IMG10.png[EC2 Dashboard]
 
-* On the dashboard note your public IP address below. You will need this to access your machine. Note that this IP address will change every time a server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your machine. 
+* On the dashboard I note your public IP address below. You will need this to access your machine. Note that this IP address will change every time a server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your EC2 machine. 
 
 ON MAC
 Use your terminal/command tool to navigate to the folder where your pem key is: 
@@ -88,64 +90,23 @@ image::IMG12.png[EC2 SSH]
 1)	Install the Apache web server and run the server on port 8080
 2)	Show the home page on port 8080
 
-* In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. Once logged in, you should see the following dashboard. 
+* In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. This is a different way of managing resources versus me builing your EC2 intance. Once logged in, you should see the following dashboard. 
 
 .S3 Dashboard
 image::IMG13.png[S3 Dashboard]
 
-* Once in S3, you will see a bucket named isqa3400. You can click on that bucket and you’ll see an image of a panda in there. You could download it from the S3 interface but I’d actually like you to download it to your EC2 instance. You can do this very easily via the wget command. Return to your instance and type: 
+* Once in S3, you will see a bucket named 3400development. You can click on that bucket and you’ll be able to upload and view images. You could download it from the S3 interface but I’d actually like you to download it to your EC2 instance. You can do this very easily via the wget command. Return to your instance and type: 
 
-> wget https://s3-us-west-1.amazonaws.com/isqa3400/panda.jpg
+> wget https://nameofyourendpoint.com (e.g., wget https://s3-us-west-2.amazonaws.com/3400development/Development/koala.jpg)
 
-* The point is to simply demonstrate the connection of resources in the AWS space.  Now, create your own S3 bucket. You are given full S3 access so only modify your own bucket (policy). 
+* The point is to simply demonstrate the connection of resources in the AWS space.  
 
-.Create Bucket Part 1
-image::IMG14.png[Create Bucket]
+* Finally, updated your EC2 index.html page to include your S3 image. 
 
-* Create an S3 bucket (use your name as the Bucket Name as this needs to be globally unique) 
+QUESTIONS TO ANSWER: 
+- Can you ping other machines in your same VPC (region)? 
+- Can you ping other machings across VPCs? 
+- Explain what is going on with respect to subnets and virtual private clouds (regions).
 
-.Create Bucket Part 2
-image::IMG15.png[Create Bucket Part 2]
+- Explain what is going on resource-wise in this lab. How are resources currently being distributed and managed? 
 
-* Keep defaults and click Next
-
-.Create Bucket Part 3
-image::IMG16.png[Create Bucket Part 3]
-
-* Keep defaults and click Next and then Create Bucket
-
-* Upload a picture (keep all defaults in the upload process) into the S3 bucket (try and keep the image small). Return to your server and try and wget your own and someone else’s picture. 
-
-* Finally, turn your S3 into a static website. 
-
-.Static Website
-image::IMG17.png[Static Website]
-
-* Click the Properties tab of your bucket and then click Static website hosting. Include index.html as the name for the Index Document. 
-
-* You will have to set the bucket permissions to be public. Add the following in the Permissions tab (change example-bucket with the name of your bucket): 
-
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::nameofyourbucket/*"
-        }
-    ]
-}
-
-.Bucket Policy
-image::IMG18.png[Bucket Policy]
-
-* Accept the warning and save the changes. 
-
-* Finally, create an index.html and upload it to the bucket – again keep all the defaults in the upload process. See if wget for the index.html page works. Visit the page as identified as the Endpoint in Properties. 
-
-.S3 Endpoint
-image::IMG19.png[S3 Endpoint]
-
-* Finally, provide a picture of how you believe resources/policies were administered for this lab. 
