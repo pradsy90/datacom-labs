@@ -39,8 +39,7 @@ image::start-capture.png[Starting a packet capture in Wireshark]
 * Double-click on your active interface to begin a packet capture.
 * Let the packet capture run while complete the following steps:
 ** Open your web browser and visit your favorite websites.
-** As one of your selected sites, go to http://www.ieee.org, or some other site that does not use HTTPS encryption, and that you have not visited today.
-** Open a command prompt (Windows) or terminal (macOS or Linux) and type `ping www.schuetzler.net` and hit ENTER. If you are on Mac or Linux, you can press CTRL-C to stop the ping, or type `ping -c 4 www.schuetzler.net` to ping only 4 times instead of forever.
+** Open a command prompt (Windows) or terminal (macOS or Linux) and type `ping www.google.com` and hit ENTER. If you are on Mac or Linux, you can press CTRL-C to stop the ping, or type `ping -c 4 www.google.com` to ping only 4 times instead of forever.
 * Return to Wireshark and stop the capture by clicking the red square in the top left corner of the window.
 
 .Stop capture by clicking the red square
