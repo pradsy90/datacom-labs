@@ -218,4 +218,4 @@ In addition to the packet-by-packet inspection you can do to gather specific inf
 . Identify a packet in the panel that uses a protocol that you do not recognize. What protocol does it use? Use your Internet skills to find more information on that protocol. What is it used for?
 . Identify one section from the Packet Details pane that has data you don't recognize. What is the packet doing, and what does that data refer to?
 . Why would a DNS response have to include the query that was sent, in addition to the answer?
-. Pick a protocol you don't recognize from the protocol hierarchy. Do some research and report on what it does?
+. Pick a protocol you don't recognize from the protocol hierarchy. Do some research and report on what it does? 
