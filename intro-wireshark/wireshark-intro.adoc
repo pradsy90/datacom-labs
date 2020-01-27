@@ -136,14 +136,11 @@ image::dns-query.png[]
 
 * Look through the packet details. What is the source and destination IP address? What about the source and destination port? How does that match up with what you know about transport layer ports? What transport layer protocol is being used?
 * Expand the `Domain Name System (query)` tree, and the `Queries` branch beneath that
-** What is the DNS name being requested?
-** What is DNS record type is being requested?
-** What is the length of the request (bytes on wire)?
+** What is anything you might recognize here?
 * Wireshark makes it easy to find the response to a query by placing a link to it directly underneath the `Domain Name System (query)` header. It will say something like `[Response In: #]`. You can double-click the link to be taken to the response packet.
 * Find the response to the query you were examining
 * Expand the `Domain Name System (response)` tree and the `Queries` and `Answers` subtrees beneath it. Look through the data that are available.
-** Why does the response contain the query _and_ the answer?
-** What data is contained in the answer?
+** Again, can you make any sense of what is going on? 
 
 NOTE: The data in the answer may vary depending on the type of answer given. For example, a `CNAME` response would contain different data than an `A` record. See if you can find different types of DNS responses in your packet capture.
 
@@ -152,7 +149,7 @@ NOTE: The data in the answer may vary depending on the type of answer given. For
 .Clear the filter
 image::clear-filter.png[]
 
-* Apply a new filter by typing `http.request == 1`. This will get you all of the packets in your capture that contain an HTTP REQUEST.
+* Apply a new filter by typing `http.request == 1`. This will get you all of the packets in your capture that contain an HTTP REQUEST (if you have any!)
 * Find an inspect an HTTP request. Expand the `Hypertext Transfer Protocol` tree.
 ** What is the `Host:` you are requesting data from?
 * Now expand the `GET` subtree below the HTTP tree (if it is a GET request).
@@ -184,7 +181,7 @@ You can use the same filters to identify traffic for any computer on your networ
 
 ==== Find your pings
 
-During the packet capture, you should have run the `ping` command to send several pings to some computer the server at www.schuetzler.net. Now we'll find those pings to see what they look like at the packet level.
+During the packet capture, you should have run the `ping` command to send several pings to some computer the server at www.google.com. Now we'll find those pings to see what they look like at the packet level.
 
 * Apply a new filter for `icmp`. ICMP, or the Internet Control Message Protocol, is a set of tools for troubleshooting networks. One of those tools is `ping`.
 * Find a message where the data is an ICMP echo (ping) request.
