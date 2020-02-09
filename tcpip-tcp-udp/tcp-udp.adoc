@@ -37,19 +37,18 @@ the virtual machine running inside your computer.
 * Create a new folder on your computer for this exercise.
 * Copy the `Vagrantfile`, `bootstrap.sh`, and `dangerous.txt` from the
 lab materials to the directory
-* Open a Git Bash and navigate to the folder.
-** (Remember Start > cmd [enter], `cd`, `md`)
+* Open a terminal windown and navigate to the folder.
 * Run `> vagrant up` to initialize the virtual machines for this lab.
 ** The two machines you'll be using here are named `alice` and `bob`.
 ** This step may take a little bit as software is installed for this
 lab.
-* Open a second Git Bash and navigate to the same directory.
+* Open a second terminal and navigate to the same directory.
 You'll need connections to both Alice and Bob simultaneously.
 
 === Gather information
 
-* In one Git Bash, connect to Alice with `> vagrant ssh alice`.
-From the other, connect to Bob with `> vagrant ssh bob`.
+* In one terminal, connect to Alice with `> vagrant ssh alice`.
+From the other terminal, connect to Bob with `> vagrant ssh bob`.
 * To use the `tshark` program, you need to know the name of the interfaces you'll be using.  On each VM, run the command `$ ifconfig`, then look at the results of the command.  The interface we'll be using for this lab is the one with the `inet addr` on the 192.168.100.0 subnet.  The interface name is on the left.  In the screenshot below, and throughout this lab, you'll see `enp0s8`.  Substitute your own interface name whenever you see that value in a command.
 
 image::ifconfig-output.png[title="Example output from `ifconfig` command"]
@@ -60,8 +59,7 @@ You'll need them soon.
 
 === Examining short messages in UDP
 
-* `tshark` is a version of Wireshark designed to run on the command
-line.
+* `tshark` is a version of Wireshark designed to run on the command line.
 * To install `tshark` on alice, you'll need to run the command on the following line.  You can examine the `bootstrap.sh` file to see what it does.  Simply put, it fetches the latest version of the package repository for Ubuntu and installs `tshark`.  Then it changes permissions on one file which will allow you to run `tshark` without being an administrator or `sudo`.
 ** When presented with the dialog asking 'Should non-superusers be able to capture packets?': Select "<Yes>"
 
@@ -127,7 +125,7 @@ you set).
 
 === Examining UDP in Wireshark
 
-On your host computer, open up a file browser (e.g. Windows Explorer)
+On your host computer, open up a file browser 
 and find the directory you created for this lab. There you should find a
 file named `udp-short.pcap`. This file should contain all of the packets sent
 between Alice and Bob while your tshark session was running. Open that
