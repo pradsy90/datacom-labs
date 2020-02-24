@@ -1,4 +1,4 @@
-Exercise 3: Subnetting
+Exercise 5: Subnetting
 ==========================
 
 Questions (Submit answers to these questions along with screen shots of the lab)
