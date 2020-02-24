@@ -10,9 +10,7 @@ Questions (Submit answers to these questions along with screen shots of the lab)
 
 3\) If two computers are not on the same subnet, what is needed in order to communicate?
 
-4\) Write the binary and CIDR notation for the 255.224.0.0 subnet.
-
-Binary:
+4\) Write the CIDR notation for the 255.224.0.0 subnet.
 
 CIDR:
 
