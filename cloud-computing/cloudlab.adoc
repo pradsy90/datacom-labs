@@ -39,7 +39,7 @@ image::IMG6.png[Tags]
 .Security Group
 image::IMG7.png[Security Group]
 
-* For Configure Security Group, set up a 3400 Security Group. This group will give you the ability to run HTTP, SSH, and Ping traffic. Then click Review and Launch
+* For Configure Security Group, set up a 3400 Security Group. This group will give you the ability to run HTTP and SSH traffic. Then click Review and Launch
 
 .Review
 image::IMG8.png[Review]
