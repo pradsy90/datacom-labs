@@ -83,10 +83,11 @@ image::IMG11.png[Putty]
 .EC2 SSH
 image::IMG12.png[EC2 SSH]
 
-* Now that you are on your AWS cloud instance, you will revisit few of your prior labs. We are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 8080. Note that Amazon Linux uses the ‘yum install’ command and not ‘apt install’ as we have been doing with Ubuntu. 
+* Now that you are on your AWS cloud instance, you will revisit few of your prior labs. We are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 80. Note that Amazon Linux uses the ‘yum install httpd’ command and not ‘apt install apache2’ as we have been doing with Ubuntu. 
 
-1)	Install the Apache web server and run the server on port 8080
-2)	Show the home page on port 8080
+1)	Install the Apache web server and run the server on port 80
+3)  Run -- sudo service httpd start -- to start the server
+2)	Show the home page of the server (include your IP address in the status bar so I can see it align with your AWS dashboard IP address)
 
 * In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. This is a different way of managing resources versus me builing your EC2 intance. Once logged in, you should see a dashboard like the following. 
 
