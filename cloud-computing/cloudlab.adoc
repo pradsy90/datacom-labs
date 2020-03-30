@@ -87,20 +87,9 @@ image::IMG12.png[EC2 SSH]
 
 1)	Install the Apache web server and run the server on port 80
 3)  Run -- sudo service httpd start -- to start the server
-2)	Show the home page of the server (include your IP address in the status bar so I can see it align with your AWS dashboard IP address)
+2)	Show the default home page of the server (include your IP address in the status bar so I can see it align with your AWS dashboard IP address)
 
-* In addition to EC2, you are going explore one more component of AWS – The Simple Storage Solution (S3). From your AWS console, you will be able to go to S3. This is a different way of managing resources versus me builing your EC2 intance. Once logged in, you should see a dashboard like the following. 
-
-.S3 Dashboard
-image::IMG13.png[S3 Dashboard]
-
-* Once in S3, create a bucket named 3400. You can click on that bucket and you’ll be able to upload and view images. You could download it from the S3 interface but I’d actually like you to download it to your EC2 instance. You can do this very easily via the wget command. Return to your instance and type: 
-
-> wget https://nameofyourendpoint.com (e.g., wget https://s3-us-west-2.amazonaws.com/3400/Development/koala.jpg)
-
-* The point is to simply demonstrate the connection of resources in the AWS space.  
-
-* Finally, updated your EC2 index.html page to include your S3 image. 
+* Modify an Apache index.html web page (/var/www) and take a picture of that new page and include that as well. 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
