@@ -83,7 +83,7 @@ image::IMG11.png[Putty]
 .EC2 SSH
 image::IMG12.png[EC2 SSH]
 
-* Now that you are on your AWS cloud instance, you will revisit few of your prior labs. We are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 80. Note that Amazon Linux uses the ‘yum install httpd’ command and not ‘apt install apache2’ as we have been doing with Ubuntu. 
+* Now that you are on your AWS cloud instance, you will revisit few of your prior labs. We are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 80. Note that Amazon Linux uses the ‘sudo yum install httpd’ command and not ‘apt install apache2’ as we have been doing with Ubuntu. 
 
 1)	Install the Apache web server and run the server on port 80
 3)  Run -- sudo service httpd start -- to start the server
