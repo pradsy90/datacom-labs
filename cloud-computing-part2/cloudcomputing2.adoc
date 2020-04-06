@@ -2,10 +2,12 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. 
+This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, you will be setting up two machines and having them talk to (ping) each other. This isn't very difficult but along the way we will make a few observations as to the power you have as an AWS manager -- to both observe and set rules. 
+
+To begin, you are going to need to set up 2 virtual machines in the AWS environment. You do this in the exact same way that you did things last week. For each of your servers, create a unique key pair for Server 1 and for Server 2. 
 
 .AWS Dashboard
-image::IMG1.png[AWS Dashboard]
+image::SelectServer.png[AWS Dashboard]
 
 You will set up a virtual server in this lab via the following:
 
