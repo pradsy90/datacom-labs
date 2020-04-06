@@ -1,3 +1,15 @@
+ifndef::bound[]
+:imagesdir: img
+endif::[]
+
+This lab is to perform a second part for Cloud Computing using the AWS Cloud environment from Amazon. Like the last lab, you will be using your AWS Educate Account. This lab is fairly straighforward and entails that you set up two virtual machines in the AWS environment. The machines can be similar to what you set up last week. 
+
+The point of this lab is not going to be setting up the servers, per se, but getting the two servers set up on different subnets and enabling and disabling the servers from pinging each other. It's really as simple as that. 
+
+1) Set up two AWS servers. Making sure that you set up the servers on different subnets. 
+
+
+
 -	Set up two machines on different subnets
 o	Name your security groups 
 o	Subnet1
