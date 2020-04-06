@@ -132,5 +132,7 @@ image::KeyPairs.png[Key Pairs]
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
-* Explain what is going on resource-wise in this lab. How are resources currently being distributed and managed? Are you an administrator? Could you provide a virtual server for a friend or colleague? 
+* Why did CIDR/32 work in this case? What is the block of numbers that could have pinged the machine with the modified inbound rule? 
+
+* Now that you've seen a bit more of the Amazon AWS interface, describe some of the administrative power that you would have if you were using this technology to manage servers for people in your organizaion. 
 
