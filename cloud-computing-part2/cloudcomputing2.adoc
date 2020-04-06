@@ -57,7 +57,16 @@ image::LoginToEach.png[Login]
 .Ping
 image::PingEach.png[Ping]
 
-* On the dashboard, note your public IP address below. You will need this to access your machine. Note that this IP address will change every time the server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your EC2 machine. 
+{nbsp} +
+{nbsp} +
+
+Once you have successfully pinged the machines, go back to your EC2 dashboard and view your running instances. At the bottom, click the Monitoring tab. This shows you some administrative insight on the work your machines are doing. There is not going to be much here because we are only using these machines for pinging but Monitoring is a great way to see server load. 
+
+.Monitoring
+image::CloudWatch.png[Monitoring]
+
+{nbsp} +
+{nbsp} +
 
 ON MAC
 Use your terminal/command tool to navigate to the folder where your pem key is: 
