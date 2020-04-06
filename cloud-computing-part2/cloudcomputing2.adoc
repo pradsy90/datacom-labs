@@ -9,12 +9,8 @@ To begin, you are going to need to set up 2 virtual machines in the AWS environm
 .AWS Dashboard
 image::SelectServer.png[AWS Dashboard]
 
-You will set up a virtual server in this lab via the following:
-
-* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
-
 .AMI Choice
-image::IMG2.png[AMI Choice]
+image::SelectServerType.png[AMI Choice]
 
 * Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
 
