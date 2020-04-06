@@ -7,17 +7,10 @@ This lab is intended to give you just a bit more insight with respect to AWS clo
 To begin, you are going to need to set up 2 virtual machines in the AWS environment. You do this in the exact same way that you did things last week. For each of your servers, create a unique key pair for Server 1 and for Server 2. 
 
 .AWS Dashboard
-image::SelectServer.png[AWS Dashboard]
+image::SelectServer.png[EC2 Dashboard]
 
 .AMI Choice
-image::SelectServerType.png[AMI Choice]
-
-* Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
-
-.Instance Type
-image::IMG3.png[Instance Type]
-
-* You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
+image::SelectServerType.png[Instance Choice]
 
 .Instance Details 
 image::IMG4.png[Instance Details]
