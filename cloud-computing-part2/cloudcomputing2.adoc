@@ -114,7 +114,21 @@ image::OnlyCIDR32.png[Only CIDR 32]
 {nbsp} +
 {nbsp} +
 
+Go back to your terminals and show me that one of the machines can no longer be pinged (restricting pings only to the subnet). 
 
+.BlockedPing
+image:BlockedPing.png[BlockedPing]
+
+{nbsp} +
+{nbsp} +
+
+Finally, go back to your EC2 Dashboard and click on the Key Pairs under Network & Security to show me the two key pairs you made for this lab. 
+
+.Key Pairs
+image::KeyPairs.png[Key Pairs]
+
+{nbsp} +
+{nbsp} +
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
