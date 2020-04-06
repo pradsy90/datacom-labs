@@ -68,10 +68,29 @@ image::CloudWatch.png[Monitoring]
 {nbsp} +
 {nbsp} +
 
-ON MAC
-Use your terminal/command tool to navigate to the folder where your pem key is: 
+All right, now we are going to isolate one of the servers from the other. To do this, we are going to modify the inbound security rules that you set earlier. First, we have to note one of the security groups that one of the servers is associated with. Again, you should have two different security groups, one for each server. You'll see the assigned security group over on the right hand side of this picture (security group column). 
 
-`$ chmod 400 YourName.pem`
+.Identify Security Group
+image::IdentifySecurityGroup.png[Identify Security Group]
+
+{nbsp} +
+{nbsp} +
+
+Once you've identified one of the security groups, note it down as this is the one we are going to change. Back at the EC2 Dashboard, on the left side, you'll see Security Groups under Network & Security. Click it. 
+
+.Security Groups Link
+image::SeeSecurityGroups.png[Security Groups Link]
+
+{nbsp} +
+{nbsp} +
+
+From there, select the security group you are going to modify in order to restrict access across subnets. 
+
+.Select Security Group to Modify
+image::SelectOneSecurityGroup.png[Select Security Group to Modify]
+
+{nbsp} +
+{nbsp} +
 
 Login to the EC2 instance 
 > ssh -i "YourName.pem" ec2-user@your.ip.address.here
