@@ -10,6 +10,8 @@ To begin, you are going to need to set up 2 virtual machines in the AWS environm
 .EC2 Dashboard
 image::SelectServer.png[EC2 Dashboard]
 
+{nbsp} +
+{nbsp} +
  
 
 .Instance Choice
