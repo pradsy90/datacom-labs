@@ -6,15 +6,17 @@ This lab is intended to give you just a bit more insight with respect to AWS clo
 
 To begin, you are going to need to set up 2 virtual machines in the AWS environment. You do this in the exact same way that you did things last week. For each of your servers, create a unique key pair for Server 1 and for Server 2. 
 
-.AWS Dashboard
+.EC2 Dashboard
 image::SelectServer.png[EC2 Dashboard]
 
-.AMI Choice
+.Instance Choice
 image::SelectServerType.png[Instance Choice]
+
+<br> 
 
 The next part is going to be the most important part of setting up your server. You'll see that you can select the subnet that you put your server on. For Server 1, choose the first subnet on the list. For Server 2, select a different subnet. It doesn't matter which one, just make sure that the two are different. 
 
-.Instance Details 
+.Select Subnet
 image::SelectSubnet.png[Select Subnet]
 
 * Configure Details -- Leave the defaults and click Next. Note thought that this is where you can assign a particular subnet. 
