@@ -10,13 +10,13 @@ To begin, you are going to need to set up 2 virtual machines in the AWS environm
 .EC2 Dashboard
 image::SelectServer.png[EC2 Dashboard]
 
-+
+ 
 
 .Instance Choice
 image::SelectServerType.png[Instance Choice]
 
-+
-+
+ 
+ 
 
 The next part is going to be the most important part of setting up your server. You'll see that you can select the subnet that you put your server on. For Server 1, choose the first subnet on the list. For Server 2, select a different subnet. It doesn't matter which one, just make sure that the two are different. 
 
