@@ -29,11 +29,14 @@ image::SelectSubnet.png[Select Subnet]
 {nbsp} +
 {nbsp} +
 
+Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets. 
 
-* Configure Details -- Leave the defaults and click Next. Note thought that this is where you can assign a particular subnet. 
+.Two Machines
+image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
 
-.Storage
-image::IMG5.png[Storage]
+{nbsp} +
+{nbsp} +
+
 
 * Storage -- Leave the defaults and click Next. 
 
