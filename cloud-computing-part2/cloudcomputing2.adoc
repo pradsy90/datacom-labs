@@ -29,7 +29,7 @@ image::SelectSubnet.png[Select Subnet]
 {nbsp} +
 {nbsp} +
 
-Once you selected the subnet, set a new (unique) security group for each of your machines, enabling ping (ICMP) from anywhere. This will allow the two machines to talk to each other even though they are different subnets. 
+Once you selected the subnet, set a new (uniquely named) security group for each of your machines, enabling ping (ICMP) from anywhere. This will allow the two machines to talk to each other even though they are different subnets. 
 
 .Set Security Group
 image::SetUpDefineSecurityGroup.png[Set Security Group]
@@ -38,7 +38,7 @@ image::SetUpDefineSecurityGroup.png[Set Security Group]
 {nbsp} +
 
 
-Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets (Availability Zone). 
+After you've done this, keep the default setup and launch your machine. Again, create a unique key pair for each machine. Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets (Availability Zone). 
 
 .Two Machines
 image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
@@ -46,31 +46,16 @@ image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
 {nbsp} +
 {nbsp} +
 
-Once you have your machines up and 
-* Storage -- Leave the defaults and click Next. 
+Once both are launched, login to them (via two terminal windows). Once you have logged in, ping each machine. You should have no trouble if you set everything up correctly. 
 
-.Tags
-image::IMG6.png[Tags]
+.Login
+image::LoginToEach.png[Login]
 
-* Tags -- Leave the defaults and click Next. 
+{nbsp} +
+{nbsp} +
 
-.Security Group
-image::IMG7.png[Security Group]
-
-* For Configure Security Group, set up a 3400 Security Group. This group will give you the ability to run HTTP and SSH traffic. Then click Review and Launch
-
-.Review
-image::IMG8.png[Review]
-
-* When you click Launch, you are asked to Choose/Select a key pair. 
-
-.Key Pair
-image::IMG9.png[Key Pair]
-
-* Create a new key pair and enter your name for the key pair and download them. Once you do this, you can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, also name your machine. 
-
-.EC2 Dashboard
-image::IMG10.png[EC2 Dashboard]
+.Ping
+image::PingEach.png[Ping]
 
 * On the dashboard, note your public IP address below. You will need this to access your machine. Note that this IP address will change every time the server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your EC2 machine. 
 
