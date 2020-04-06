@@ -1,0 +1,11 @@
+-	Set up two machines on different subnets
+o	Name your security groups 
+o	Subnet1
+o	Subnet2
+-	Login to both and have them ping each other 
+-	Modify the Security rules to CIDR 32 and repeat ping
+o	Isolating the subnets 
+
+
+
+
