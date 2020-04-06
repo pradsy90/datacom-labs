@@ -29,7 +29,16 @@ image::SelectSubnet.png[Select Subnet]
 {nbsp} +
 {nbsp} +
 
-Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets. 
+Once you selected the subnet, set a new (unique) security group for each of your machines, enabling ping (ICMP) from anywhere. This will allow the two machines to talk to each other even though they are different subnets. 
+
+.Set Security Group
+image::SetUpDefineSecurityGroup.png[Set Security Group]
+
+{nbsp} +
+{nbsp} +
+
+
+Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets (Availability Zone). 
 
 .Two Machines
 image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
@@ -37,7 +46,7 @@ image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
 {nbsp} +
 {nbsp} +
 
-
+Once you have your machines up and 
 * Storage -- Leave the defaults and click Next. 
 
 .Tags
