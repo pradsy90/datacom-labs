@@ -17,13 +17,18 @@ image::SelectServer.png[EC2 Dashboard]
 .Instance Choice
 image::SelectServerType.png[Instance Choice]
 
- 
+{nbsp} +
+{nbsp} +
  
 
 The next part is going to be the most important part of setting up your server. You'll see that you can select the subnet that you put your server on. For Server 1, choose the first subnet on the list. For Server 2, select a different subnet. It doesn't matter which one, just make sure that the two are different. 
 
 .Select Subnet
 image::SelectSubnet.png[Select Subnet]
+
+{nbsp} +
+{nbsp} +
+
 
 * Configure Details -- Leave the defaults and click Next. Note thought that this is where you can assign a particular subnet. 
 
