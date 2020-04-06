@@ -130,6 +130,8 @@ image::KeyPairs.png[Key Pairs]
 {nbsp} +
 {nbsp} +
 
+Finally, finally... Go ahead and stop (or terminate) your servers. Also, if you are interested, take a look at your total AWS credits. You should see that they have barely been touched. 
+
 QUESTION TO CONSIDER FOR THE FINAL: 
 
 * Why did CIDR/32 work in this case? What is the block of numbers that could have pinged the machine with the modified inbound rule? 
