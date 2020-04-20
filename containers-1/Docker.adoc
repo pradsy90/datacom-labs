@@ -70,81 +70,48 @@ image::6.png[ApacheOnDockerHub]
 {nbsp} +
 {nbsp} +
 
-Once you have successfully pinged the machines, go back to your EC2 dashboard and view your running instances. At the bottom, click the Monitoring tab. This shows you some administrative insight on the work your machines are doing. There is not going to be much here because we are only using these machines for pinging but Monitoring is a great way to see server load. 
+> sudo docker run -dit --name web-3400 -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:latest
 
-.Monitoring
-image::CloudWatch.png[Monitoring]
+Once you run this run: 
 
-{nbsp} +
-{nbsp} +
+> sudo docker images
 
-All right, now we are going to isolate one of the servers from the other. To do this, we are going to modify the inbound security rules that you set earlier. First, we have to note one of the security groups that one of the servers is associated with. Again, you should have two different security groups, one for each server. You'll see the assigned security group over on the right hand side of this picture (security group column). 
+You will see your latest downloaded Apache container (and it's already running). Change to the local directory at: 
 
-.Identify Security Group
-image::IdentifySecurityGroup.png[Identify Security Group]
+> cd /home/user/website 
 
-{nbsp} +
-{nbsp} +
+And make an index.html file. Then navigate to your IP address (get this from your AWS console) and goto your IPADDRESS:8080.
 
-Once you've identified one of the security groups, note it down as this is the one we are going to change. Back at the EC2 Dashboard, on the left side, you'll see Security Groups under Network & Security. Click it. 
+Once you've seen your server running, remember that it is running in a container, not natively on your AWS instance. Run the command to see your containers on your instance: 
 
-.Security Groups Link
-image::SeeSecurityGroups.png[Security Groups Link]
+> sudo docker ps -a 
+
+.ShowContainers
+image::8.png[ShowContainers]
 
 {nbsp} +
 {nbsp} +
 
-From there, select the security group you are going to modify in order to restrict access across subnets. 
+Finally, we can login to our Apache container. Note that this IS differnet from a VM as it is using the same resources as the native AWS instance that you are on. It is just an assigned (and shared) space on the computer. 
 
-.Select Security Group to Modify
-image::SelectOneSecurityGroup.png[Select Security Group to Modify]
+> sudo docker exec -it web-3400 /bin/bash
 
-{nbsp} +
-{nbsp} +
+If you do the following: 
 
-After clicking the security group you are going to modify, click "Edit Inbound Rules". This will enable us to restrict what is coming into the server. 
+> pwd 
 
-.See Current Rules
-image::SeeCurrentSecurityRules.png[See Current Rules]
+You'll see your present working directory in the container. Then do: 
 
-{nbsp} +
-{nbsp} +
+> ls 
 
-.Edit Rules
-image::EditRules.png[Edit Rules]
+You'll see a folder called htdocs. CD into that folder and do: 
 
-{nbsp} +
-{nbsp} +
+> ls 
 
-From there, you will modify the rule (simply click in the search box) to select the rule 0.0.0.0/32. Delete any additional ICMP rules. Make sure you don't delete your SSH rule. 
+You'll see the index file you created in an earlier step but you can't modifiy it here. Why? Because you aren't really supposed to modify containers in production. They are meant to be self-contained applications in containers that you can ship to people and make sure that they work everywhere. If you let people modify things, like configuration files, it starts to defeat the purpose of containerization. That's the end of this intro to containers!
 
-.Only CIDR 32
-image::OnlyCIDR32.png[Only CIDR 32]
+QUESTIONS TO CONSIDER FOR THE FINAL: 
 
-{nbsp} +
-{nbsp} +
-
-Go back to your terminals and show me that one of the machines can no longer be pinged (restricting pings only to the subnet). 
-
-.BlockedPing
-image:BlockedPing.png[BlockedPing]
-
-{nbsp} +
-{nbsp} +
-
-Finally, go back to your EC2 Dashboard and click on the Key Pairs under Network & Security to show me the two key pairs you made for this lab. 
-
-.Key Pairs
-image::KeyPairs.png[Key Pairs]
-
-{nbsp} +
-{nbsp} +
-
-Finally, finally... Go ahead and stop (or terminate) your servers. Also, if you are interested, take a look at your total AWS credits. You should see that they have barely been touched. 
-
-QUESTION TO CONSIDER FOR THE FINAL: 
-
-* Why did CIDR/32 work in this case? What is the block of numbers that could have pinged the machine with the modified inbound rule? 
-
-* Now that you've seen a bit more of the Amazon AWS interface, describe some of the administrative power that you would have if you were using this technology to manage servers for people in your organizaion. 
+* How is a container different from a virtual machine? 
+* Why would I want to create a containerized application that is available to others to use? 
 
