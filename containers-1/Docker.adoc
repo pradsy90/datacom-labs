@@ -30,25 +30,42 @@ image::3.png[My Launched Instances]
 {nbsp} +
 {nbsp} +
 
+Login to your AWS machine and install and start Docker: 
 
-After you've done this, keep the default setup and launch your machine. Again, create a unique key pair for each machine. Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets (Availability Zone). 
+> sudo yum -y install docker 
 
-.Two Machines
-image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
+> sudo service docker start 
+
+From here, you can check to see if there are any Docker images on your machine (there will not be): 
+
+> sudo docker images
+
+.Docker Images
+image::4.png[DockerImages]
 
 {nbsp} +
 {nbsp} +
 
-Once both are launched, login to them (via two terminal windows). Once you have logged in, ping each machine. You should have no trouble if you set everything up correctly. 
+Now, we can do our first Docker image installation with the following command. Notice that it tries to run things locally but because it is not avaialble, it downloads it from the online registry. Also notice the PULL statement in the text as Hello-World is PULLED from the repository. 
 
-.Login
-image::LoginToEach.png[Login]
+> sudo docker run hello-world 
+
+.Hello World
+image::5.png[HelloWorld]
 
 {nbsp} +
 {nbsp} +
 
-.Ping
-image::PingEach.png[Ping]
+Now type: 
+
+> sudo docker images
+
+You should see the hello-world image in the list. 
+
+But what else is available? Go and check out Docker Hub (https://hub.docker.com/search?type=image). You can search for Apache (yes, well just keep sticking with a known application for simplicity sake but you could substitute Apache for any other container). 
+
+.ApacheOnDockerHub
+image::6.png[ApacheOnDockerHub]
 
 {nbsp} +
 {nbsp} +
