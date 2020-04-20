@@ -2,34 +2,30 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you an introduction to containers. We will be using Docker for this lab. 
-
-.EC2 Dashboard
-image::SelectServer.png[EC2 Dashboard]
-
-{nbsp} +
-{nbsp} +
+This lab is intended to give you an introduction to containers. We will be using Docker for this lab. For this lab, we will be deploying two containers in an AWS instance. This will include the install and deployment of containers via Docker. 
  
+For the first part of this lab, it is important that you understand what a container is. Essentially, the deployment of an applicaiton can be a problematic endeavor. This is largely because as you deploy an application on one system, it is quite likely to not work on another -- due to the dependencies on one system to another. In short, all computer systems are not the same and deploying an application on one is likely different from another. 
 
-.Instance Choice
-image::SelectServerType.png[Instance Choice]
+Containers provide a highly 'containerized' environment that contains all of the necessary dependencies for an application to run. So when you deploy a container/application you can be confident that the application will run because it has been properly setup and will run on any computer that can run containers. A nice video is availble here that helps set up the difference Docker and the differentiation from virtualization: 
 
-{nbsp} +
-{nbsp} +
- 
+https://www.youtube.com/watch?v=JSLpG_spOBM&feature=youtu.be
 
-The next part is going to be the most important part of setting up your server. You'll see that you can select the subnet that you put your server on. For Server 1, choose the first subnet on the list. For Server 2, select a different subnet. It doesn't matter which one, just make sure that the two are different. 
-
-.Select Subnet
-image::SelectSubnet.png[Select Subnet]
+.Docker & Containers
+image::1.png[DockerContainers]
 
 {nbsp} +
 {nbsp} +
 
-Once you selected the subnet, set a new (uniquely named) security group for each of your machines, enabling ping (ICMP) from anywhere. This will allow the two machines to talk to each other even though they are different subnets. 
+We are going to be setting up a Docker environment in AWS. So, like your last two labs, go ahead and setup an AWS instance that we can use for this lab. The one thing to note in this setup is that you need to setup a security group that enables SSH, HTTP, and TCP with port 8080. Everything else can stay with the default settings. You only need one instance running, mine is showing two -- just for my own practice purposes. 
 
 .Set Security Group
-image::SetUpDefineSecurityGroup.png[Set Security Group]
+image::2.png[Set Security Group]
+
+{nbsp} +
+{nbsp} +
+
+.My Launched Instances
+image::3.png[My Launched Instances]
 
 {nbsp} +
 {nbsp} +
