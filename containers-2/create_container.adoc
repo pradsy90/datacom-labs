@@ -36,25 +36,17 @@ This will create an empty Dockerfile. It is this file that will enable us to cre
 
 Type (copy) the following: 
 
-
-
 #Make sure that the use of the Container will always download the publicly available docker image "python" on Docker Hub. 
+FROM python
 
-.... 
-
-FROM python ...
 #Creating directory helloworld in the container
-
 RUN mkdir /home/helloworld
 
 #Copying helloworld.py from our local directory to container's helloworld directory
-
 COPY helloworld.py /home/helloworld/helloworld.py
 
 #running helloworld.py in container
-
 CMD python /home/helloworld/helloworld.py
-
 
 ....
 
