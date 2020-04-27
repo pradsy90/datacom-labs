@@ -2,13 +2,9 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you an introduction to containers. We will be using Docker for this lab. For this lab, we will be deploying two containers in an AWS instance. This will include the install and deployment of containers via Docker. 
- 
-For the first part of this lab, it is important that you understand what a container is. Essentially, the deployment of an applicaiton can be a problematic endeavor. This is largely because as you deploy an application on one system, it is quite likely to not work on another -- due to the dependencies on one system to another. In short, all computer systems are not the same and deploying an application on one is likely different from another. 
+Welcome to your last lab in 3400! Yes, we are at the end of the (strange) semester. Well done everyone. I'm sorry that I didn't get to spend more time with you in class. I really enjoying working on these labs with all of you... and I enjoy doing this in person. 
 
-Containers provide a highly 'containerized' environment that contains all of the necessary dependencies for an application to run. So when you deploy a container/application you can be confident that the application will run because it has been properly setup and will run on any computer that can run containers. A nice video is availble here that helps set up the difference Docker and the differentiation from virtualization: 
-
-https://www.youtube.com/watch?v=JSLpG_spOBM&feature=youtu.be
+For this final lab, you are going to be using Docker again and, quite simply, you are going to be building a container that contains a Python script. The idea is to get you to see how you could package an application into a container that would ultimately be available for others. We are not going to be placing the container in any sort of registry, we are simply going to be making it on an AWS instance. Let's get started. 
 
 .Docker & Containers
 image::1.png[DockerContainers]
