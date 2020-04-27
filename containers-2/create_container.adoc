@@ -6,30 +6,9 @@ Welcome to your last lab in 3400! Yes, we are at the end of the (strange) semest
 
 For this final lab, you are going to be using Docker again and, quite simply, you are going to be building a container that contains a Python script. The idea is to get you to see how you could package an application into a container that would ultimately be available for others. We are not going to be placing the container in any sort of registry, we are simply going to be making it on an AWS instance. Let's get started. 
 
-.Docker & Containers
-image::1.png[DockerContainers]
-
-{nbsp} +
-{nbsp} +
-
-We are going to be setting up a Docker environment in AWS. So, like your last two labs, go ahead and setup an AWS instance that we can use for this lab. The one thing to note in this setup is that you need to setup a security group that enables SSH, HTTP, and TCP with port 8080. Everything else can stay with the default settings. You only need one instance running, mine is showing two -- just for my own practice purposes. 
-
-.Set Security Group
-image::2.png[Set Security Group]
-
-{nbsp} +
-{nbsp} +
-
-.My Launched Instances
-image::3.png[My Launched Instances]
-
-{nbsp} +
-{nbsp} +
-
-Login to your AWS machine and install and start Docker: 
+First things first. Build an instance on AWS. There is nothing special about this instance. The only thing that you need to confirm in the Security Settings is that you can SSH into the machine. I think this is a default setting anyway. Once you are logged into your AWS instance, make sure that docker is installed and started: 
 
 > sudo yum -y install docker 
-
 > sudo service docker start 
 
 From here, you can check to see if there are any Docker images on your machine (there will not be): 
