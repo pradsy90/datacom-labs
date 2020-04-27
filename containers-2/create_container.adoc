@@ -35,31 +35,24 @@ This will create an empty Dockerfile. It is this file that will enable us to cre
 > sudo nano Dockerfile
 
 #Make sure that the use of the Container will always download the publicly available docker image "python" on Docker Hub. 
+
 FROM python
 
 #Creating directory helloworld in the container
+
 RUN mkdir /home/helloworld
 
 #Copying helloworld.py from our local directory to container's helloworld directory
+
 COPY helloworld.py /home/helloworld/helloworld.py
 
 #running helloworld.py in container
+
 CMD python /home/helloworld/helloworld.py
 
-> sudo docker images
 
-.Docker Images
-image::4.png[DockerImages]
 
-{nbsp} +
-{nbsp} +
 
-Now, we can do our first Docker image installation with the following command. Notice that it tries to run things locally but because it is not avaialble, it downloads it from the online registry. Also notice the PULL statement in the text as Hello-World is PULLED from the repository. 
-
-> sudo docker run hello-world 
-
-.Hello World
-image::5.png[HelloWorld]
 
 {nbsp} +
 {nbsp} +
