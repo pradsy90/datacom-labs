@@ -12,7 +12,22 @@ First things first. Build an instance on AWS. There is nothing special about thi
 
 > sudo service docker start 
 
-From here, you can check to see if there are any Docker images on your machine (there will not be): 
+From here, we are going write the smallest Python script that we will place into a Docker container. In your current folder: 
+
+> sudo nano helloworld.py
+
+When inside nano, type: 
+
+> print("hello world. Python for Docker!")
+
+Exit nano and run the Python script at the command line: 
+
+> python helloworld.py
+
+This should simply print the line that you just typed. 
+
+
+
 
 > sudo docker images
 
