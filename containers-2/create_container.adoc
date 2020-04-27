@@ -9,6 +9,7 @@ For this final lab, you are going to be using Docker again and, quite simply, yo
 First things first. Build an instance on AWS. There is nothing special about this instance. The only thing that you need to confirm in the Security Settings is that you can SSH into the machine. I think this is a default setting anyway. Once you are logged into your AWS instance, make sure that docker is installed and started: 
 
 > sudo yum -y install docker 
+
 > sudo service docker start 
 
 From here, you can check to see if there are any Docker images on your machine (there will not be): 
