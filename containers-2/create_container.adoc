@@ -6,7 +6,9 @@ Welcome to your last lab in 3400! Yes, we are at the end of the (strange) semest
 
 For this final lab, you are going to be using Docker again and, quite simply, you are going to be building a container that contains a Python script. The idea is to get you to see how you could package an application into a container that would ultimately be available for others. We are not going to be placing the container in any sort of registry, we are simply going to be making it on an AWS instance. Let's get started. 
 
-First things first. Build an instance on AWS. There is nothing special about this instance. The only thing that you need to confirm in the Security Settings is that you can SSH into the machine. I think this is a default setting anyway. Once you are logged into your AWS instance, make sure that docker is installed and started: 
+First things first. There are no images for this lab. Everything is captured through commands as described below. 
+
+To start, build an instance on AWS. There is nothing special about this instance. The only thing that you need to confirm in the Security Settings is that you can SSH into the machine. I think this is a default setting anyway. Once you are logged into your AWS instance, make sure that docker is installed and started: 
 
 > sudo yum -y install docker 
 
@@ -69,15 +71,6 @@ You should see the helloword results! Nicely done. You can view the container wi
 > sudo docker ps -a 
 
 Finally, do the following (1) Modify your helloworld.py file to say some additional things, (2) Run your Docker container again (you'll see no change in your updated Python script), (3) rebuild your container with teh build statement above, (4) rerun your container and you'll see the changes reflected
-
-{nbsp} +
-{nbsp} +
-
-.ApacheOnDockerHub
-image::6.png[ApacheOnDockerHub]
-
-{nbsp} +
-{nbsp} +
 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
