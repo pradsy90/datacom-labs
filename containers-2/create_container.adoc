@@ -34,7 +34,7 @@ This will create an empty Dockerfile. It is this file that will enable us to cre
 
 > sudo nano Dockerfile
 
-Type (copy) the following: 
+Type (copy) and save the following: 
 
 ....
 
@@ -52,18 +52,26 @@ CMD python /home/helloworld/helloworld.py
 
 ....
 
+Now, back at the command line, make sure that the Dockerfile is executable with the following command: 
 
+> sudo chmod 755 Dockerfile 
+
+Now, let's build the container with: 
+
+> sudo docker build -t 3400app .
+
+You can now run the applicaiton in the Docker container: 
+
+> sudo docker run 3400app
+
+You should see the helloword results! Nicely done. You can view the container with: 
+
+> sudo docker ps -a 
+
+Finally, do the following (1) Modify your helloworld.py file to say some additional things, (2) Run your Docker container again (you'll see no change in your updated Python script), (3) rebuild your container with teh build statement above, (4) rerun your container and you'll see the changes reflected
 
 {nbsp} +
 {nbsp} +
-
-Now type: 
-
-> sudo docker images
-
-You should see the hello-world image in the list. 
-
-But what else is available? Go and check out Docker Hub (https://hub.docker.com/search?type=image). You can search for Apache (yes, well just keep sticking with a known application for simplicity sake but you could substitute Apache for any other container). 
 
 .ApacheOnDockerHub
 image::6.png[ApacheOnDockerHub]
@@ -71,48 +79,8 @@ image::6.png[ApacheOnDockerHub]
 {nbsp} +
 {nbsp} +
 
-> sudo docker run -dit --name web-3400 -p 8080:80 -v /home/user/website/:/usr/local/apache2/htdocs/ httpd:latest
 
-Once you run this run: 
+QUESTION TO CONSIDER FOR THE FINAL: 
 
-> sudo docker images
-
-You will see your latest downloaded Apache container (and it's already running). Change to the local directory at: 
-
-> cd /home/user/website 
-
-And make an index.html file. Then navigate to your IP address (get this from your AWS console) and goto your IPADDRESS:8080.
-
-Once you've seen your server running, remember that it is running in a container, not natively on your AWS instance. Run the command to see your containers on your instance: 
-
-> sudo docker ps -a 
-
-.ShowContainers
-image::8.png[ShowContainers]
-
-{nbsp} +
-{nbsp} +
-
-Finally, we can login to our Apache container. Note that this IS differnet from a VM as it is using the same resources as the native AWS instance that you are on. It is just an assigned (and shared) space on the computer. 
-
-> sudo docker exec -it web-3400 /bin/bash
-
-If you do the following: 
-
-> pwd 
-
-You'll see your present working directory in the container. Then do: 
-
-> ls 
-
-You'll see a folder called htdocs. CD into that folder and do: 
-
-> ls 
-
-You'll see the index file you created in an earlier step but you can't modifiy it here. Why? Because you aren't really supposed to modify containers in production. They are meant to be self-contained applications in containers that you can ship to people and make sure that they work everywhere. If you let people modify things, like configuration files, it starts to defeat the purpose of containerization. That's the end of this intro to containers!
-
-QUESTIONS TO CONSIDER FOR THE FINAL: 
-
-* How is a container different from a virtual machine? 
-* Why would I want to create a containerized application that is available to others to use? 
+* Why did you need to rebuild the container to see the local changes to your Python script? 
 
