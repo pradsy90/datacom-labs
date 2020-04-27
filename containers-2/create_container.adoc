@@ -24,10 +24,27 @@ Exit nano and run the Python script at the command line:
 
 > python helloworld.py
 
-This should simply print the line that you just typed. 
+This should simply print the line that you just typed. Easy enough so far. The point of this is that you are able to build an applicant on your local machine and ultimately place it into a Docker container, ensuring that it can be run on ANY system using Docker. Naturally, you will likely build more complex applications than helloworld but we're simply trying to see how this process would begin. Packaging a larger applicant into a Docker container is a bit more complex but follows similar logic to what we are doing here. 
 
+Now, let's get the simple Python application into a container. To do this, we first need to create a Dockerfile: 
 
+> sudo touch Dockerfile
 
+This will create an empty Dockerfile. It is this file that will enable us to create a container. The next step is to edit the file: 
+
+> sudo nano Dockerfile
+
+#Make sure that the use of the Container will always download the publicly available docker image "python" on Docker Hub. 
+FROM python
+
+#Creating directory helloworld in the container
+RUN mkdir /home/helloworld
+
+#Copying helloworld.py from our local directory to container's helloworld directory
+COPY helloworld.py /home/helloworld/helloworld.py
+
+#running helloworld.py in container
+CMD python /home/helloworld/helloworld.py
 
 > sudo docker images
 
