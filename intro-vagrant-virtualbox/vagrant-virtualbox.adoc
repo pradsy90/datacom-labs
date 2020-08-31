@@ -1,8 +1,4 @@
-= Vagrant Setup
-Ryan Schuetzler <ryan@schuetzler.net>s
-v1.1, 2017-01-17
-ifndef::bound[:imagesdir: figs]
-:icons: fontv
+= Vagrant VirtualBox Setup
 
 This exercise will aid you in setting up and becoming familiar with Vagrant, VirtualBox, and SSH. You will use these tools throughout the course to learn networking and security concepts. 
 
