@@ -198,9 +198,9 @@ In addition to the packet-by-packet inspection you can do to gather specific inf
 ** The protocol hierarchy is a nested list of all protocols used in any of the captured packets. You can expand each layer to get all the way down to the application layer protocols used, although not all packets have an application layer protocol (e.g., ARP)
 * Spend some time digging around the protocol hierarchy. Find a protocol you don't recognize, and see if you can find out what it does.
 
-== Questions
+== Questions (You don't have to answer these for the assignment)
 
-=== Quick questions (May end up on the Exam?)
+=== Quick questions (You don't have to answer but may end up on the exam)
 
 . What data is stored in the Ethernet header?
 . What data is in the network layer (IP) header?
@@ -209,7 +209,7 @@ In addition to the packet-by-packet inspection you can do to gather specific inf
 . What percentage of your network traffic was IPv4? What about IPv6? TCP vs. UDP?
 . What was one thing that surprised you from your capture's protocol hierarchy?
 
-=== Do some research or thinking
+=== Do some research or thinking (Extra Work Not Required for the Assignment)
 [start=7]
 . Identify a packet in the panel that uses a protocol that you do not recognize. What protocol does it use? Use your Internet skills to find more information on that protocol. What is it used for?
 . Identify one section from the Packet Details pane that has data you don't recognize. What is the packet doing, and what does that data refer to?
