@@ -216,9 +216,13 @@ Save your changes and exit. Restart Apache. Return to the browser and again try:
 
 This time, it should load your index.html file, thanks to the Speling module.
 
-=== Step 7: Load and Start Your Own Module. This Counts as your Additional Contribution.
+=== Step 7: Load and Start Your Own Module. This Counts as your Additional Contribution (2 points for this lab)
 
 Look at the available modules in `/etc/apache2/mods-available`. Find one that is not currently enabled, learn what it does, and enable it. This will count as the "experimentation" step of the lab.
+
+In particular, I'm asking you to look at one of two of the more complex modules: Dav or SSL. Dav is old school. It's a file structure module that will allow you to use Apache as a file management utility. SSL is old school too but used sort of a lot on the Internet. Even in 2020. I'll be talking more about SSL. 
+
+In both cases, you are going to have to do some research. You are going to have to do some experimentation. This is how this course is going to be begin to transition a bit from showing nearly all parts to showing enough of the parts so you have tools to continue an investigation. 
 
 === Other issues
 
