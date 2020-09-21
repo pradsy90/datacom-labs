@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.provision "shell", inline: "echo Starting alice and bob"
+  config.vm.provision "shell", inline: "echo Starting alice and bob virtual machines"
   
   config.vm.define "alice" do |alice|
     alice.vm.box = "ubuntu/Trusty64"
