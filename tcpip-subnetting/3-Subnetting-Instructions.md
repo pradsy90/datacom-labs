@@ -90,7 +90,7 @@ In this section, you will have the opportunity to test what happens when compute
 
 Alice and Bob are currently on the same subnetwork, or subnet. Machines on the same subnet can communicate with each other directly. Communicating with machines outside of the subnet requires that communication to be *routed* to the appropriate network using a router.
 
-* On Bob, run `bob$ sudo ifconfig eth1 192.168.200.45` to change the IP address. Note that this command will place the computer in a different subnet.
+* On Bob, run `bob$ sudo ifconfig eth1 192.168.200.` to change the IP address. Note that this command will place the computer in a different subnet.
     * The command `sudo` is used here to run the command with "root" permissions. The root account in Linux is basically the administrator account that is allowed to make changes. Often, you can run commands that display information without elevated privileges, but to make changes, you must run commands as root by prefixing them with `sudo`.
     * Note that the same command (`ifconfig`) that you used to print network configuration can also be used to modify the network configuration.
 * On Bob, run `bob$ ifconfig` and verify that the IP address was modified.
