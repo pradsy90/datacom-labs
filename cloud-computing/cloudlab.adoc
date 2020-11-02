@@ -9,9 +9,9 @@ image::IMG1.png[AWS Dashboard]
 
 You will set up a virtual server in this lab via the following:
 
-* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine (instance) in the AWS environment. 
+* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine (instance) in the AWS environment.
 
-<br><br>
+    
 
 .AMI Choice
 image::IMG2.png[AMI Choice]
