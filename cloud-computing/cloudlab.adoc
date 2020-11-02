@@ -97,22 +97,26 @@ image::IMG10.png[Create Key Pair]
 
 You can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, also name your machine. 
 
-.Key Pair
-image::IMG11.png[Key Pair]
+.View Instances
+image::IMG11.png[View Instances]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG12.png[Key Pair]
+On the instances dashboard, you will first see only one new instance. REPEAT ALL THE STEPS to create a second instance that is on the same subnet and uses the same security group. 
+
+.Create Second Identical Instance
+image::IMG12.png[Create Second Identical Instance]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG13.png[Key Pair]
+This screen shows you how you can simply assign the second computer to an existing security group. You created this exisiting security group when you created the first instance. 
+
+.Assigning to the Same Security Group 
+image::IMG13.png[Assigning to the Same Security Group ]
 
 &nbsp;
 ************************************************************
