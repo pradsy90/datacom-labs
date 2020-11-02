@@ -172,8 +172,15 @@ Finally, try pinging between machines again. Also try pinging from your own pers
 .Ping #2
 image::IMG20.png[Ping #2]
 
+&nbsp;
+************************************************************
+&nbsp;
+
+
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
-* Explain what is going on resource-wise in this lab. How are resources currently being distributed and managed? Are you an administrator? Could you provide a virtual server for a friend or colleague? 
+* Explain what is going on resource-wise in this lab. 
+* If the second machine was on a different subnet, what would have happened with the pings? 
+* When setting up the subnets, there was a field called VPC. What is VPC? 
 
