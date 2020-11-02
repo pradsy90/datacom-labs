@@ -23,10 +23,10 @@ Click the Launch Instance button
 ************************************************************
 &nbsp;
 
-Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
+Choose the first Amazon AMI. This is a distribution of Linux specific to Amazon. 
 
-.Choose AMI
-image::IMG3.png[Choose AMI]
+.Choose Amazon AMI
+image::IMG3.png[Choose Amazon AMI]
 
 &nbsp;
 ************************************************************
@@ -37,7 +37,11 @@ You have many options for the size of your virtual machine. Choose the t2.micro 
 .Instance Details 
 image::IMG4.png[Instance Details]
 
-* Configure Details -- Notice the choices under subnet. Choose a specific subnet and write down the name of the subnet becasue you will be creating another virtual machine and you will be placing it in the same subnet --> and click Next. 
+&nbsp;
+************************************************************
+&nbsp;
+
+Configure Details -- Notice the choices under subnet. Choose a specific subnet and write down the name of the subnet becasue you will be creating another virtual machine and you will be placing it in the same subnet --> and click Next. 
 
 .Storage
 image::IMG5.png[Storage]
