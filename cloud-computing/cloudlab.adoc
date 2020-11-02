@@ -43,8 +43,12 @@ image::IMG4.png[Instance Details]
 
 Configure Details -- Notice the choices under subnet. Choose a specific subnet and write down the name of the subnet becasue you will be creating another virtual machine and you will be placing it in the same subnet --> and click Next. 
 
-.Storage
-image::IMG5.png[Storage]
+.Subnet
+image::IMG5.png[Subnet]
+
+&nbsp;
+************************************************************
+&nbsp;
 
 * Storage -- Leave the defaults and click Next. 
 
