@@ -88,71 +88,81 @@ image::IMG9.png[Launch]
 
 Create a new key pair and enter your name for the key pair and download them. Then Click Launch!!
 
-.Instances
-image::IMG10.png[Instances]
+.Create Key Pair
+image::IMG10.png[Create Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
 
 You can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, also name your machine. 
 
+.Key Pair
+image::IMG11.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
 
 .Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
-.Key Pair
-image::IMG9.png[Key Pair]
+image::IMG12.png[Key Pair]
 
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG13.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG14.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG15.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG16.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG17.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG18.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+.Key Pair
+image::IMG19.png[Key Pair]
+
+&nbsp;
+************************************************************
+&nbsp;
 
 .EC2 Dashboard
-image::IMG10.png[EC2 Dashboard]
+image::IMG20.png[EC2 Dashboard]
 
-* On the dashboard, note your public IP address below. You will need this to access your machine. Note that this IP address will change every time the server is restarted. Now that you have your server running, you have your pem key, and you have your IP address, you can login to your EC2 machine. 
-
-ON MAC
-Use your terminal/command tool to navigate to the folder where your pem key is: 
-
-`$ chmod 400 YourName.pem`
-
-Login to the EC2 instance 
-> ssh -i "YourName.pem" ec2-user@your.ip.address.here
-
-ON WINDOWS
-Download Putty and PuttyGen. Using PuttyGen you have to convert the pem key that you have to a ppk key that Putty will understand. There is a tutorial provided from Amazon here: 
-
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html 
-
-Once you have converted your key to a ppk key, open Putty and in the hostname/address type exactly this: 
-
-ec2-user@your.ip.address
-
-Scroll down to connection-SSH-auth and browse to your newly created ppk key. 
-
-.Putty
-image::IMG11.png[Putty]
-
-* Before you click Open, you should scroll back up to Terminal and name and save your connection so you don’t have to locate your ppk key every time. Click Open. Whether on a Mac or Windows, you are now logged on: 
-
-.EC2 SSH
-image::IMG12.png[EC2 SSH]
-
-* Now that you are on your AWS cloud instance, you will revisit few of your prior labs. We are going revisit the Apache Web Server lab. Install the Apache Web Server and run the server on port 80. Note that Amazon Linux uses the ‘sudo yum install httpd’ command and not ‘apt install apache2’ as we have been doing with Ubuntu. 
-
-1)	Install the Apache web server and run the server on port 80
-3)  Run -- sudo service httpd start -- to start the server
-2)	Show the default home page of the server (include your IP address in the status bar so I can see it align with your AWS dashboard IP address)
-
-* Modify an Apache index.html web page (/var/www) and take a picture of that new page and include that as well. 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
