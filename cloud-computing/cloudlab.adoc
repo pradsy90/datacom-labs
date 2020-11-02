@@ -14,10 +14,6 @@ image::IMG1.png[AWS Dashboard]
 
 You will set up a virtual server in this lab via the following:
 
-&nbsp;
-************************************************************
-&nbsp;
-
 .Launch Instance
 image::IMG2.png[Launch Instance]
 
