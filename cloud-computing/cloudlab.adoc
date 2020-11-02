@@ -18,8 +18,14 @@ You will set up a virtual server in this lab via the following:
 ************************************************************
 &nbsp;
 
-.AMI Choice
-image::IMG2.png[AMI Choice]
+.Launch Instance
+image::IMG2.png[Launch Instance]
+
+Click the Launch Instance button
+
+&nbsp;
+************************************************************
+&nbsp;
 
 * Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
 
