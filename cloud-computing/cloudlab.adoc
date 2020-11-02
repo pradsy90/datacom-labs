@@ -39,7 +39,7 @@ image::IMG6.png[Tags]
 .Security Group
 image::IMG7.png[Security Group]
 
-* For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch
+* For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch. 
 
 .Review
 image::IMG8.png[Review]
@@ -49,7 +49,33 @@ image::IMG8.png[Review]
 .Key Pair
 image::IMG9.png[Key Pair]
 
-* Create a new key pair and enter your name for the key pair and download them. Once you do this, you can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, also name your machine. 
+* Create a new key pair and enter your name for the key pair and download them. Then Click Launch!!
+
+.Instances
+image::IMG10.png[Instances]
+
+You can return to my EC2 Dashboard and find your machine running (you can identify via the key that you just created in the Key Column). In the name column, also name your machine. 
+
+
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+.Key Pair
+image::IMG9.png[Key Pair]
+
 
 .EC2 Dashboard
 image::IMG10.png[EC2 Dashboard]
