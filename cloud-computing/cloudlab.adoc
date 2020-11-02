@@ -140,36 +140,37 @@ image::IMG15.png[First Ping Doesn't Work]
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG16.png[Key Pair]
+To fix this, return to your EC2 dashboard and either click on an instance or click on the security group link on the left navigation bar. These screens show the first route. Clicking on an instance will enable you to click on the Security tab. Click on the security group. 
+
+.Security Group
+image::IMG17.png[Security Group]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG17.png[Key Pair]
+Once in the security group, you can Edit Inbound Rules. The reason that we couldn't ping is because we didn't enable the ping protocol. Let's do that. 
+
+.Edit Inbound Rules
+image::IMG18.png[Edit Inbound Rules]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG18.png[Key Pair]
+Add a rule. Select ICMP. From Anywhere. Save the Rule. 
+
+.Add ICMP
+image::IMG19.png[Add ICMP]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG19.png[Key Pair]
+Finally, try pinging between machines again. Also try pinging from your own personal machine. What are the results? 
 
-&nbsp;
-************************************************************
-&nbsp;
-
-.EC2 Dashboard
-image::IMG20.png[EC2 Dashboard]
+.Ping #2
+image::IMG20.png[Ping #2]
 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
