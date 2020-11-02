@@ -23,12 +23,16 @@ Click the Launch Instance button
 ************************************************************
 &nbsp;
 
-* Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
+Choose the first Amazon API. This is a distribution of Linux specific to Amazon. 
 
-.Instance Type
-image::IMG3.png[Instance Type]
+.Choose AMI
+image::IMG3.png[Choose AMI]
 
-* You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
+&nbsp;
+************************************************************
+&nbsp;
+
+You have many options for the size of your virtual machine. Choose the t2.micro free tier and click Next. 
 
 .Instance Details 
 image::IMG4.png[Instance Details]
