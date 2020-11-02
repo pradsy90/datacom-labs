@@ -50,20 +50,32 @@ image::IMG5.png[Subnet]
 ************************************************************
 &nbsp;
 
-* Storage -- Leave the defaults and click Next. 
+Storage -- Leave the defaults and click Next. 
+
+.Storage
+image::IMG6.png[Storage]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+Tags -- Leave the defaults and click Next. 
 
 .Tags
-image::IMG6.png[Tags]
+image::IMG7.png[Tags]
 
-* Tags -- Leave the defaults and click Next. 
+&nbsp;
+************************************************************
+&nbsp;
 
-.Security Group
-image::IMG7.png[Security Group]
+For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch. 
 
-* For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch. 
+.Security
+image::IMG8.png[Security]
 
-.Review
-image::IMG8.png[Review]
+&nbsp;
+************************************************************
+&nbsp;
 
 * When you click Launch, you are asked to Create/Choose/Select a key pair. 
 
