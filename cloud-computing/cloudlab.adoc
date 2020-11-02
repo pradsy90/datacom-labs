@@ -122,15 +122,19 @@ image::IMG13.png[Assigning to the Same Security Group ]
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG14.png[Key Pair]
+Great job!! You've created to virtual machines in AWS using a variety of different tools. Now copy your Public IP address or your public IPv4 DNS. You will use these to SSH into both of your running machines. I showed how to do this in earlier class videos ;) 
+
+.Copy Connection Information
+image::IMG14.png[Copy Connection Information]
 
 &nbsp;
 ************************************************************
 &nbsp;
 
-.Key Pair
-image::IMG15.png[Key Pair]
+Once you have connected to both machines, trying pinging each other. Should this work? They are on the same subnets. 
+
+.First Ping Doesn't Work
+image::IMG15.png[First Ping Doesn't Work]
 
 &nbsp;
 ************************************************************
