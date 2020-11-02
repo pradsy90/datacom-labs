@@ -2,7 +2,7 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Your instructor will provide you with information to access AWS. When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. 
+This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Use your AWS Educate account (or your own personal account if that is the route you took). When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. 
 
 .AWS Dashboard
 image::IMG1.png[AWS Dashboard]
