@@ -77,12 +77,16 @@ image::IMG8.png[Security]
 ************************************************************
 &nbsp;
 
-* When you click Launch, you are asked to Create/Choose/Select a key pair. 
+On the review page, when you click Launch, you are asked to Create/Choose/Select a key pair. 
 
-.Key Pair
-image::IMG9.png[Key Pair]
+.Launch
+image::IMG9.png[Launch]
 
-* Create a new key pair and enter your name for the key pair and download them. Then Click Launch!!
+&nbsp;
+************************************************************
+&nbsp;
+
+Create a new key pair and enter your name for the key pair and download them. Then Click Launch!!
 
 .Instances
 image::IMG10.png[Instances]
