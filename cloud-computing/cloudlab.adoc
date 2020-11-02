@@ -2,14 +2,14 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Use your AWS Educate account (or your own personal account if that is the route you took). When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided. 
+This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Use your AWS Educate account (or your own personal account if that is the route you took). When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided via your account. 
 
 .AWS Dashboard
 image::IMG1.png[AWS Dashboard]
 
 You will set up a virtual server in this lab via the following:
 
-* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine in the AWS environment. 
+* On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine (instance) in the AWS environment. 
 
 .AMI Choice
 image::IMG2.png[AMI Choice]
@@ -24,7 +24,7 @@ image::IMG3.png[Instance Type]
 .Instance Details 
 image::IMG4.png[Instance Details]
 
-* Configure Details -- Leave the defaults and click Next. Note thought that this is where you can assign a particular subnet. 
+* Configure Details -- Notice the choices under subnet. Choose a specific subnet and write down the name of the subnet becasue you will be creating another virtual machine and you will be placing it in the same subnet --> and click Next. 
 
 .Storage
 image::IMG5.png[Storage]
@@ -39,12 +39,12 @@ image::IMG6.png[Tags]
 .Security Group
 image::IMG7.png[Security Group]
 
-* For Configure Security Group, set up a 3400 Security Group. This group will give you the ability to run HTTP and SSH traffic. Then click Review and Launch
+* For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch
 
 .Review
 image::IMG8.png[Review]
 
-* When you click Launch, you are asked to Choose/Select a key pair. 
+* When you click Launch, you are asked to Create/Choose/Select a key pair. 
 
 .Key Pair
 image::IMG9.png[Key Pair]
