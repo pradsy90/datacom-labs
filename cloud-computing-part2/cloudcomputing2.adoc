@@ -4,90 +4,96 @@ endif::[]
 
 This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, you will be setting up two machines and having them talk to (ping) each other. This isn't very difficult but along the way we will make a few observations as to the power you have as an AWS manager -- to both observe and set rules. 
 
-To begin, you are going to need to set up 2 virtual machines in the AWS environment. You do this in the exact same way that you did things last week. For each of your servers, create a unique key pair for Server 1 and for Server 2. 
+To start, login to your AWS Educate account and make sure you are in the N. Virginia region. This seems to be the region that gives us the resources we need. Locate the VPC services. There you will see VPCs along with other services in the VPC dashboard. 
 
-
-.EC2 Dashboard
-image::SelectServer.png[EC2 Dashboard]
-
-{nbsp} +
-{nbsp} +
- 
-
-.Instance Choice
-image::SelectServerType.png[Instance Choice]
+.VPC
+image::1.png[VPC]
 
 {nbsp} +
 {nbsp} +
  
+ Click on the VPCs link and from there click Create VPC
 
-The next part is going to be the most important part of setting up your server. You'll see that you can select the subnet that you put your server on. For Server 1, choose the first subnet on the list. For Server 2, select a different subnet. It doesn't matter which one, just make sure that the two are different. 
+.Create VPC
+image::2.png[Create VPC]
 
-.Select Subnet
-image::SelectSubnet.png[Select Subnet]
+{nbsp} +
+{nbsp} +
+ 
+From there, you will name your VPC. You can name it after yourself if you'd like. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
+
+.VPC Settings
+image::3.png[VPC Settings]
 
 {nbsp} +
 {nbsp} +
 
-Once you selected the subnet, set a new (uniquely named) security group for each of your machines, enabling ping (ICMP) from anywhere. This will allow the two machines to talk to each other even though they are different subnets. 
+Once you have created the VPC, you will need to create a subnet within that VPC. Click on the Subnets over on the left side, then click Create Subnet. 
 
-.Set Security Group
-image::SetUpDefineSecurityGroup.png[Set Security Group]
-
-{nbsp} +
-{nbsp} +
-
-
-After you've done this, keep the default setup and launch your machine. Again, create a unique key pair for each machine. Once you've launched the two machines (on different subnets), provide a picture of them in your EC2 dashboard that shows the two machines are on different subnets (Availability Zone). 
-
-.Two Machines
-image::ShowTwoMachinesTwoSubnets.png[TwoMachines]
+.Create Subnet
+image::4.png[Create Subnet]
 
 {nbsp} +
 {nbsp} +
 
-Once both are launched, login to them (via two terminal windows). Once you have logged in, ping each machine. You should have no trouble if you set everything up correctly. 
+In the create subnet screen fill out the appropriate details. In this case, you have to assign the subnet to the VPC that you just created. Also, In this example, the subnet is the size of the VPC (the blocks are the same size). 
 
-.Login
-image::LoginToEach.png[Login]
-
-{nbsp} +
-{nbsp} +
-
-.Ping
-image::PingEach.png[Ping]
+.Subnet Details
+image::5.png[Subnet Details]
 
 {nbsp} +
 {nbsp} +
 
-Once you have successfully pinged the machines, go back to your EC2 dashboard and view your running instances. At the bottom, click the Monitoring tab. This shows you some administrative insight on the work your machines are doing. There is not going to be much here because we are only using these machines for pinging but Monitoring is a great way to see server load. 
+Now let's create a route. The route will define where traffic can and can't flow in the VPC/subnet. Click Route Tables on the left side and then click Create route table. 
 
-.Monitoring
-image::CloudWatch.png[Monitoring]
-
-{nbsp} +
-{nbsp} +
-
-All right, now we are going to isolate one of the servers from the other. To do this, we are going to modify the inbound security rules that you set earlier. First, we have to note one of the security groups that one of the servers is associated with. Again, you should have two different security groups, one for each server. You'll see the assigned security group over on the right hand side of this picture (security group column). 
-
-.Identify Security Group
-image::IdentifySecurityGroup.png[Identify Security Group]
+.Create Route Table
+image::6.png[Create Route Table]
 
 {nbsp} +
 {nbsp} +
 
-Once you've identified one of the security groups, note it down as this is the one we are going to change. Back at the EC2 Dashboard, on the left side, you'll see Security Groups under Network & Security. Click it. 
+Like the subnet, you assign the route table to a VPC (whatever you named yours). Pretty easy. 
 
-.Security Groups Link
-image::SeeSecurityGroups.png[Security Groups Link]
+.Route Table Details
+image::7.png[Route Table Details]
 
 {nbsp} +
 {nbsp} +
 
-From there, select the security group you are going to modify in order to restrict access across subnets. 
+At this point, your VPC is starting to get a bit of robustness associated with it. It has a name. It has a subnet. It has a route table. Growing up! Now we need to estabish an Internet Gatewary for your VPC -- so it can go on the internet. Click on Internet Gateways on the left and then click Create Internet Gateway. 
 
-.Select Security Group to Modify
-image::SelectOneSecurityGroup.png[Select Security Group to Modify]
+.Internet Gateway
+image::8.png[Internet Gateway]
+
+{nbsp} +
+{nbsp} +
+
+Name the Internet Gateway and click Create! 
+
+.Internet Gateway Details
+image::9.png[Internet Gateway Details]
+
+{nbsp} +
+{nbsp} +
+
+SUPER IMPORTANT!!! Once you create the gateway, the next screen will ask if you would like to associate the gateway with a VPC (green bar at the top). You must do this -- associating it with your newly created VPC. 
+
+.Associate Internet Gateway with VPCa
+image::9a.png[Associate Internet Gateway with VPCa]
+
+.Associate Internet Gateway with VPCb
+image::9b.png[Associate Internet Gateway with VPCb]
+
+{nbsp} +
+{nbsp} +
+
+Now return to your Route Table and add the newly created Internet Gateway. 
+
+.Add IG
+image::10.png[Add IG]
+
+.Add IGa
+image::11.png[Add IGa]
 
 {nbsp} +
 {nbsp} +
