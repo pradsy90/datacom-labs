@@ -81,6 +81,9 @@ SUPER IMPORTANT!!! Once you create the gateway, the next screen will ask if you 
 .Associate Internet Gateway with VPCa
 image::9a.png[Associate Internet Gateway with VPCa]
 
+{nbsp} +
+{nbsp} +
+
 .Associate Internet Gateway with VPCb
 image::9b.png[Associate Internet Gateway with VPCb]
 
@@ -91,6 +94,9 @@ Now return to your Route Table and add the newly created Internet Gateway.
 
 .Add IG
 image::10.png[Add IG]
+
+{nbsp} +
+{nbsp} +
 
 .Add IGa
 image::11.png[Add IGa]
