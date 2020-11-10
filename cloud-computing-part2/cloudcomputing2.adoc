@@ -78,75 +78,97 @@ image::9.png[Internet Gateway Details]
 
 SUPER IMPORTANT!!! Once you create the gateway, the next screen will ask if you would like to associate the gateway with a VPC (green bar at the top). You must do this -- associating it with your newly created VPC. 
 
-.Associate Internet Gateway with VPCa
-image::9a.png[Associate Internet Gateway with VPCa]
+.Associate Internet Gateway with VPC
+image::9a.png[Associate Internet Gateway with VPC]
 
 {nbsp} +
 {nbsp} +
 
-.Associate Internet Gateway with VPCb
-image::9b.png[Associate Internet Gateway with VPCb]
+.Associate Internet Gateway with VPC
+image::9b.png[Associate Internet Gateway with VPC]
 
 {nbsp} +
 {nbsp} +
 
 Now return to your Route Table and add the newly created Internet Gateway. 
 
-.Add IG
-image::10.png[Add IG]
+.Add Internet Gateway to Route Table
+image::10.png[Add Internet Gateway]
 
 {nbsp} +
 {nbsp} +
 
-.Add IGa
-image::11.png[Add IGa]
+.Add Internet Gateway to Route Table
+image::11.png[Add Internet Gateway]
 
 {nbsp} +
 {nbsp} +
 
-After clicking the security group you are going to modify, click "Edit Inbound Rules". This will enable us to restrict what is coming into the server. 
+We're now ready to create the Peering Connection! Click Peering Connections on the left and then Create peeting connection on the top. The large numbers you see there are the things you are going to need to set up the peering conneciton with your professor. 
 
-.See Current Rules
-image::SeeCurrentSecurityRules.png[See Current Rules]
-
-{nbsp} +
-{nbsp} +
-
-.Edit Rules
-image::EditRules.png[Edit Rules]
+.Create Peering Connection
+image::12.png[Create Peering Connection]
 
 {nbsp} +
 {nbsp} +
 
-From there, you will modify the rule (simply click in the search box) to select the rule 0.0.0.0/32. Delete any additional ICMP rules. Make sure you don't delete your SSH rule. 
+Here are the details of the Create Peering Connection page. These should be pretty straightforward. Basically, you are connecting your VPC to the professor's VPC. The details in the bottom must be exactly as they are in this picture
 
-.Only CIDR 32
-image::OnlyCIDR32.png[Only CIDR 32]
-
-{nbsp} +
-{nbsp} +
-
-Go back to your terminals and show me that one of the machines can no longer be pinged (restricting pings only to the subnet). 
-
-.BlockedPing
-image:BlockedPing.png[BlockedPing]
+.Peering Details
+image::13.png[Peering Details]
 
 {nbsp} +
 {nbsp} +
 
-Finally, go back to your EC2 Dashboard and click on the Key Pairs under Network & Security to show me the two key pairs you made for this lab. 
+A little clean-up here at the end. 1) Add the newly created Peering Connection to your list of routes and 2) ensure that your route table is aligned with your subnet. 
 
-.Key Pairs
-image::KeyPairs.png[Key Pairs]
+.Add Peering Connection to Routes
+image::14.png[Add Peering Connection to Routes]
 
 {nbsp} +
 {nbsp} +
 
-Finally, finally... Go ahead and stop (or terminate) your servers. Also, if you are interested, take a look at your total AWS credits. You should see that they have barely been touched. 
+.Add Peering Connection to Routes
+image::15.png[Add Peering Connection to Routes]
+
+{nbsp} +
+{nbsp} +
+
+.Associate Route Table with Subnet
+image::16.png[Associate Route Table with Subnet]
+
+{nbsp} +
+{nbsp} +
+
+.Associate Route Table with Subnet
+image::17.png[Associate Route Table with Subnet]
+
+{nbsp} +
+{nbsp} +
+
+At this you are really done. You just need to wait for me. On my end, I will see your peering request. I'll do my best to monitor things to accept your requests but it is quite possible that things will timeout (if you do this work at 2am -- send me the request -- and I don't see it until hours later). That's okay as our schedules may be totally off. 
+
+.See Peering Request
+image:18.png[BlockedPing]
+
+{nbsp} +
+{nbsp} +
+
+If (when) I accept your peering request, you will see it as Active. If I don't accept your request in time, sorry as I may not have been monitoring things super closely. If that's the case, you'll see a red status marker and it'll say something like timeout. That's okay -- take a picture anyway. 
+
+.Seeing Peering Connection
+image::19.png[Seeing Peering Connection]
+
+{nbsp} +
+{nbsp} +
+
+That's it. You can stop your services if you'd like. The goal is to get you to see that we can move towards shared resources between you and me. There is more to this story and it is in the video and slides. Once the peering is established, we can talk with one and other on our local networks. There is a bit more work to do on this but it's only a few steps away. Establishing peering is really the key. You have a VPC. I have a VPC. Through peering we can share resources. 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
 
-* Why did CIDR/32 work in this case? What is the block of numbers that could have pinged the machine with the modified inbound rule? 
+* Why would someone set up peering? 
 
-* Now that you've seen a bit more of the Amazon AWS interface, describe some of the administrative power that you would have if you were using this technology to manage servers for people in your organizaion. 
+* When setting up your route table, why did you have to set up the three different entries? 
+
+* Why does the route table need to be associated with the subnet? 
 
