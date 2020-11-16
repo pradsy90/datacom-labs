@@ -16,7 +16,7 @@ image::1.png[DockerContainers]
 {nbsp} +
 {nbsp} +
 
-We are going to be setting up a Docker environment in AWS. So, like your last two labs, go ahead and setup an AWS instance that we can use for this lab. The one thing to note in this setup is that you need to setup a security group that enables SSH, HTTP, and TCP with port 8080. Everything else can stay with the default settings. You only need one instance running, mine is showing two -- just for my own practice purposes. 
+We are going to be setting up a Docker environment in AWS. So, like your last labs, go ahead and setup an AWS instance that we can use for this lab. The one thing to note in this setup is that you need to setup a security group that enables SSH, HTTP, and TCP with port 8080. Everything else can stay with the default settings. You only need one instance running, mine is showing two -- just for my own practice purposes. 
 
 .Set Security Group
 image::2.png[Set Security Group]
@@ -62,7 +62,7 @@ Now type:
 
 You should see the hello-world image in the list. 
 
-But what else is available? Go and check out Docker Hub (https://hub.docker.com/search?type=image). You can search for Apache (yes, well just keep sticking with a known application for simplicity sake but you could substitute Apache for any other container). 
+But what else is available? Go and check out Docker Hub (https://hub.docker.com/search?type=image). You can search for Apache (let's just stick with a known application for simplicity sake but you could substitute Apache for any other container). 
 
 .ApacheOnDockerHub
 image::6.png[ApacheOnDockerHub]
