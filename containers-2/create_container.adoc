@@ -66,7 +66,39 @@ You should see the helloword results! Nicely done. You can view the container wi
 
 > sudo docker ps -a
 
-Finally, do the following (1) Modify your helloworld.py file to say some additional things, (2) Run your Docker container again (you'll see no change in your updated Python script), (3) rebuild your container with the build statement above, (4) rerun your container and you'll see the changes reflected
+Now, let's push your new Docker container to Docker Hub. Similar to what you did in the last assignment (you pulled from Docker Hub), you can now take your Python script and push it to Docker Hub so that others could download (pull) it to their local Docker setup. The first thing we need to do is go to Docker Hub (you'll need to create an account) and setup a repository where you can push your Python script. First, you need to get your IMAGE ID. You can do this with the following command:
+
+> sudo docker images
+
+This will show you all your containters but most importanly the IMAGE ID that you will need to tag your container. Save this for just a bit later. 
+
+Now, go to Docker Hub on the Internet. Create an account if you haven't already. It is within this account that we will push your Python script. If you haven't used Docker Hub before, it won't show any repositories. 
+
+IMAGE HERE
+
+You will need to create a repository that you can push your Python script to. Name this the same name as what you named your container. This should be a public repository. 
+
+IMAGE HERE
+
+You can then click on the repositry. There won't be anything in it but it'll show you the command to push things. This is the grey box in the upper right. 
+
+IMAGE HERE
+
+Now you are all set on Docker Hub to which you can push your container. Return to your AWS instance to push the container. From here, tag your container so that it is inline with your Docker Hub account and repository
+
+> sudo docker tag YOURIMAGEID YourDockerHubName/YourRepository:latest
+
+Make sure you are logged in: 
+
+> sudo docker login 
+
+Enter your Docker Hub credentials. Then push! 
+
+> sudo docker push YourDockerHubName/YourRepository:latest
+
+Head over to Docker Hub and you should see that there is now code in your repository. It is this code that you (or anyone else) could pull down to run your container on their own local system. 
+
+Finally, do the following (1) Modify your helloworld.py file to say some additional things, (2) Run your Docker container again (you'll see no change in your updated Python script), (3) rebuild your container with the build statement above, (4) rerun and repush your container and you'll see the changes reflected both locally and on Docker Hub. 
 
 
 QUESTION TO CONSIDER FOR THE FINAL: 
