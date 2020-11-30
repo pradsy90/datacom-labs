@@ -56,11 +56,11 @@ Now, back at the command line, make sure that the Dockerfile is executable with 
 
 Now, let's build the container with: 
 
-> sudo docker build -t infrastructure .
+> sudo docker build -t classtest .
 
 You can now run the applicaiton in the Docker container: 
 
-> sudo docker run infrastructure
+> sudo docker run classtest
 
 You should see the helloword results! Nicely done. You can view the container with: 
 
