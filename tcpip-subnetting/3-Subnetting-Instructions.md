@@ -112,6 +112,3 @@ After submitting your work, you can destroy any boxes you used.
 * Run "`$ exit`" on Bob and Alice to leave the SSH sessions.
 * Run "`> vagrant destroy`" to turn off the machines and delete them completely. Answer "y" to confirm deletion.
 
-### Step 6: Questions you MUST answer per this very straightforward lab
-
-https://github.com/germonprez/datacom-labs/blob/develop/tcpip-subnetting/3-Subnetting-Submission.md
