@@ -145,18 +145,3 @@ If you are receiving this error, you need to get SSH installed on your machine a
 === Other issues
 
 It is possible that you have other issues as you try to use Vagrant and VirtualBox together.  Keep a close eye out for any error messages along the way.  If you see an error message, stop working on the lab and figure out how to fix that error before moving on. 
-
-== Thought Questions (No Need to Answer for the Lab)
-=== Basics
-. What is virtualization?
-. What does Vagrant do for us in this lab?
-. What is the command to set up a virtual machine using Vagrant?
-. What is the command to start a virtual machine using Vagrant?
-. Is your virtual machine shut down now?
-
-=== Do some research
-[start=6]
-. SSH is not the only technology we can use to access a remote machine. An older alternative is a program called `telnet`. What advantages does SSH have over telnet?
-. What are some ways virtualization is used in the real world (outside of this lab)?
-. Go to https://app.vagrantup.com/boxes/search and look at the list of pre-created Vagrant boxes. Create a new VM with a different box on your machine. Are there any differences you can tell?
-. Open the Vagrantfile that was created when you typed `vagrant init ubuntu/xenial64`. All lines in that file that start with `#` are comments. There may only be 2 or 3 lines in the entire file not commented out. What do you think the Vagrantfile does?
