@@ -112,3 +112,7 @@ After submitting your work, you can destroy any boxes you used.
 * Run "`$ exit`" on Bob and Alice to leave the SSH sessions.
 * Run "`> vagrant destroy`" to turn off the machines and delete them completely. Answer "y" to confirm deletion.
 
+### Attribtion
+
+The original version of this lab comes from: https://github.com/rschuetzler/datacom-labs
+
