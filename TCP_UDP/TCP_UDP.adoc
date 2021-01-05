@@ -195,4 +195,6 @@ regular command prompt.
 * Run "`> vagrant destroy`" to turn off the machines and delete them
 completely from your system. Answer "y" to confirm deletion.
 
+### Attribtion
 
+The original version of this lab comes from: https://github.com/rschuetzler/datacom-labs
