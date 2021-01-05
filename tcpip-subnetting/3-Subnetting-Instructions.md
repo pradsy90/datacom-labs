@@ -1,5 +1,5 @@
 
-Exercise: Subnetting
+Subnetting
 ==========================
 
 Like with cars, too much traffic causes congestion. Networks can be segmented to separate traffic. The segments are called subnetworks, or subnets. The subnet is defined by a subnet mask. 
