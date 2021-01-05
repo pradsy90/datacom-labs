@@ -175,12 +175,3 @@ image::IMG20.png[Ping #2]
 &nbsp;
 ************************************************************
 &nbsp;
-
-
-
-QUESTION TO CONSIDER FOR THE FINAL: 
-
-* Explain what is going on resource-wise in this lab. 
-* If the second machine was on a different subnet, what would have happened with the pings? 
-* When setting up the subnets, there was a field called VPC. What is VPC? 
-
