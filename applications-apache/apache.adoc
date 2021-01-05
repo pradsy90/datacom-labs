@@ -226,16 +226,3 @@ In both cases, you are going to have to do some research. You are going to have 
 
 You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an up-close an personal view of web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
 
-== Thought Questions (No Need to Answer for the Lab)
-=== Basics
-. What is Apache?
-. What does Vagrant/VirtualBox do for us in this lab?
-. What is port forwarding with respect to the Vagrantfile?
-. What is the command to start/restart/stop Apache?
-. What is the relationship between a module and a directive?
-
-=== Do some research
-[start=6]
-. Apache is not the only web server. What are some other technologies in this space?
-. How often are you interacting with web servers in your day-to-day?
-. What happens if you type garbage in the apache2.config file and try to restart Apache?
