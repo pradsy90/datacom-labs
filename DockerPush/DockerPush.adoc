@@ -112,8 +112,3 @@ Head over to Docker Hub and you should see that there is now code in your reposi
 
 Finally, do the following (1) Modify your helloworld.py file to say some additional things, (2) Run your Docker container again (you'll see no change in your updated Python script), (3) rebuild your container with the build statement above, (4) rerun and repush your container and you'll see the changes reflected both locally and on Docker Hub. 
 
-
-QUESTION TO CONSIDER FOR THE FINAL: 
-
-* Why did you need to rebuild the container to see the local changes to your Python script? 
-
