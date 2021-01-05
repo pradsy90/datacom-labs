@@ -164,11 +164,3 @@ image::19.png[Seeing Peering Connection]
 
 That's it. You can stop your services if you'd like. The goal is to get you to see that we can move towards shared resources between you and me. There is more to this story and it is in the video and slides. Once the peering is established, we can talk with one and other on our local networks. There is a bit more work to do on this but it's only a few steps away. Establishing peering is really the key. You have a VPC. I have a VPC. Through peering we can share resources. 
 
-QUESTION TO CONSIDER FOR THE FINAL: 
-
-* Why would someone set up peering? 
-
-* When setting up your route table, why did you have to set up the three different entries? 
-
-* Why does the route table need to be associated with the subnet? 
-
