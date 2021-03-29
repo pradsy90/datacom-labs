@@ -15,7 +15,10 @@ image::1.png[VPC]
  Click on the VPCs link and from there click Create VPC
 
 .Create VPC
-image::2.png[Create VPC]
+image::2a.png[Create VPC]
+
+.Create VPC
+image::2b.png[Create VPCb]
 
 {nbsp} +
 {nbsp} +
@@ -23,7 +26,10 @@ image::2.png[Create VPC]
 From there, you will name your VPC. You can name it after yourself if you'd like. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
 
 .VPC Settings
-image::3.png[VPC Settings]
+image::3a.png[VPC Settings]
+
+.VPC Settings
+image::3b.png[VPC Settingsb]
 
 {nbsp} +
 {nbsp} +
