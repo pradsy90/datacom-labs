@@ -154,9 +154,6 @@ image::17.png[Associate Route Table with Subnet]
 
 At this you are really done. You just need to wait for me. On my end, I will see your peering request. I'll do my best to monitor things to accept your requests but it is quite possible that things will timeout (if you do this work at 2am -- send me the request -- and I don't see it until hours later). That's okay as our schedules may be totally off. 
 
-.See Peering Request
-image:18.png[BlockedPing]
-
 {nbsp} +
 {nbsp} +
 
