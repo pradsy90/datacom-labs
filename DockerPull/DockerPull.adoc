@@ -16,7 +16,7 @@ image::1.png[DockerContainers]
 {nbsp} +
 {nbsp} +
 
-We are going to be setting up a Docker environment in AWS. For this lab, I have sent you your own private IP address and key that you will use for the lab. You will not set up your own server. The server that I shared with you has all the necessary security settings needed for this lab. 
+We are going to be setting up a Docker environment in AWS. For this lab, simply launch a new EC2 server instance (like in our prior labs). You will be using this virtual machine to do your Docker work. 
 
 {nbsp} +
 {nbsp} +
