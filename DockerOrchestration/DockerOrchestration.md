@@ -56,7 +56,7 @@ This will create the Manager node of the Docker swarm. Once you do this, it'll s
 
 Copy this entire docker swarm join --token statement down somewhere. You'll need it to join your two other Worker machines to the swarm. So, let's do this. Go to the terminal window of your two other machines. These are going to be the Worker machines in this orchestrated system. On each machine, type/paste: 
 
-> docker swarm join --token (SOME LONG LIST OF STUFF)
+> sudo docker swarm join --token (SOME LONG LIST OF STUFF)
 
 It should tell you in both cases that you have successfully joined the Docker Swarm. Great job!! We now have three machines that are part of a Docker Swarm. One Manager and Two Workers. What we can do now is deploy containers at the manager level and they will be 'picked up' and run by the workers. So let's do that. 
 
@@ -64,7 +64,86 @@ Bring up the terminal of your Manager machine. Type:
 
 > sudo docker node ls 
 
-This should show you three nodes. One Manager (Leader) and two Workers. You can have many, many more worker nodes but two is fine in our case. 
+This should show you three nodes. One Manager (Leader) and two Workers. You can have many, many more worker nodes but two is fine in our case. Now on the manager type: 
+
+> sudo docker service ls 
+
+This should be empty as we haven't deployed any services in our swarm. Now type: 
+
+> sudo docker ps 
+
+This should also be empty as we don't have any containers in our swarm. Let's fix both of these things! Type: 
+
+> sudo docker service create --name new-service --mode global -p 80:80 httpd:latest
+
+All right, there is a lot going on here. First of all, we are creating a new service named 'new-service'. This new service will be deployed globally in our swarm (all three nodes) and we are downloading the Apache server (httpd:latest) to be run on all nodes in the swarm on port 80. Now if you run on your Manager: 
+
+> sudo docker service ls 
+
+and 
+
+> sudo docker ps 
+
+You should see something a bit more. Now open the terminals of your worker nodes. Type: 
+
+> sudo docker ps 
+
+You should see the deployed container (as specified by the Manager). Cool!!
+
+.WorkerContainer
+image::5.png[WorkerContainer]
+
+{nbsp} +
+{nbsp} +
+
+What's perhaps even cooler is that the Apache web server is now up and running on all of your nodes (Manager and Both Workers). Check it out by going to each server's IP address on the web. Get the public IP from AWS and pasted it into your browser: 
+
+.GetIP
+image::6.png[GetIP]
+
+{nbsp} +
+{nbsp} +
+
+.WebPage
+image::7.png[WebPage]
+
+{nbsp} +
+{nbsp} +
+
+Check it out on all three machines. Now, you see that Docker Swarm can help with the global deployment of servers and one of the very cool things that this helps enable is that if an application relies on the Apache Web Server (as many do), if one of the Worker nodes goes down, the others are up. Services can be shifted seamlessly to new (up) nodes so that a client never sees any downtime. Further, while a container on a node is down, the Manager can detect this and restart or redeploy the container to the down worker, rebuilding the cluster quickly. Let's take a look at this as our final step. 
+
+Pick one of your worker nodes and go to that terminal. Type: 
+
+> sudo docker ps
+
+and copy the container ID. It's the leftmost string of characters and numbers. Now we are going to kill that Worker node container -- simulating the loss of the container. Type: 
+
+> sudo docker rm -f (ID THAT YOU COPIED DOWN)
+
+Do another quick: 
+
+> sudo docker ps
+
+You'll see that the container is gone. Give it a second and type it again: 
+
+> sudo docker ps
+
+You'll see that the Manager node redeployed the container to that Worker. Nice. Keeping the cluser up and running in a good state. 
+
+You're done with this intro to orchestration. You can keep your servers up in AWS. I might recommend that you stop each instance to perserve your credits as we will most likely pick this up for a bit more next week. 
+
+.StopInstances
+image::8.png[Stop Instances]
+
+{nbsp} +
+{nbsp} +
+
+I hope you learned a bit more about Docker today and how it can be used in a more complex arrangment than just pulling and pushing continers. 
+
+
+
+
+
 
 
 
