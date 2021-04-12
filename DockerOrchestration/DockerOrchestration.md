@@ -54,6 +54,20 @@ This will create the Manager node of the Docker swarm. Once you do this, it'll s
 
 - docker swarm join --token (SOME LONG LIST OF STUFF)
 
+Copy this entire docker swarm join --token statement down somewhere. You'll need it to join your two other Worker machines to the swarm. So, let's do this. Go to the terminal window of your two other machines. These are going to be the Worker machines in this orchestrated system. On each machine, type/paste: 
+
+> docker swarm join --token (SOME LONG LIST OF STUFF)
+
+It should tell you in both cases that you have successfully joined the Docker Swarm. Great job!! We now have three machines that are part of a Docker Swarm. One Manager and Two Workers. What we can do now is deploy containers at the manager level and they will be 'picked up' and run by the workers. So let's do that. 
+
+Bring up the terminal of your Manager machine. Type: 
+
+> sudo docker node ls 
+
+This should show you three nodes. One Manager (Leader) and two Workers. You can have many, many more worker nodes but two is fine in our case. 
+
+
+
 
 
 
