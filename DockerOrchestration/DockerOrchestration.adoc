@@ -7,7 +7,7 @@ For this lab, you will be deploying three AWS instances -- all with docker on th
 First, you are going to need to launch three (3) new AWS instances. 
 
 .AWS Instances
-image::1.png[AWS Instances]
+img::1.png[AWS Instances]
 
 {nbsp} +
 {nbsp} +
