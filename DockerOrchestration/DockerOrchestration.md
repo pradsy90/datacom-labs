@@ -38,13 +38,23 @@ image::4.png[Anywhere]
 
 (note: in my image, you are seeing the ports listed twice. This is just a residual of AWS. When you add each port (TCP and UDP), you will only need to add one line with the port type, port number, and 'anywhere')
 
-At this point, you should have three instances that are really all the same. We will differentiate them as Manager and two Workers next. 
+At this point, you should have three instances that are really all the same (they have different names in AWS and different keys but that's really it). We will differentiate them as Manager and two Workers next. 
 
 On all three of your instances, install and start Docker: 
 
 > sudo yum -y install docker 
 
 > sudo service docker start 
+
+Once you have installed and started Docker on each of them, go to the terminal that is the machine that you want to be the manager. First, we are going to create the Docker Swarm and have the other two Worker machines join the swarm. On the Manager terminal type: 
+
+> sudo docker swarm init --advertise-addr <<PUBLIC IPADDRESS FROM AWS>>
+
+This will create the Manager node of the Docker swarm. Once you do this, it'll show you a a Docker swarm join command that will look something like: 
+
+- docker swarm join --token <<SOME LONG LIST OF STUFF>>
+
+
 
 
 
