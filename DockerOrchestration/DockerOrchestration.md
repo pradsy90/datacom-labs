@@ -6,3 +6,42 @@ For this lab, you will be deploying three AWS instances -- all with docker on th
 
 First, you are going to need to launch three (3) new AWS instances. 
 
+.AWS Instances
+image::1.png[AWS Instances]
+
+{nbsp} +
+{nbsp} +
+
+For each of these instances, you are going to have to set up a pretty comprehensive set of ports to be able to demonstrate what we are trying to demonstrate. I would recommend that you first just set up your instances so that you can SSH into them. This is the default instance setting so you won't need to change or add any ports in your security settings. 
+
+Once you have all three machines launched and you can SSH into all three of them, go to each respective security group and from there, we can add a collection of inbound ports. You will have to do this for each of your three instances. 
+
+.Security Tab
+image::2.png[Security Tab]
+
+{nbsp} +
+{nbsp} +
+
+.Security Group
+image::3.png[Security Group]
+
+{nbsp} +
+{nbsp} +
+
+These ports ensure that we are able to set up the Docker Swarm. When you are adding ports, make sure to select 'anywhere' as the source. 
+
+.Anywhere
+image::4.png[Anywhere]
+
+{nbsp} +
+{nbsp} +
+
+(note: in my image, you are seeing the ports listed twice. This is just a residual of AWS. When you add each port (TCP and UDP), you will only need to add one line with the port type, port number, and 'anywhere')
+
+At this point, you should have three instances that are really all the same. We will differentiate them as Manager and two Workers next. 
+
+On all three of your instances, install and start Docker: 
+
+
+
+
