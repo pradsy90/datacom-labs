@@ -42,6 +42,10 @@ At this point, you should have three instances that are really all the same. We 
 
 On all three of your instances, install and start Docker: 
 
+> sudo yum -y install docker 
+
+> sudo service docker start 
+
 
 
 
