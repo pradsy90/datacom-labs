@@ -48,11 +48,11 @@ On all three of your instances, install and start Docker:
 
 Once you have installed and started Docker on each of them, go to the terminal that is the machine that you want to be the manager. First, we are going to create the Docker Swarm and have the other two Worker machines join the swarm. On the Manager terminal type: 
 
-> sudo docker swarm init --advertise-addr <<PUBLIC IPADDRESS FROM AWS>>
+> sudo docker swarm init --advertise-addr (YOUR PUBLIC IPADDRESS FROM AWS)
 
 This will create the Manager node of the Docker swarm. Once you do this, it'll show you a a Docker swarm join command that will look something like: 
 
-- docker swarm join --token <<SOME LONG LIST OF STUFF>>
+- docker swarm join --token (SOME LONG LIST OF STUFF)
 
 
 
