@@ -1,1 +1,80 @@
-Test
+ifndef::bound[]
+:imagesdir: img
+endif::[]
+
+# Overview 
+
+For this lab, we are going to very simply build from the work that we did last week. In short, we are going to use Docker Stacks to deploy applications across our swarm. It's really a way for use to manage multiple containers (unlike last week where we managed a single container). This can be very effective when deploying full applications across a swarm. If you have ever used docker compose, this is similar if not a bit more restricitve and a bit easier across a swarm. 
+
+For this lab, you will be using the three AWS instances from last week. If you turned them off, just restart them and make not of their new IP addresses. As this is nearly the last (second to last to be exact) assignment for you, I'm going to be leaving a few blanks in this write-up as you should be able to navigate what you need, either in AWS or on your terminal screens. 
+
+To start, login to your leader machine. I'm just using the sudo docker node ls command here but you can see my three machines to which one is the leader. 
+
+.Leader
+image::1.png[List of All Nodes]
+
+{nbsp} +
+{nbsp} +
+
+On the leader node, create a folder called something like dockerstack and in that folder create a file called docker-compose.yml. Use any editor you'd like. 
+
+> sudo nano docker-compose.yml
+
+It is in this file where we essentially create the stack of containers. The stack can be a group of applications that are pulled from Docker Hub or a local hub and distributed as a collection to the worker nodes. In this example, we are going to bring together a somewhat random collection of applications: Maven, Telegraph, and Consul. We will do this by building our .yml file with the following stack: 
+
+----
+version: "3"
+
+services:
+  consul:
+    image: consul
+    deploy:
+      replicas: 3
+  maven:
+    image: maven
+    deploy:
+      replicas: 3
+  telegrah:
+    image: telegraf
+    deploy:
+      replicas: 3
+----
+
+Once you've done this, save the file and then deploy the stack (not just a single container) across your swarm: 
+
+> sudo docker stack deploy -c docker-stack.yml testStack
+
+You should see the three containers being deployed. As these containers are pretty big (size-wise), they make take a while to even deploy on the leader node. Only then will they be distributed across the swarm. You can observe your stack and containers at the leader with: 
+
+> sudo docker stack ls
+
+.Stack
+image::2.png[List of Stack]
+
+{nbsp} +
+{nbsp} +
+
+You can also see your containers and services deployed with: 
+
+> sudo docker container ls
+
+and 
+
+> sudo docker service ls 
+
+Once, you checked things out on the leader, head over to one of your workers and do a: 
+
+> sudo docker container ls
+
+If you've waited long enough, you should see all of the containers from the leader now deployed on your worker. Again, this can take a bit of time as you have to first download the containers from Docker Hub and only then are they distributed to the swarm. 
+
+What I'd like you to do as a final step is to modify the .yml file, removing some containers and adding others. You could remove your current stack: 
+
+> sudo docker stack rm testStack 
+
+and then rebuild it with your modified .yml file. This shouldn't be too hard and you have the freedom to pick whichever containers you'd like off of Docker Hub. 
+
+This lab shouldn't take you too long and gives you a slightly deeper looking into some of the architecture that Docker can provide. 
+
+
+
