@@ -11,7 +11,9 @@ This lab will help you get oriented with Amazon Web Services. This will give you
 
 == Learning Objectives
 
-This lab is meant to get you to start interacting with your AWS Educate account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to Canvas. 
+This lab is meant to get you to start interacting with your AWS Educate account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to Canvas. '
+
+In each of these cases, you will perhaps need to do a little more research as to what the technologies are. In all cases, focus your description on what the technology is. Your answer certainly won't be perfect and we will learn more as we interact with the technologies throughout the semester. However, please make an attempt as to what you believe each technology to be -- either through the descriptions on AWS or as found elsewhere on the internet. 
 
 == Steps
 
