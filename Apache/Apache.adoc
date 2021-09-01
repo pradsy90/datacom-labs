@@ -1,6 +1,6 @@
 = Apache Web Server
 Matt Germonprez <germonprez@gmail.com>
-v1.1, Sept 18, 2018
+v1.2, Sept 1, 2021
 ifndef::bound[:imagesdir: figs]
 :source-highlighter: rouge
 :rouge-style: github
