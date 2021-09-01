@@ -13,5 +13,11 @@ This lab will help you get oriented with Amazon Web Services. This will give you
 
 This lab is meant to get you to start interacting with your AWS Educate account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to Canvas. 
 
+== Steps
+
+=== Step 1: Login to your AWS Account
+
+By this point, you have received an invitation from me to login to your AWS Educate account. From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the semester. For this step take a screen shot of your AWS Console page 
+
 
 
