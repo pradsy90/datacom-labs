@@ -19,5 +19,53 @@ This lab is meant to get you to start interacting with your AWS Educate account.
 
 By this point, you have received an invitation from me to login to your AWS Educate account. From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the semester. For this step take a screen shot of your AWS Console page 
 
+.Console
+image::1.png[Console]
+
+What do you see here? Do you recognize anything? 
+
+{nbsp} +
+{nbsp} +
+
+.EC2
+image::2.png[EC2]
+
+Describe what EC2 is in your own words
+
+{nbsp} +
+{nbsp} +
+
+.Amplify
+image::3.png[Amplify]
+
+Describe what Amplify is in your own words
+
+{nbsp} +
+{nbsp} +
+
+.Lamda
+image::4.png[Lamda]
+
+Describe what Lamda is in your own words
+
+{nbsp} +
+{nbsp} +
+
+.RDS
+image::5.png[RDS]
+
+Describe what RDS is in your own words
+
+{nbsp} +
+{nbsp} +
+
+.DynamoDB
+image::6.png[DynamoDB]
+
+Describe what DynamoDB is in your own words 
+
+{nbsp} +
+{nbsp} +
+
 
 
