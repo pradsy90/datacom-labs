@@ -1,7 +1,7 @@
 = Amazon Web Services
 Matt Germonprez <germonprez@gmail.com>
 v1.1, Sept 1, 2021
-ifndef::bound[:imagesdir: figs]
+ifndef::bound[:imagesdir: img]
 :source-highlighter: rouge
 :rouge-style: github
 :icons: font
