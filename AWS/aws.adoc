@@ -24,7 +24,7 @@ By this point, you have received an invitation from me to login to your AWS Educ
 .Console
 image::1.png[Console]
 
-What do you see here? Do you recognize anything? 
+What do you see here? Do you recognize any of the technologies? 
 
 {nbsp} +
 {nbsp} +
@@ -32,7 +32,7 @@ What do you see here? Do you recognize anything?
 .EC2
 image::2.png[EC2]
 
-Describe what EC2 is in your own words
+This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
 
 {nbsp} +
 {nbsp} +
@@ -40,7 +40,7 @@ Describe what EC2 is in your own words
 .Amplify
 image::3.png[Amplify]
 
-Describe what Amplify is in your own words
+Like EC2, Amplify is simply a service provided by AWS. Amplify will enable us to launch web applications without really being concerned about the server infrastructure behind the website. Again, take a screenshot of your own Amplify environment and describe what how you think Amplify could be helpful. 
 
 {nbsp} +
 {nbsp} +
@@ -48,7 +48,7 @@ Describe what Amplify is in your own words
 .Lamda
 image::4.png[Lamda]
 
-Describe what Lamda is in your own words
+Similar to Amplify, Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
 {nbsp} +
 {nbsp} +
@@ -56,7 +56,7 @@ Describe what Lamda is in your own words
 .RDS
 image::5.png[RDS]
 
-Describe what RDS is in your own words
+The last two servcies are more database oriented. First is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. As mentioned in earlier videos, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
 
 {nbsp} +
 {nbsp} +
@@ -64,10 +64,18 @@ Describe what RDS is in your own words
 .DynamoDB
 image::6.png[DynamoDB]
 
-Describe what DynamoDB is in your own words 
+Finally, we will take a look at DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
 
 {nbsp} +
 {nbsp} +
+
+Great job! You are done with this lab. Remember to take screenshots and provide narrative for each. This is really important for your submissions. A few notes: 
+
+- Make sure that your screenshots are readable. Sometimes people provide really low quality images or the images simply have too much information, making it hard to see what is going on. 
+- Make sure to submit your assignment as a SINGLE PDF. This is really important and I won't grade your assignment if you submit it in any other way. Again, SINGLE PDF. 
+- Include your name in your PDF. Sometimes I download the entire class set of submissions and work off of my local machine. If you don't include your name, it's pretty hard for me to figure out who completed the submission 
+
+If you have any questions, please don't hesitate to reach out to me. I'm happy to help. 
 
 
 
