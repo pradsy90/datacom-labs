@@ -66,37 +66,16 @@ It should be noted that machines on different networks can be configured with th
 
 Now for finishing this step.... launch a third machine but this time, when you are in Step 3: Configure Instance Details, choose a different subnet than what your other two instances are on. Additionally, when you are in the security part of things, include both SSH and ICMP as security rules for the new instance. Once you've made this selection, you can follow the remaining steps as you have done in the past and simply launch the instance -- noting that the primary difference is that it is on a different subnet. 
 
-### Step 3: Test Connections Between Machines
+### Step 3: Test Connections Between Machines on Different Subnets
 
-In this next step, trying pinging between the machines (one on one subnet and the other on the other subnet). You may have to define the security ru
+In this next step, trying pinging between the machines (one on one subnet and the other on the other subnet). If your security profiles are set up as totally open for ICMP, you should be able to ping between all machines, no matter what subnet they are on. 
 
-### Step 4: Change Bob's Hosted Subnet 
+### Step 4: Modify your Security Rules to Isolate Subnets
 
-Alice and Bob are currently on the same subnetwork, or subnet. Machines on the same subnet can communicate with each other directly. Communicating with machines outside of the subnet requires that communication to be *routed* to the appropriate network using a router.
+Like last week's lab, we are going to go back into the security profiles and modify our ICMP rules to isolate our subnets. In short, you can simply modify the 0.0.0.0 to 0.0.0.0/20. In doing this you are limiting the different instances to only be able to communicate within their own subnet (a bit over 4,000 machines). 
 
-* On Bob, run `bob$ sudo ifconfig eth1 192.168.200.` to change the IP address. Note that this command will place the computer in a different subnet.
-    * The command `sudo` is used here to run the command with "root" permissions. The root account in Linux is basically the administrator account that is allowed to make changes. Often, you can run commands that display information without elevated privileges, but to make changes, you must run commands as root by prefixing them with `sudo`.
-    * Note that the same command (`ifconfig`) that you used to print network configuration can also be used to modify the network configuration.
-* On Bob, run `bob$ ifconfig` and verify that the IP address was modified.
-* On Bob, ping Alice by running `bob$ ping 192.168.100.24`.
-    * The ping will be successful.
-	* On Bob, run `bob$ sudo route del default` to delete the default gateway which will prevent routing between networks.
-* Routing is our way to get machines on different networks (subnets) to be able to communicate with each other. 
+Once you've isolated all three of your instances, try pinging between the two that are on the same subnet (two instances from last week) and between subnets (last week's instances with this week's new instance). The former should work, the latter should not work. 
 
-* On Bob, run `bob$ ping 192.168.100.24`.
-    * The ping should fail. The computers are not on the same subnet, and there is no routing.
-* On Bob, run `bob$ sudo ifconfig eth1 192.168.100.25` to restore the original IP address.
-* On Bob, run `bob$ ping 192.168.100.24`.
-    * The ping should succeed because Bob and Alice are on the same subnet and no routing is needed.
- 
-### Step 5: Cleanup (Optional)
-
-After submitting your work, you can destroy any boxes you used.
-
-* Run "`$ exit`" on Bob and Alice to leave the SSH sessions.
-* Run "`> vagrant destroy`" to turn off the machines and delete them completely. Answer "y" to confirm deletion.
-
-### Attribtion
-
-The original version of this lab comes from: https://github.com/rschuetzler/datacom-labs
+### Step 5: Cleanup
+You can stop all of your instances. This will help in not spending all of your AWS credits. 
 
