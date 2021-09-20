@@ -12,6 +12,8 @@ By the end of this lesson, you will be able to:
 2. Change the subnet for a deployed instance
 3. Explain how subnetting effects the ability of computers on a network to communicate.
 
+It is really, really important that you watch the videos this week to see the visuals of what is going on inside of AWS. I am not providing pictures here as I really need you to watch the videos to get oriented with the lab. 
+
 Steps
 --------------------------
 
@@ -20,6 +22,9 @@ Steps
 In this part, you will need to either use the instances from last week or, if you terminated them, simply built a new instance just like you did last week. 
 
 
+### Step 2: Build a new instance for this lab but on a new subnet
+
+First, what are subnets? 
 
 Subnet masks define the IP addresses for a subnetwork. Remember that IPv4 addresses are numbers ranging from 0 to 255. Subnet masks are more limited. It is easiest to see how subnet masks are defined in binary. The subnet mask 255.255.255.0 is very common, and is represented in binary as 11111111.11111111.11111111.00000000. [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) can represent this subnet simply as "/24." Looking at the binary notation, from left to right there are 24 1's. Valid subnets always fill up the 1's on the left and zeros on the right; they are never mixed together.
 
@@ -59,18 +64,11 @@ There are only 16 subnets available on the /28 subnet. Looking at the preceding 
 
 It should be noted that machines on different networks can be configured with the same subnetwork settings but be unable to communicate. The 192.168 address space is reserved for local networks. A public library in Seattle might give and IP address to a computer of 192.168.1.1/24 to a user, while a business in Houston might assign the IP address 192.168.1.2/24 to another user. If those two addresses were on the same network, they could communicate. However, they are on separate networks. They are physically and logically disconnected. Traffic from the Seattle library network would have to be routed to the Houston business network for those machines to communicate. On a single network, IP addresses must be unique.
 
+Now for finishing this step.... launch a third machine but this time, when you are in Step 3: Configure Instance Details, choose a different subnet than what your other two instances are on. Additionally, when you are in the security part of things, include both SSH and ICMP as security rules for the new instance. Once you've made this selection, you can follow the remaining steps as you have done in the past and simply launch the instance -- noting that the primary difference is that it is on a different subnet. 
+
 ### Step 3: Test Connections Between Machines
 
-In this section, you will have the opportunity to test what happens when computers are on the same subnet or different subnet.
-
-* Run `alice$ ping 192.168.100.25`
-    * You should see a *reply* showing how fast the reply was received.
-    * The Linux ping utility has several options. Run `$ man ping` to read the user manual. Press `q` to quit reading the manual.
-* On Linux, the ping command will keep running until it is stopped. Stop it by pressing `Control+c`.
-    * You can also use the `-c <#>` option to tell ping to only run a given number of times. For example, `ping -c 3 192.168.100.25` will send a total of 3 ping attempts.	
-* On your host machine, open a new command prompt and run `> ping 192.168.100.24`.
-    * Note that on Windows, the ping stops by default after four replies.
-    * Run `> ping -?` to see more ping options on Windows.
+In this next step, trying pinging between the machines (one on one subnet and the other on the other subnet). You may have to define the security ru
 
 ### Step 4: Change Bob's Hosted Subnet 
 
