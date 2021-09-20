@@ -9,31 +9,17 @@ Learning Objectives
 By the end of this lesson, you will be able to:
 
 1. Determine the subnet mask.
-2. Change the subnet.
+2. Change the subnet for a deployed instance
 3. Explain how subnetting effects the ability of computers on a network to communicate.
 
 Steps
 --------------------------
 
-### Step 1: Load the Preconfigured Vagrant File
+### Step 1: Either restart or launch an instance that you used last week. 
 
-Previously, when you have run the "`vagrant init ubuntu/Trusty64`" command, Vagrant automatically generated a file named "`Vagrantfile`" (with no extension). This file contains the configuration options for your virtual machine. For this exercise, a Vagrantfile has already been created.
+In this part, you will need to either use the instances from last week or, if you terminated them, simply built a new instance just like you did last week. 
 
-* Copy the Vagrantfile for this exercise to a folder.
-* Open a command prompt and navigate to the folder where you saved the Vagrantfile.
-* Run `vagrant up` to bring up the machines.
-    * Note that because two machines are defined in the Vagrantfile, any Vagrant command that does not target a specific machine will automatically target all machines.
 
-Note that *two* virtual machines will be created. The machines are named "alice" and "bob." If you can't get this Vagrantfile to run, rely on your previous lab experience as this is remarkably similar to earlier labs. 
-
-### Step 2: Check Network Settings
-
-* Run `> vagrant ssh alice` to connect to the first machine.
-* Open a new Windows command prompt, navigate to the folder with your Vagrantfile, and run `> vagrant ssh bob` to connect to the second machine.
-* Run `$ ifconfig` to check the IP address and subnet of each machine.
-    * Note that there are two ethernet connections. This lab will focus on `eth1`. This connection allows multiple guests virtual machines to communicate with each other. For the purposes of this exercise, you can pretend that `eth0` doesn't exist.
-* Alice and Bob have different IP addresses, but they have they same subnet mask.
-    * You need two pieces of information to determine if computers are on the same network (i.e. subnetwork): 1) the IP address, and 2) the subnet mask.
 
 Subnet masks define the IP addresses for a subnetwork. Remember that IPv4 addresses are numbers ranging from 0 to 255. Subnet masks are more limited. It is easiest to see how subnet masks are defined in binary. The subnet mask 255.255.255.0 is very common, and is represented in binary as 11111111.11111111.11111111.00000000. [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) can represent this subnet simply as "/24." Looking at the binary notation, from left to right there are 24 1's. Valid subnets always fill up the 1's on the left and zeros on the right; they are never mixed together.
 
