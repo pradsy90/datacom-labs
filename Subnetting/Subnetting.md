@@ -1,5 +1,5 @@
 
-Subnetting - DO NOT DO THE LAB UNTIL I FIX IT (SEPT 21, 2021)
+Subnetting
 ==========================
 
 Like with cars, too much traffic causes congestion. Networks can be segmented to separate traffic. The segments are called subnetworks, or subnets. The subnet is defined by a subnet mask. 
@@ -17,7 +17,7 @@ It is really, really important that you watch the videos this week to see the vi
 Steps
 --------------------------
 
-### Step 1: Either restart or launch an instance that you used last week. 
+### Step 1: Either restart or launch the instances that you used last week. 
 
 In this part, you will need to either use the instances from last week or, if you terminated them, simply built a new instance just like you did last week. 
 
@@ -66,13 +66,13 @@ It should be noted that machines on different networks can be configured with th
 
 Now for finishing this step.... launch a third machine but this time, when you are in Step 3: Configure Instance Details, choose a different subnet than what your other two instances are on. Additionally, when you are in the security part of things, include both SSH and ICMP as security rules for the new instance. Once you've made this selection, you can follow the remaining steps as you have done in the past and simply launch the instance -- noting that the primary difference is that it is on a different subnet. 
 
-### Step 3: Test Connections Between Machines on Different Subnets
+### Step 3: Test Connections Between Machines on Different Subnets with Private IPs
 
-In this next step, trying pinging between the machines (one on one subnet and the other on the other subnet). If your security profiles are set up as totally open for ICMP, you should be able to ping between all machines, no matter what subnet they are on. 
+First, "a public IP address identifies you to the wider internet so that all the information you're searching for can find you. A private IP address is used within a private network to connect securely to other devices within that same network. Each device within the same network has a unique private IP address". (from https://www.avast.com/c-ip-address-public-vs-private). In this next step, trying pinging private IP addresses between the machines (one on one subnet and the other on the other subnet). If your security profiles are set up as totally open for ICMP, you should be able to ping the private IP addresses between all machines (because they are on the same virtual private cloud), no matter what subnet they are on. 
 
 ### Step 4: Modify your Security Rules to Isolate Subnets
 
-Like last week's lab, we are going to go back into the security profiles and modify our ICMP rules to isolate our subnets. In short, you can simply modify the 0.0.0.0 to 0.0.0.0/20. In doing this you are limiting the different instances to only be able to communicate within their own subnet (a bit over 4,000 machines). 
+Like last week's lab, we are going to go back into the security profiles and modify our ICMP rules to isolate our subnets. In short, you can simply modify one of the instances from last week from 0.0.0.0 to 172.31.44.16/20 (or whatever your IPv4 CIDR is for your two machines from last week). In doing this you are limiting the different instances to only be able to communicate within their own subnet. You find your specific IPv4 CIDR by clicking on the details of one of your instances from last week, scroll down under the instance details to the Subnet ID and click that. You open a new window and you can see the IPv4 CIDR in the fifth column. Copy that and it's this number that you use to replace the 0.0.0.0 mentioned above in the security profile. 
 
 Once you've isolated all three of your instances, try pinging between the two that are on the same subnet (two instances from last week) and between subnets (last week's instances with this week's new instance). The former should work, the latter should not work. 
 
