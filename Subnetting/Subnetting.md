@@ -1,5 +1,5 @@
 
-Subnetting
+Subnetting - DO NOT DO THE LAB UNTIL I FIX IT (SEPT 21, 2021)
 ==========================
 
 Like with cars, too much traffic causes congestion. Networks can be segmented to separate traffic. The segments are called subnetworks, or subnets. The subnet is defined by a subnet mask. 
