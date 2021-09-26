@@ -7,7 +7,7 @@ ifndef::bound[:imagesdir: figs]
 :icons: font
 :experimental:
 
-This exercise will help you set up and configure the Apache Web Server. This will give you exposure to how to work with the web server in your existing Vagrant/VirtualBox environment.
+This exercise will help you set up and configure the Apache Web Server. This will give you exposure to how to work with the web server in your existing Vagrant/VirtualBox environment. 
 
 == Learning Objectives
 
