@@ -25,44 +25,18 @@ All of the examples are demonstrated using Vagrant and VirtualBox and the Ubuntu
 
 == Steps
 
-=== Step 1: Create and Modify your Vagrantfile -- Vagrant Up
+=== Step 1: SSH into one of your AWS instances, Install Apache, and Test the Site
 
-The Ubuntu operating will be deployed on Vagrant/VirtualBox. This is the OS that Apache will be installed on. However, we will be connecting to the web server on our local (host) machine. To do this, we have to modify our Vagrantfile to accommodate TCP ports that enable us to make this connection.
-
-First, create the Vagrantfile for Ubuntu 18.04 with:
-
- > vagrant init ubuntu/bionic64
-
-Second, modify the Vagrantfile file such that you can access the (yet-to-be-intsalled) Apache Web Server from your local machine:
-
-.Vagrantfile
-[source,ruby]
-----
-# Create a forwarded port mapping which allows access to a specific port
-# within the machine from a port on the host machine. In the example below,
-# accessing "localhost:8080" will access port 80 on the guest machine.
-# NOTE: This will enable public access to the opened port
-config.vm.network "forwarded_port", guest: 80, host: 8080
-----
-
-This will allow you to type localhost:8080 on a local machine, accessing the (yet-to-be-installed) Apache Web Server on it's normal port 80.
-
-Finally:
-
- > vagrant up
-
-=== Step 2: SSH into Ubuntu, Install Apache, and Test the Site
-
-Apache is a very popular web server. You can check out the August 2018 Market Share Survey here to get some idea of how it stacks up against other web servers (market-wise):
+Apache is a very popular web server. You can check out the Market Share Survey here to get some idea of how it stacks up against other web servers (market-wise):
 
 https://news.netcraft.com/archives/2018/08/24/august-2018-web-server-survey.html
 
-Quite simply to install the Apache on your Ubuntu machine:
+Quite simply to install the Apache on your AWS machine:
  
- $ sudo apt update
- $ sudo apt install apache2
+ $ sudo yum update
+ $ sudo yum install apache2
 
-Answer the one question on space requirements during the installation and the web server will be downloaded and installed via APT.
+Answer the one question on space requirements during the installation and the web server will be downloaded and installed via YUM.
 
 Once the installation is complete, you need to start the server:
 
@@ -71,11 +45,11 @@ Once the installation is complete, you need to start the server:
 That's it. The command should look like it did nothing -- just returning you to the next command prompt line. All is good.
 Now open up your browser on your local (host) computer and type the following in the address:
 
- localhost:8080
+http://YOUR.PUBLIC.IP.ADDRESS
 
-You should see the Ubuntu/Apache It Worked! page.
+You should see the Apache It Worked! page.
 
-=== Step 3: Modify Apache: Directories, Files, and Directives
+=== Step 2: Modify Apache: Directories, Files, and Directives
 
 Up to this point, you have installed the default Apache Web Server. This includes a variety of functions but not all of them. In short, Apache doesn't ship with all functionality running -- you have to turn things on (or off as you'd like).
 
@@ -149,7 +123,7 @@ Having done that, it's important to note that Apache needs to be restarted every
 Everything should go well so long as you didn't include some extra or unrecognizable characters in the apache2.conf file. Reload your web page on your browser. Honestly, you won't see any performance change as you are the only client on the server but just note that Apache has had some performance changes done via changes to the apache2.conf file.
 
 
-=== Step 4: Modify Apache: Modules and Directives
+=== Step 3: Modify Apache: Modules and Directives
 
 Now cd into the `/etc/apache2/mods-enabled`. Once in there `ls` to show all of the files. You'll see that a number of files end with `.load` and others with `.conf`. If you view the contents of any of the .load files (e.g., `status.load`), you'll see that the document just points to the actual location of the module (`LoadModule status_module /usr/lib/apache2/modules/mod_status.so`). There is no reason to modify the actual modules. What is important for us to know is what modules are loaded and what modules are available.
 
@@ -159,7 +133,7 @@ Sticking with Status, open status.conf in your editor:
 
 You'll see a relatively small configuration file here. The point of the server-status module is to have Apache return server status information to the browser when requested. You can check this out by typing the following in your browser address bar:
 
- http://localhost:8080/server-status
+ http://YOUR.PUBLIC.IP.ADDRESS/server-status
 
 What you should see is a Forbidden error. What this tells us is that the module is running (server-status) but the directives are not set such that we can access the information. Returning to you status.conf, locate the block that starts with
 
@@ -178,7 +152,7 @@ allow from all
 
 Save your changes and restart Apache. Then reload your page:
 
- http://localhost:8080/server-status
+ http://YOUR.IP.ADDRESS/server-status
 
 You should see the server-status information. Now, you have successfully identified a module and modified its directives to change its behavior. Now let's load a module that is not currently part of the core Apache functionality
 
@@ -199,7 +173,7 @@ Then do an 'ls' in the mods-enabled folder. You should now see speling.load ther
 
 All should be good but is the Speling (yes misspelled) module working? Go to your browser and type:
 
- http://localhost:8080/imdex.html
+ http://YOUR.PUBLIC.IP.ADDRESS/imdex.html
 
 You'll see an error page. Why? The module is loaded. What we are missing is the directive to actually tell Apache to use the module. But there is no configuration file. No problem. Go back to the Apache root configuration directory and open apache2.conf
 
@@ -212,7 +186,7 @@ Scroll all the way to the bottom of the file and add the following line:
 
 Save your changes and exit. Restart Apache. Return to the browser and again try:
 
- http://localhost:8080/imdex.html
+ http://YOUR.PUBLIC.IP.ADDRESS/imdex.html
 
 This time, it should load your index.html file, thanks to the Speling module.
 
@@ -225,4 +199,6 @@ In both cases, you are going to have to do some research. You are going to have 
 === Other issues
 
 You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an up-close an personal view of web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
+
+= Stop your servers at this point. 
 
