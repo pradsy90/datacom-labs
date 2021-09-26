@@ -18,9 +18,13 @@ By the end of this lesson, you will be able to:
 * Modify Apache directives to change the server behavior
 * Install Apache modules to enhance the server capabilities
 
-== Conventions
+= Stop your instances when you are done with the lab. 
 
-All of the examples are demonstrated using Vagrant and VirtualBox and the Ubuntu operating system.
+This is a reminder to stop your servers when you are done with your labs/assignments. You don't want to use unnecessary credits when you aren't using your instances. 
+
+Simply point your cursor over the instance, right click, and say STOP INSTANCE --> OR check the box next to the instance and then at the top, change instance state to STOP INSTANCE. 
+
+Again, make sure you stop the instances so as to not use up your credits. 
 
 
 == Steps
@@ -200,5 +204,5 @@ In both cases, you are going to have to do some research. You are going to have 
 
 You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an up-close an personal view of web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
 
-= Stop your servers at this point. 
+= Stop your instances at this point. 
 
