@@ -80,7 +80,7 @@ Now create a new index.html file with your favorite editor (emacs, vim, nano):
 
 Now that you know where the HTML pages are located, track down the configuration files. They are located in
 
- $ cd /etc/httpd
+ $ cd /etc/httpd/conf
  $ ls
 
 There are several important files in here but start with httpd.conf.
