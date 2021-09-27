@@ -129,43 +129,9 @@ Having seen this, it's important to note that Apache needs to be restarted every
 Everything should go well so long as you didn't include some extra or unrecognizable characters in the httpd.conf file. Reload your web page on your browser. Honestly, you won't see any performance change as you are the only client on the server but just note that Apache has had some performance changes done via changes to the httpd.conf file.
 
 
-=== Step 3: Modify Apache: Modules and Directives
-
-Now cd into the `/etc/httpd/modules`. Once in there `ls` to show all of the files. You'll see that a number of files end with `.so'. If you view the contents of any of the .so files (e.g., `status.load`), you won't see much that you can work with. These are tools to increase the core funtionality of the server and they don't ever really get updated. 
-
-Sticking with Status, open status.conf in your editor:
-
- $ sudo nano status.conf
-
-You'll see a relatively small configuration file here. The point of the server-status module is to have Apache return server status information to the browser when requested. You can check this out by typing the following in your browser address bar:
-
- http://YOUR.PUBLIC.IP.ADDRESS/server-status
-
-What you should see is a Forbidden error. What this tells us is that the module is running (server-status) but the directives are not set such that we can access the information. Returning to you status.conf, locate the block that starts with
-
- <Location /server-status>
-
-In that block, modify the text to be:
-
-.server-status.conf
-[source,apache]
-----
-SetHandler server-status
-order deny,allow
-deny from all
-allow from all
-----
-
-Save your changes and restart Apache. Then reload your page:
-
- http://YOUR.IP.ADDRESS/server-status
-
-You should see the server-status information. Now, you have successfully identified a module and modified its directives to change its behavior. Now let's load a module that is not currently part of the core Apache functionality
-
-
 === Other issues
 
-You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an up-close an personal view of web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
+You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an introduction to web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
 
 = Stop your instances at this point. 
 
