@@ -76,7 +76,7 @@ Now create a new index.html file with your favorite editor (emacs, vim, nano):
 
  $ sudo nano index.html
 
-(Yes, nano is awesome). Type anything you want in that file. It could be text, it could be HTML, it doesn't really matter. When you are done save and close (if you are using nano -- kbd:[Ctrl+O] and enter to save, kbd:[Ctrl+X] to exit). Now reload your localhost:8080 page on your browser -- you should see your changes.
+(Yes, nano is awesome). Type anything you want in that file. It could be text, it could be HTML, it doesn't really matter. When you are done save and close (if you are using nano -- kbd:[Ctrl+O] and enter to save, kbd:[Ctrl+X] to exit). Now reload your http://YOUR.PUBLIC.IP.ADDRESS page on your browser -- you should see your changes.
 
 Now that you know where the HTML pages are located, track down the configuration files. They are located in
 
