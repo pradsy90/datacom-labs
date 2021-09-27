@@ -47,6 +47,9 @@ Once the installation is complete, you need to start the server:
  $ sudo service apache2 start
 
 That's it. The command should look like it did nothing -- just returning you to the next command prompt line. All is good.
+
+Now, you will have to go into your Instance on AWS and modify the security rules to include HTTP running on port 80, open to everyone. 
+
 Now open up your browser on your local (host) computer and type the following in the address:
 
 http://YOUR.PUBLIC.IP.ADDRESS
