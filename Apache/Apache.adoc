@@ -120,9 +120,9 @@ Listen 80
 Include conf.modules.d/*.conf
 ----
 
-In each of these you can modify directives to impact the functionality of the server. For example, MaxKeepAliveRequests is a directive that regulates the number of requests that Apache will handle for one connection. Once that max is hit, a new connection is established (helping with memory management). Go ahead and change that number to 200 and save your changes to the httpd.conf file and exit your editor.
+In each of these you can modify directives to impact the functionality of the server. For example, Listen is a directive that regulates the port that your server is listening to. 80 is the default but you may want to change this to 8080 for testing reasons. You would have to update your AWS security profiles to accommodate this port and add a :8080 to the end of your URL request to the server. 
 
-Having done that, it's important to note that Apache needs to be restarted every time a change is made to a configuration file as the files are read anew at every start/restart. To do this:
+Having seen this, it's important to note that Apache needs to be restarted every time a change is made to a configuration file as the files are read anew at every start/restart. To do this:
 
  $ sudo service httpd restart
 
@@ -131,7 +131,7 @@ Everything should go well so long as you didn't include some extra or unrecogniz
 
 === Step 3: Modify Apache: Modules and Directives
 
-Now cd into the `/etc/httpd/mods-enabled`. Once in there `ls` to show all of the files. You'll see that a number of files end with `.load` and others with `.conf`. If you view the contents of any of the .load files (e.g., `status.load`), you'll see that the document just points to the actual location of the module (`LoadModule status_module /usr/lib/httpd/modules/mod_status.so`). There is no reason to modify the actual modules. What is important for us to know is what modules are loaded and what modules are available.
+Now cd into the `/etc/httpd/modules`. Once in there `ls` to show all of the files. You'll see that a number of files end with `.so'. If you view the contents of any of the .so files (e.g., `status.load`), you won't see much that you can work with. These are tools to increase the core funtionality of the server and they don't ever really get updated. 
 
 Sticking with Status, open status.conf in your editor:
 
@@ -162,45 +162,6 @@ Save your changes and restart Apache. Then reload your page:
 
 You should see the server-status information. Now, you have successfully identified a module and modified its directives to change its behavior. Now let's load a module that is not currently part of the core Apache functionality
 
-
-=== Step 6: Load and Start a Module
-
-You have likely noticed that there are two module related folders: mods-enabled and mods-available. Change directories into mods-available and do an 'ls'. You see a lot of modules that are available to Apache but are not currently enabled - an not all have configuration files. For this part, we are going to enable a module without a configuration file:
-
- speling.load
-
-To do this, return to your mods-enabled folder. In this folder, we are going to create a link to speling.load that will enable its functionality. This module will allow a user in a browser to misspell a word by one letter and the module will work to find the closest match to that request. By creating the link, we don't actually have to move speling.load from one folder to another. So, from within the mods-enabled folder type:
-
- $ sudo ln -s /etc/httpd/mods-available/speling.load /etc/httpd/mods-enabled/speling.load
-
-Then do an 'ls' in the mods-enabled folder. You should now see speling.load there. Restart the server:
-
- $ sudo service httpd restart
-
-All should be good but is the Speling (yes misspelled) module working? Go to your browser and type:
-
- http://YOUR.PUBLIC.IP.ADDRESS/imdex.html
-
-You'll see an error page. Why? The module is loaded. What we are missing is the directive to actually tell Apache to use the module. But there is no configuration file. No problem. Go back to the Apache root configuration directory and open httpd.conf
-
- $ cd /etc/httpd
- $ sudo nano httpd.conf
-
-Scroll all the way to the bottom of the file and add the following line:
-
- CheckSpelling On
-
-Save your changes and exit. Restart Apache. Return to the browser and again try:
-
- http://YOUR.PUBLIC.IP.ADDRESS/imdex.html
-
-This time, it should load your index.html file, thanks to the Speling module.
-
-=== Step 7: Load and Start Your Own Module. You don't need to do this but could serve you well if you give it a go. 
-
-In particular, I'm asking you to look at one of two of the more complex modules: Dav or SSL. Dav is old school. It's a file structure module that will allow you to use Apache as a file management utility. SSL is old school too but used sort of a lot on the Internet. Even in 2021. I'll be talking more about SSL. 
-
-In both cases, you are going to have to do some research. You are going to have to do some experimentation. This is how this course is going to be begin to transition a bit from showing nearly all parts to showing enough of the parts so you have tools to continue an investigation. 
 
 === Other issues
 
