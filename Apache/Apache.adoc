@@ -72,10 +72,6 @@ You'll see the html folder there
  $ cd html
  $ ls
 
-You'll see index.html. Just rename that file to get it out of the way:
-
- $ sudo mv index.html index.html.old
-
 Now create a new index.html file with your favorite editor (emacs, vim, nano):
 
  $ sudo nano index.html
