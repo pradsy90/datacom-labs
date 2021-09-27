@@ -120,7 +120,7 @@ Listen 80
 Include conf.modules.d/*.conf
 ----
 
-In each of these you can modify directives to impact the functionality of the server. For example, Listen is a directive that regulates the port that your server is listening to. 80 is the default but you may want to change this to 8080 for testing reasons. You would have to update your AWS security profiles to accommodate this port and add a :8080 to the end of your URL request to the server. 
+In each of these you can modify directives to impact the functionality of the server. For example, Listen is a directive that regulates the port that your server is listening to. 80 is the default but I'd like you change this to 8080 for testing reasons. You will have to update your AWS security profiles to accommodate this port and add a :8080 to the end of your URL request to the server. 
 
 Having seen this, it's important to note that Apache needs to be restarted every time a change is made to a configuration file as the files are read anew at every start/restart. To do this:
 
