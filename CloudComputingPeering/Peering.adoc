@@ -2,9 +2,9 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, you will be setting up two machines and having them talk to (ping) each other. This isn't very difficult but along the way we will make a few observations as to the power you have as an AWS manager -- to both observe and set rules. 
+This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, I will be setting up two machines and having them talk to (ping) each other. This lab is a bit different from the rest in that you will be following along with the videos and then answering a series of questions associated with the work. 
 
-To start, login to your AWS Educate account and make sure you are in the N. Virginia region. This seems to be the region that gives us the resources we need. Locate the VPC services. There you will see VPCs along with other services in the VPC dashboard. 
+To start, I'll login to my AWS account. There you will see VPCs along with other services in the VPC dashboard. 
 
 .VPC
 image::1.png[VPC]
@@ -12,7 +12,7 @@ image::1.png[VPC]
 {nbsp} +
 {nbsp} +
  
- Click on the VPCs link and from there click Create VPC
+ I'll click on the VPCs link and from there click Create VPC. 
 
 .Create VPC
 image::2a.png[Create VPC]
@@ -23,7 +23,7 @@ image::2b.png[Create VPCb]
 {nbsp} +
 {nbsp} +
  
-From there, you will name your VPC. You can name it after yourself if you'd like. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
+From there, I'll name the VPC. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
 
 .VPC Settings
 image::3a.png[VPC Settings]
@@ -34,7 +34,7 @@ image::3b.png[VPC Settingsb]
 {nbsp} +
 {nbsp} +
 
-Once you have created the VPC, you will need to create a subnet within that VPC. Click on the Subnets over on the left side, then click Create Subnet. 
+Once I have created the VPC, I will need to create a subnet within that VPC. Clicking on the Subnets over on the left side, then clicking Create Subnet. 
 
 .Create Subnet
 image::4.png[Create Subnet]
@@ -42,7 +42,7 @@ image::4.png[Create Subnet]
 {nbsp} +
 {nbsp} +
 
-In the create subnet screen fill out the appropriate details. In this case, you have to assign the subnet to the VPC that you just created. Also, In this example, the subnet is the size of the VPC (the blocks are the same size). 
+In the create subnet screen I fill out the appropriate details. In this case, I have to assign the subnet to the VPC that you just created. Also, In this example, the subnet is the size of the VPC (the blocks are the same size). 
 
 .Subnet Details
 image::5.png[Subnet Details]
@@ -50,7 +50,7 @@ image::5.png[Subnet Details]
 {nbsp} +
 {nbsp} +
 
-Now let's create a route. The route will define where traffic can and can't flow in the VPC/subnet. Click Route Tables on the left side and then click Create route table. 
+Now let's create a route. The route will define where traffic can and can't flow in the VPC/subnet. I click Route Tables on the left side and then click Create route table. 
 
 .Create Route Table
 image::6.png[Create Route Table]
@@ -58,7 +58,7 @@ image::6.png[Create Route Table]
 {nbsp} +
 {nbsp} +
 
-Like the subnet, you assign the route table to a VPC (whatever you named yours). Pretty easy. 
+Like the subnet, you assign the route table to a VPC. Pretty easy. 
 
 .Route Table Details
 image::7.png[Route Table Details]
@@ -66,7 +66,7 @@ image::7.png[Route Table Details]
 {nbsp} +
 {nbsp} +
 
-At this point, your VPC is starting to get a bit of robustness associated with it. It has a name. It has a subnet. It has a route table. Growing up! Now we need to estabish an Internet Gatewary for your VPC -- so it can go on the internet. Click on Internet Gateways on the left and then click Create Internet Gateway. 
+At this point, my VPC is starting to get a bit of robustness associated with it. It has a name. It has a subnet. It has a route table. Growing up! Now we need to estabish an Internet Gatewary for your VPC -- so it can go on the internet. I click on Internet Gateways on the left and then click Create Internet Gateway. 
 
 .Internet Gateway
 image::8.png[Internet Gateway]
@@ -74,7 +74,7 @@ image::8.png[Internet Gateway]
 {nbsp} +
 {nbsp} +
 
-Name the Internet Gateway and click Create! 
+I name the Internet Gateway and click Create! 
 
 .Internet Gateway Details
 image::9.png[Internet Gateway Details]
@@ -82,7 +82,7 @@ image::9.png[Internet Gateway Details]
 {nbsp} +
 {nbsp} +
 
-SUPER IMPORTANT!!! Once you create the gateway, the next screen will ask if you would like to associate the gateway with a VPC (green bar at the top). You must do this -- associating it with your newly created VPC. 
+SUPER IMPORTANT!!! Once I create the gateway, the next screen will ask if I would like to associate the gateway with a VPC (green bar at the top). I must do this -- associating it with your newly created VPC. 
 
 .Associate Internet Gateway with VPC
 image::9a.png[Associate Internet Gateway with VPC]
@@ -96,7 +96,7 @@ image::9b.png[Associate Internet Gateway with VPC]
 {nbsp} +
 {nbsp} +
 
-Now return to your Route Table and add the newly created Internet Gateway. 
+Now I return to my Route Table and add the newly created Internet Gateway. 
 
 .Add Internet Gateway to Route Table
 image::10.png[Add Internet Gateway]
@@ -110,7 +110,7 @@ image::11.png[Add Internet Gateway]
 {nbsp} +
 {nbsp} +
 
-We're now ready to create the Peering Connection! Click Peering Connections on the left and then Create peeting connection on the top. The large numbers you see there are the things you are going to need to set up the peering conneciton with your professor. 
+I'm now ready to create the Peering Connection! I click Peering Connections on the left and then Create peeting connection on the top. The large numbers you see there are the things I am going to need to set up the peering conneciton. 
 
 .Create Peering Connection
 image::12.png[Create Peering Connection]
@@ -118,7 +118,7 @@ image::12.png[Create Peering Connection]
 {nbsp} +
 {nbsp} +
 
-Here are the details of the Create Peering Connection page. These should be pretty straightforward. Basically, you are connecting your VPC to the professor's VPC. The details in the bottom must be exactly as they are in this picture
+Here are the details of the Create Peering Connection page. These should be pretty straightforward. Basically, I am connecting one VPC to another VPC. The details in the bottom must be exactly as they are in this picture
 
 .Peering Details
 image::13.png[Peering Details]
@@ -126,7 +126,7 @@ image::13.png[Peering Details]
 {nbsp} +
 {nbsp} +
 
-A little clean-up here at the end. 1) Add the newly created Peering Connection to your list of routes and 2) ensure that your route table is aligned with your subnet. 
+A little clean-up here at the end. 1) I add the newly created Peering Connection to my list of routes and 2) ensure that your route table is aligned with my subnet. 
 
 .Add Peering Connection to Routes
 image::14.png[Add Peering Connection to Routes]
@@ -152,12 +152,12 @@ image::17.png[Associate Route Table with Subnet]
 {nbsp} +
 {nbsp} +
 
-At this you are really done. You just need to wait for me. On my end, I will see your peering request. I'll do my best to monitor things to accept your requests but it is quite possible that things will timeout (if you do this work at 2am -- send me the request -- and I don't see it until hours later). That's okay as our schedules may be totally off. 
+At this I am really done. From the second VPC, I will see the peering request.
 
 {nbsp} +
 {nbsp} +
 
-If (when) I accept your peering request, you will see it as Active. If I don't accept your request in time, sorry as I may not have been monitoring things super closely. If that's the case, you'll see a red status marker and it'll say something like timeout. That's okay -- take a picture anyway. 
+If (when) I accept the peering request, I will now see it as Active. If I don't accept the request in time, I'll see a red status marker and it'll say something like timeout. 
 
 .Seeing Peering Connection
 image::19.png[Seeing Peering Connection]
@@ -165,5 +165,10 @@ image::19.png[Seeing Peering Connection]
 {nbsp} +
 {nbsp} +
 
-That's it. You can stop your services if you'd like. The goal is to get you to see that we can move towards shared resources between you and me. There is more to this story and it is in the video and slides. Once the peering is established, we can talk with one and other on our local networks. There is a bit more work to do on this but it's only a few steps away. Establishing peering is really the key. You have a VPC. I have a VPC. Through peering we can share resources. 
+That's it. Now for the questions: 
+
+1) What is peering? 
+2) What is a route table? 
+3) What is an internet gateway? 
+4) Draw me a picture of what has been designed here. This should include a VPCs, subnets, and any number-details that help me understand your design. 
 
