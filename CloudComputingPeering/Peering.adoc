@@ -2,7 +2,9 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, I will be setting up two machines and having them talk to (ping) each other. This lab is a bit different from the rest in that you will be following along with the videos and then answering a series of questions associated with the work. 
+This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, I will be setting up two machines and having them talk to (ping) each other. This lab is a bit different from the rest in that you will be following along with the videos and then answering a series of questions associated with the work. That is, you DO NOT need to set up the peering connection on your end. I sort of talk like you need to do the technical work in the video, but you do not. All that I want you to do is watch the video and then answer the questions at the end of this document. 
+
+(sorry, the video was made recently with the expectation that all resources are AWS Educate ready and I'm concerned that they are not really available to us. So all you have to do is watch the video, you do not need to do the peering work on your end in AWS). 
 
 To start, I'll login to my AWS account. There you will see VPCs along with other services in the VPC dashboard. 
 
