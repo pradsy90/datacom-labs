@@ -6,7 +6,7 @@ This lab is intended to give you just a bit more insight with respect to AWS clo
 
 (sorry, the video was made recently with the expectation that all resources are AWS Educate ready and I'm concerned that they are not really available to us. So all you have to do is watch the video, you do not need to do the peering work on your end in AWS). 
 
-To start, I'll login to my AWS account. There you will see VPCs along with other services in the VPC dashboard. 
+To start, I'll login to my AWS #1 account (I'll call this account the BLUE account). There you will see VPCs along with other services in the VPC dashboard. 
 
 .VPC
 image::1.png[VPC]
@@ -14,7 +14,7 @@ image::1.png[VPC]
 {nbsp} +
 {nbsp} +
  
- I'll click on the VPCs link and from there click Create VPC. 
+I'll click on the VPCs link and from there click Create VPC. 
 
 .Create VPC
 image::2a.png[Create VPC]
@@ -25,7 +25,7 @@ image::2b.png[Create VPCb]
 {nbsp} +
 {nbsp} +
  
-From there, I'll name the VPC. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
+From there, I'll name the VPC. Again this is all in my BLUE account. In the CIDR block, put some block of local addresses. In this case I put a relatively small block of addresses. 
 
 .VPC Settings
 image::3a.png[VPC Settings]
@@ -36,7 +36,7 @@ image::3b.png[VPC Settingsb]
 {nbsp} +
 {nbsp} +
 
-Once I have created the VPC, I will need to create a subnet within that VPC. Clicking on the Subnets over on the left side, then clicking Create Subnet. 
+Once I have created the VPC, I will need to create a subnet within that VPC. Clicking on the Subnets over on the left side, then clicking Create Subnet. Again, still in the BLUE account and very similar (same?) to the work you did last week. 
 
 .Create Subnet
 image::4.png[Create Subnet]
@@ -44,7 +44,7 @@ image::4.png[Create Subnet]
 {nbsp} +
 {nbsp} +
 
-In the create subnet screen I fill out the appropriate details. In this case, I have to assign the subnet to the VPC that you just created. Also, In this example, the subnet is the size of the VPC (the blocks are the same size). 
+In the create subnet screen I fill out the appropriate details. In this case, I have to assign the subnet to the VPC that I just created. Also, In this example, the subnet is the size of the VPC (the blocks are the same size). 
 
 .Subnet Details
 image::5.png[Subnet Details]
@@ -52,7 +52,7 @@ image::5.png[Subnet Details]
 {nbsp} +
 {nbsp} +
 
-Now let's create a route. The route will define where traffic can and can't flow in the VPC/subnet. I click Route Tables on the left side and then click Create route table. 
+Now I'll create a route. Again, this is all in the BLUE account. The route will define where traffic can and can't flow in the VPC/subnet. I click Route Tables on the left side and then click Create route table. 
 
 .Create Route Table
 image::6.png[Create Route Table]
@@ -60,7 +60,7 @@ image::6.png[Create Route Table]
 {nbsp} +
 {nbsp} +
 
-Like the subnet, you assign the route table to a VPC. Pretty easy. 
+Like the subnet, I assign the route table to a VPC. Pretty easy. 
 
 .Route Table Details
 image::7.png[Route Table Details]
@@ -68,7 +68,7 @@ image::7.png[Route Table Details]
 {nbsp} +
 {nbsp} +
 
-At this point, my VPC is starting to get a bit of robustness associated with it. It has a name. It has a subnet. It has a route table. Growing up! Now we need to estabish an Internet Gatewary for your VPC -- so it can go on the internet. I click on Internet Gateways on the left and then click Create Internet Gateway. 
+At this point, my VPC is starting to get a bit of robustness associated with it. It has a name. It has a subnet. It has a route table. Growing up! Now I need to estabish an Internet Gatewary for my VPC -- so it can go on the internet. I click on Internet Gateways on the left and then click Create Internet Gateway. 
 
 .Internet Gateway
 image::8.png[Internet Gateway]
@@ -84,7 +84,7 @@ image::9.png[Internet Gateway Details]
 {nbsp} +
 {nbsp} +
 
-SUPER IMPORTANT!!! Once I create the gateway, the next screen will ask if I would like to associate the gateway with a VPC (green bar at the top). I must do this -- associating it with your newly created VPC. 
+SUPER IMPORTANT!!! Once I create the gateway, the next screen will ask if I would like to associate the gateway with a VPC (green bar at the top). I must do this -- associating it with my newly created VPC. Again, all of this is in my BLUE account. 
 
 .Associate Internet Gateway with VPC
 image::9a.png[Associate Internet Gateway with VPC]
@@ -112,7 +112,7 @@ image::11.png[Add Internet Gateway]
 {nbsp} +
 {nbsp} +
 
-I'm now ready to create the Peering Connection! I click Peering Connections on the left and then Create peeting connection on the top. The large numbers you see there are the things I am going to need to set up the peering conneciton. 
+I'm now ready to create the Peering Connection! I click Peering Connections on the left and then Create Peering Connection on the top. The large numbers you see there are the things I am going to need to set up the peering conneciton
 
 .Create Peering Connection
 image::12.png[Create Peering Connection]
@@ -120,7 +120,7 @@ image::12.png[Create Peering Connection]
 {nbsp} +
 {nbsp} +
 
-Here are the details of the Create Peering Connection page. These should be pretty straightforward. Basically, I am connecting one VPC to another VPC. The details in the bottom must be exactly as they are in this picture
+Here are the details of the Create Peering Connection page. These should be pretty straightforward. Basically, I am connecting the BLUE VPC to another VPC (let's call that one RED). The details in the bottom must be exactly as they are in this picture
 
 .Peering Details
 image::13.png[Peering Details]
@@ -154,7 +154,7 @@ image::17.png[Associate Route Table with Subnet]
 {nbsp} +
 {nbsp} +
 
-At this I am really done. From the second VPC, I will see the peering request.
+At this I am really done. From the second (RED) VPC, I will see the peering request (from BLUE)
 
 {nbsp} +
 {nbsp} +
@@ -167,10 +167,10 @@ image::19.png[Seeing Peering Connection]
 {nbsp} +
 {nbsp} +
 
-That's it. Now for the questions: 
+That's it. The video should help too. Again, I made the video assuming that you would do the work in AWS but you won't be doing that. After our few AWS resource issues, I'm a bit hesitant. So, answer these questions for the lab. That's it!
 
 1) What is peering? 
 2) What is a route table? 
 3) What is an internet gateway? 
-4) Draw me a picture of what has been designed here. This should include a VPCs, subnets, and any number-details that help me understand your design. 
+4) Draw me a picture of what has been designed here. This should include a VPCs, subnets, and any number-details that help me understand the design that was just created. 
 
