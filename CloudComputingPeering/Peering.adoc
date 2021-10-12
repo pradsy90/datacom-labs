@@ -172,5 +172,5 @@ That's it. The video should help too. Again, I made the video assuming that you 
 1) What is peering? 
 2) What is a route table? 
 3) What is an internet gateway? 
-4) Draw me a picture of what has been designed here. This should include a VPCs, subnets, and any number-details that help me understand the design that was just created. 
+4) Draw me a picture of what has been designed here (the final design and not the process). This should include a VPCs, subnets, and any number-details that help me understand the design that was just created. 
 
