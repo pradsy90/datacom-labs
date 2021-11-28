@@ -6,7 +6,7 @@ For this lab you are going to be using Docker again and, quite simply, you are g
 
 To start, you will be using the AWS instance that I gave you a few weeks ago. This is the same instance that you used for your prior Docker lab. There is nothing special about this instance. Once you are logged into your AWS instance, make sure that Docker started: 
 
-> sudo service docker start 
+> sudo service docker start
 
 From here, we are going write the smallest Python script that we will place into a Docker container. In your current folder: 
 
