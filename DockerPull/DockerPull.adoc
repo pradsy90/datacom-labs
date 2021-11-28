@@ -2,7 +2,7 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you an introduction to containers. We will be using Docker for this lab. For this lab, we will be deploying two containers in an AWS instance. This will include the install and deployment of containers via Docker. 
+This lab is intended to give you an introduction to containers. We will be using Docker for this lab. For this lab, we will be deploying two containers in an AWS instance. This will include the install and deployment of containers via Docker.
  
 For the first part of this lab, it is important that you understand what a container is. Essentially, the deployment of an applicaiton can be a problematic endeavor. This is largely because as you deploy an application on one system, it is quite likely to not work on another -- due to the dependencies on one system to another. In short, all computer systems are not the same and deploying an application on one is likely different from another. 
 
