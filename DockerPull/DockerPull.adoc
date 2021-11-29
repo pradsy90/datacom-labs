@@ -29,6 +29,8 @@ or for Linux2 versions:
 
 > sudo amazon-linux-extras install docker
 
+Then run: 
+
 > sudo service docker start 
 
 From here, you can check to see if there are any Docker images on your machine (there will not be): 
