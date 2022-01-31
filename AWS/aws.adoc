@@ -11,7 +11,7 @@ This lab will help you get oriented with Amazon Web Services. This will give you
 
 == Learning Objectives
 
-This lab is meant to get you to start interacting with your AWS Educate account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to Canvas. '
+This lab is meant to get you to start interacting with your AWS account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to the UNO Canvas.
 
 In each of these cases, you will perhaps need to do a little more research as to what the technologies are. In all cases, focus your description on what the technology is. Your answer certainly won't be perfect and we will learn more as we interact with the technologies throughout the semester. However, please make an attempt as to what you believe each technology to be -- either through the descriptions on AWS or as found elsewhere on the internet. 
 
@@ -37,18 +37,10 @@ This is the Elastic Cloud Compute (EC2) interface. You can get here by searching
 {nbsp} +
 {nbsp} +
 
-.Amplify
-image::3.png[Amplify]
-
-Like EC2, Amplify is simply a service provided by AWS. Amplify will enable us to launch web applications without really being concerned about the server infrastructure behind the website. Again, take a screenshot of your own Amplify environment and describe what how you think Amplify could be helpful. 
-
-{nbsp} +
-{nbsp} +
-
 .Lamda
 image::4.png[Lamda]
 
-Similar to Amplify, Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
+Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
 {nbsp} +
 {nbsp} +
