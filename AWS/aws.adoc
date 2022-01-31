@@ -22,7 +22,7 @@ In each of these cases, you will perhaps need to do a little more research as to
 By this point, you have received an invitation from me to login to your AWS Educate account. From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the semester. For this step take a screen shot of your AWS Console page 
 
 .Console
-image::1.png[Console]
+image::1a.png[Console]
 
 What do you see here? Do you recognize any of the technologies? 
 
