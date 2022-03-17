@@ -6,7 +6,7 @@ This lab is intended to give you just a bit more insight with respect to AWS clo
 
 (sorry, the video was made recently with the expectation that all resources are AWS Educate ready and I'm concerned that they are not really available to us. So all you have to do is watch the video, you do not need to do the peering work on your end in AWS). 
 
-To start, I'll login to my AWS #1 account (I'll call this account the BLUE account). There you will see VPCs along with other services in the VPC dashboard. 
+To start, I'll login to my AWS1 account (I'll call this account the BLUE account). There you will see VPCs along with other services in the VPC dashboard. 
 
 .VPC
 image::1.png[VPC]
