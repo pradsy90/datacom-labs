@@ -126,6 +126,16 @@ image::13.png[Peering Details]
 {nbsp} +
 {nbsp} +
 
+Once, you finalize the details, you should see a banner like this: 
+
+.Peering Request
+image::21.png[Peering Request]
+
+{nbsp} +
+{nbsp} +
+
+This request is just a request at this point. It's not active until I accept it. For this lab, you don't have to wait for me to accept your request as our timing maybe off a bit and requests expire after a bit of time. 
+
 What's intersting here is that there are two VPCs. Yours and mine. They are truly different VPCs but once I accept the peering connection, they are able to communicate and share resources with each other across the broader AWS landscape. 
 
 YOU ARE DONE AT THIS POINT! But let me demonstrate what I mean by the above statements about peering. If I were to accept your peering request, you could add the newly created Peering Connection to your list of routes and 2) ensure that your route table is aligned with my subnet. 
