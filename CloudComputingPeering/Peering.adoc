@@ -179,6 +179,6 @@ image::19.png[Seeing Peering Connection]
 
 That's it. The video should help too. I do have two questions I'd like you to also answer for this lab: 
 
-1) What is peering? 
+1) What is peering?{nbsp} +
 2) Draw me a picture of what has been designed here (the final design and not the process). This should include a VPCs, subnets, and any number-details that help me understand the design that was just created. 
 
