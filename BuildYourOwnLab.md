@@ -2,18 +2,18 @@
 
 ## Overview 
 The *Build your Own Lab* lab is for ISQA8300 students. For this lab, follow the format that we have been using over course of the semester. 
-The only difference is that you can build the lab using just text and a pdf. You do not need to create the lab in markdown.
+The only difference is that you can build the lab using just text and a pdf. You do not need to create the lab in markdown. The lab should have the look and feel of our prior 11 labs that we have done in the course. 
 
-For the lab, use AWS Educate for exploring new technologies that we did not use this semester. The lab should be written so as to guide a future student through things. 
+For the lab, use AWS Academy for exploring new technologies that we did not use this semester. The lab should be written so as to guide a future student through things. 
 It should include pictures, descriptions, and necessary commands to complete the lab. 
 
 Scope the lab such that it could be completed in under one hour for people unfamiliar with your chosen technology. 
-You can get a full and comprehensive set of available AWS services at: https://awseducate-starter-account-services.s3.amazonaws.com/AWS_Educate_Starter_Account_Services_Supported.pdf 
+You can get a full and comprehensive set of available AWS services via AWS Educate at: https://awseducate-starter-account-services.s3.amazonaws.com/AWS_Educate_Starter_Account_Services_Supported.pdf. I'm not 100% sure that this list is totally applicable to AWS Academy but it should give you a really good idea. 
 
 
 Details: 
 
--	Lab should use an AWS Educate technology that we did not use in class.
+-	Lab should use an AWS Academy technology that we did not use in class.
 - Lab should include a description as to why you think this lab would be helpful in better understanding IT Infrastrcture. 
 -	Lab must include relevant screen shots, descriptions, and commands necessary to complete the lab. 
 -	Lab must be scoped to take approximately 1 hour for those unfamiliar with the technology.
