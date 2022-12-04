@@ -4,12 +4,9 @@
 The *Build your Own Lab* lab is for ISQA8300 students. For this lab, follow the format that we have been using over course of the semester. 
 The only difference is that you can build the lab using just text and a pdf. You do not need to create the lab in markdown. The lab should have the look and feel of our prior 11 labs that we have done in the course. 
 
-For the lab, use AWS Academy for exploring new technologies that we did not use this semester. The lab should be written so as to guide a future student through things. 
-It should include pictures, descriptions, and necessary commands to complete the lab. 
+For the lab, use AWS Academy for exploring new technologies that we did not use this semester. The lab should be written so as to guide a future student through things. It should include pictures, descriptions, and necessary commands to complete the lab. 
 
-Scope the lab such that it could be completed in under one hour for people unfamiliar with your chosen technology. 
-You can get a full and comprehensive set of available AWS services via AWS Educate at: https://awseducate-starter-account-services.s3.amazonaws.com/AWS_Educate_Starter_Account_Services_Supported.pdf. I'm not 100% sure that this list is totally applicable to AWS Academy but it should give you a really good idea. 
-
+Scope the lab such that it could be completed in under one hour for people unfamiliar with your chosen technology. It looks as the avaialble services are at: https://cyberlab.pacific.edu/courses/comp175/resources/aws-academy/AWS_Academy_Learner_Lab-Foundational_Services.pdf
 
 Details: 
 
