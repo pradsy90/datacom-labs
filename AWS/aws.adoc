@@ -77,10 +77,9 @@ image::0h.png[All Services]
 What do you see here? Do you recognize any of the technologies? 
 
 {nbsp} +
-{nbsp} +
 
 .EC2
-image::2.png[EC2]
+image::0i.png[EC2]
 
 This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
 
@@ -88,7 +87,7 @@ This is the Elastic Cloud Compute (EC2) interface. You can get here by searching
 {nbsp} +
 
 .Lamda
-image::4.png[Lamda]
+image::0j.png[Lamda]
 
 Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
@@ -96,7 +95,7 @@ Lamda is a server-less environment but this time, instead of a website, it is fo
 {nbsp} +
 
 .RDS
-image::5.png[RDS]
+image::0k.png[RDS]
 
 The last two servcies are more database oriented. First is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. As mentioned in earlier videos, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
 
@@ -104,7 +103,7 @@ The last two servcies are more database oriented. First is RDS which is going to
 {nbsp} +
 
 .DynamoDB
-image::6.png[DynamoDB]
+image::0l.png[DynamoDB]
 
 Finally, we will take a look at DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
 
