@@ -4,7 +4,7 @@ endif::[]
 
 # Server Deployment
 
-This lab is to introduce Cloud Computing using the AWS Cloud environment from Amazon. In this lab, you will not be responsible for setting up your own AWS environment. Use your AWS Educate account (or your own personal account if that is the route you took). When you first login to AWS, you will see the AWS dashboard. This is all of the services that are provided via your account. On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine (instance) in the AWS environment. 
+This lab is to introduce Cloud Computing using the AWS EC2 environment from Amazon. Use your AWS Academy account (or your own personal account if that is the route you took). When you first login to AWS, you will see the AWS dashboard as described in the previous lab. This is all of the services that are provided via your account. On the dashboard, clicking on the EC2 link. This link will enable us to launch a virtual machine (instance) in the AWS environment. 
 
 .EC2 Dashboard
 image::IMG1.png[AWS Dashboard]
