@@ -22,14 +22,16 @@ In each of these cases, you will perhaps need to do a little more research as to
 By this point, you have received an invitation from me to login to your AWS Academy account. This sceent shows your successful login to AWS Academy. Here, click on LMS to get us to the AWS Academy course. 
 
 .AWS Account
-image::0a.png[Console]
+image::0a.png[AWS Account]
 
 {nbsp} +
 
 In this next screen, simply click on your course. 
 
-.Console
-image::0b.png[Console]
+.Class
+image::0b.png[Class]
+
+{nbsp} +
 
 In the course, click on 'Modules' and then Learner Lab. 
 
