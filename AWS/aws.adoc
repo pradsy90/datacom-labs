@@ -68,8 +68,11 @@ image::0g.png[Console]
 {nbsp} +
 {nbsp} +
 
-.AllServices
-image::0h.png[AllServices]
+.All Services
+image::0h.png[All Services]
+
+{nbsp} +
+{nbsp} +
 
 What do you see here? Do you recognize any of the technologies? 
 
