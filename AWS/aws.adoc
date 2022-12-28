@@ -13,16 +13,55 @@ This lab will help you get oriented with Amazon Web Services. This will give you
 
 This lab is meant to get you to start interacting with your AWS account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to the UNO Canvas.
 
-In each of these cases, you will perhaps need to do a little more research as to what the technologies are. In all cases, focus your description on what the technology is. Your answer certainly won't be perfect and we will learn more as we interact with the technologies throughout the semester. However, please make an attempt as to what you believe each technology to be -- either through the descriptions on AWS or as found elsewhere on the internet. 
+In each of these cases, you will perhaps need to do a little more research as to what the technologies are. In all cases, focus your description on what the technology is. Your answer certainly won't be perfect and we will learn more as we interact with the technologies throughout the term. However, please make an attempt as to what you believe each technology to be -- either through the descriptions on AWS or as found elsewhere on the internet. 
 
 == Steps
 
 === Step 1: Login to your AWS Account
 
-By this point, you have received an invitation from me to login to your AWS Academy account. From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the semester. For this step take a screen shot of your AWS Console page 
+By this point, you have received an invitation from me to login to your AWS Academy account. This sceent shows your successful login to AWS Academy. Here, click on LMS to get us to the AWS Academy course. 
 
 .Console
-image::1a.png[Console]
+image::0a.png[Console]
+
+In this next screen, simply click on your course. 
+
+.Console
+image::0b.png[Console]
+
+In the course, click on 'Modules' and then Learner Lab. 
+
+.Console
+image::0c.png[Console]
+
+{nbsp} +
+{nbsp} +
+
+.Console
+image::0d.png[Console]
+
+Once in the Learner Lab, click 'Start'. You should see a big 'V' with an arrow spinning for a while. But! After a while the AWS (green dot) will appear. Simply click on the underlined AWS. 
+
+.Console
+image::0e.png[Console]
+
+{nbsp} +
+{nbsp} +
+
+.Console
+image::0f.png[Console]
+
+
+From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the term. For this step take a screen shot of your AWS Console page 
+
+.Console
+image::0g.png[Console]
+
+{nbsp} +
+{nbsp} +
+
+.AllServices
+image::0h.png[AllServices]
 
 What do you see here? Do you recognize any of the technologies? 
 
