@@ -88,7 +88,7 @@ image::0i.png[EC2]
 {nbsp} +
 {nbsp} +
 
-This is Lambda Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
+This is Lambda. Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
 .Lamda
 image::0j.png[Lamda]
