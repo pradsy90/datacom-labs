@@ -48,15 +48,17 @@ image::0d.png[Learner Lab]
 
 Once in the Learner Lab, click 'Start'. You should see a big 'V' with an arrow spinning for a while. But! After a while the AWS (green dot) will appear. Simply click on the underlined AWS. 
 
-.Console
-image::0e.png[Console]
+.Start Lab
+image::0e.png[Start Lab]
 
 {nbsp} +
 {nbsp} +
 
-.Console
-image::0f.png[Console]
+.Green Dot
+image::0f.png[Green Dot]
 
+{nbsp} +
+{nbsp} +
 
 From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the term. For this step take a screen shot of your AWS Console page 
 
