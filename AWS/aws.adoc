@@ -35,14 +35,16 @@ image::0b.png[Class]
 
 In the course, click on 'Modules' and then Learner Lab. 
 
-.Console
-image::0c.png[Console]
+.Modules
+image::0c.png[Modules]
 
 {nbsp} +
 {nbsp} +
 
-.Console
-image::0d.png[Console]
+.Learner Lab
+image::0d.png[Learner Lab]
+
+{nbsp} +
 
 Once in the Learner Lab, click 'Start'. You should see a big 'V' with an arrow spinning for a while. But! After a while the AWS (green dot) will appear. Simply click on the underlined AWS. 
 
