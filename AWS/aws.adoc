@@ -80,42 +80,42 @@ What do you see here? Do you recognize any of the technologies?
 
 ## Sample Technologies in AWS
 
+This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
+
+{nbsp} +
+
 .EC2
 image::0i.png[EC2]
 
 {nbsp} +
-
-This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
-
 {nbsp} +
+
+Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
+
 {nbsp} +
 
 .Lamda
 image::0j.png[Lamda]
 
 {nbsp} +
-
-Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
-
 {nbsp} +
+
+This is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. To note, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
+
 {nbsp} +
 
 .RDS
 image::0k.png[RDS]
 
 {nbsp} +
-
-This is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. To note, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
-
 {nbsp} +
+
+Finally, this is DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
+
 {nbsp} +
 
 .DynamoDB
 image::0l.png[DynamoDB]
-
-{nbsp} +
-
-Finally, this is DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
 
 {nbsp} +
 {nbsp} +
