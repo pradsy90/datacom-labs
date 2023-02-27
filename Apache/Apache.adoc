@@ -1,4 +1,4 @@
-= Apache Web Server
+= HTTPD Web Server
 Matt Germonprez <germonprez@gmail.com>
 v1.2, Sept 1, 2021
 ifndef::bound[:imagesdir: figs]
