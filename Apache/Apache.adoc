@@ -118,16 +118,16 @@ Include conf.modules.d/*.conf
 
 In each of these you can modify directives to impact the functionality of the server. For example, Listen is a directive that regulates the port that your server is listening to. 80 is the default but I'd like you change this to 8080 for testing reasons. You will have to update your AWS security profiles to accommodate this port and add a :8080 to the end of your URL request to the server. 
 
-Having seen this, it's important to note that Apache needs to be restarted every time a change is made to a configuration file as the files are read anew at every start/restart. To do this:
+Having seen this, it's important to note that the server needs to be restarted every time a change is made to a configuration file as the files are read anew at every start/restart. To do this:
 
  $ sudo service httpd restart
 
-Everything should go well so long as you didn't include some extra or unrecognizable characters in the httpd.conf file. Reload your web page on your browser. Honestly, you won't see any performance change as you are the only client on the server but just note that Apache has had some performance changes done via changes to the httpd.conf file.
+Everything should go well so long as you didn't include some extra or unrecognizable characters in the httpd.conf file. Reload your web page on your browser. Honestly, you won't see any performance change as you are the only client on the server but just note that the server has had some performance changes done via changes to the httpd.conf file.
 
 
 === Other issues
 
-You have now gotten a good view of Apache. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an introduction to web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
+You have now gotten a good view of the HTTPD Web server. You should understand the folder and file structures, modules, and directives. If you'd like to stop the server, simply give the server a `sudo service httpd stop`. This exercise gives you an introduction to web servers and their role in managing a variety of network layers (ports, addressing, sessions, applications). As we've mentioned in class, many pieces of technology touch many network layers.
 
 = Stop your instances at this point. 
 
