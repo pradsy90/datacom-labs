@@ -7,16 +7,16 @@ ifndef::bound[:imagesdir: figs]
 :icons: font
 :experimental:
 
-This exercise will help you set up and configure the Apache Web Server.
+This exercise will help you set up and configure the HTTPD Web Server.
 
 == Learning Objectives
 
 By the end of this lesson, you will be able to:
 
-* Setup an Apache Web Server
-* Connect to Apache via your local browser
-* Modify Apache directives to change the server behavior
-* Install Apache modules to enhance the server capabilities
+* Setup an HTTPD Web Server
+* Connect to HTTPD Server via your local browser
+* Modify server directives to change the server behavior
+* Install server modules to enhance the server capabilities
 
 = Stop your instances when you are done with the lab. 
 
@@ -29,13 +29,9 @@ Again, make sure you stop the instances so as to not use up your credits.
 
 == Steps
 
-=== Step 1: SSH into one of your AWS instances, Install Apache, and Test the Site
+=== Step 1: SSH into one of your AWS instances, Install the HTTPD Server, and test the site
 
-Apache is a very popular web server. You can check out the Market Share Survey here to get some idea of how it stacks up against other web servers (market-wise):
-
-https://news.netcraft.com/archives/2018/08/24/august-2018-web-server-survey.html
-
-Quite simply to install the Apache on your AWS machine:
+Quite simply to install the HTTPD Web Server on your AWS machine:
  
  $ sudo yum update
  $ sudo yum install httpd
@@ -54,13 +50,13 @@ Now open up your browser on your local (host) computer and type the following in
 
 http://YOUR.PUBLIC.IP.ADDRESS
 
-You should see the Apache It Worked! page.
+You should see the It Worked! page.
 
-=== Step 2: Modify Apache: Directories, Files, and Directives
+=== Step 2: Modify the Server: Directories, Files, and Directives
 
-Up to this point, you have installed the default Apache Web Server. This includes a variety of functions but not all of them. In short, Apache doesn't ship with all functionality running -- you have to turn things on (or off as you'd like).
+Up to this point, you have installed the default HTTPD Web Server. This includes a variety of functions but not all of them. In short, the server doesn't ship with all functionality running -- you have to turn things on (or off as you'd like).
 
-Before you do that, you have to get some bearings on the layout of the Apache file structure.
+Before you do that, you have to get some bearings on the layout of the server's file structure.
 
 First, change the default html page. To do so, you'll have to navigate to the html directory on Ubuntu:
 
@@ -87,7 +83,7 @@ There are several important files in here but start with httpd.conf.
 
  $ sudo nano httpd.conf
 
-You'll see in the file that there are a lot of comments and a few uncommented lines. These uncommented lines are the directives - they allow me to tweak existing functionality on Apache. Perhaps the most interesting part of the httpd.conf file are the following lines:
+You'll see in the file that there are a lot of comments and a few uncommented lines. These uncommented lines are the directives - they allow me to tweak existing functionality on the server. Perhaps the most interesting part of the httpd.conf file are the following lines:
 
 .httpd.conf snippet
 [source,apache]
