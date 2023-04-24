@@ -16,7 +16,7 @@ When inside nano, type:
 
 > print("hello world. Python for Docker!")
 
-Save and exit nano and run the Python script at the command line: 
+Save and exit nano and run the Python script at the command line (you may need to install Python): 
 
 > python helloworld.py
 
