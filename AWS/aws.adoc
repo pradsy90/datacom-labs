@@ -46,6 +46,11 @@ image::LearnerLab_Image4.jpg[Learner Lab]
 
 {nbsp} +
 
+Accept terms and conditions as needed. Will be needed for the first time.
+{nbsp} +
+
+image::LearnerLab_Image5.jpg[T&Cs]
+
 Once in the Learner Lab, click 'Start'. You should see a big 'V' with an arrow spinning for a while. But! After a while the AWS (green dot) will appear. Simply click on the underlined AWS. 
 
 .Start Lab
