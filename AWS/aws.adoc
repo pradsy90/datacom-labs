@@ -29,7 +29,7 @@ image::0a.png[AWS Account]
 In this next screen, simply click on your course. 
 
 .Class
-image::0b.png[Class]
+image::LearnerLab_Image2.jpg[Class]
 
 {nbsp} +
 
