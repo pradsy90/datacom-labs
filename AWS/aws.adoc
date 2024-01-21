@@ -42,7 +42,7 @@ image::LearnerLab_Image3.png[Modules]
 {nbsp} +
 
 .Learner Lab
-image::LearnerLab_Image4.png[Learner Lab]
+image::LearnerLab_Image4.jpg[Learner Lab]
 
 {nbsp} +
 
