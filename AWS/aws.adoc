@@ -1,5 +1,5 @@
 = Amazon Web Services
-Matt Germonprez <germonprez@gmail.com>
+Pradhip Swaminathan <pradhip.swaminathan@accenture.com>
 v1.1, Sept 1, 2021
 ifndef::bound[:imagesdir: img]
 :source-highlighter: rouge
