@@ -7,7 +7,7 @@ ifndef::bound[:imagesdir: img]
 :icons: font
 :experimental:
 
-This lab will help you get oriented with Amazon Web Services. This will give you exposure to the environment that we will be using the for the remainder of the class. 
+This lab will help you get oriented with Amazon Web Services. This will give you exposure to the environment (AWS Learner Lab) that we will be using the for the remainder of the class. 
 
 == Learning Objectives
 
