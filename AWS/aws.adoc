@@ -65,7 +65,7 @@ image::0f.png[Green Dot]
 {nbsp} +
 {nbsp} +
 
-From this, you will be able to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the term. For this step take a screen shot of your AWS Console page 
+From clicking on this link, you will be able to get to the console page (opens in a separate tab) to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the term. For this step take a screen shot of your AWS Console page 
 
 .Console
 image::0g.png[Console]
