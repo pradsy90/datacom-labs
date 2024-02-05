@@ -31,7 +31,7 @@ Click the Launch Instance button
 Choose the first Amazon AMI. This is a distribution of Linux specific to Amazon. 
 
 .Choose Amazon AMI
-image::IMG3.png[Choose Amazon AMI]
+image::SelectOS.jpg[Choose Amazon AMI]
 
 &nbsp;
 ************************************************************
