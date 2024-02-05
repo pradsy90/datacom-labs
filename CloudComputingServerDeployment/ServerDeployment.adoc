@@ -11,7 +11,7 @@ image::0h.png[AWS Dashboard]
 
 &nbsp;
 .EC2 Dashboard
-image::ec2.png[EC2 Dashboard]
+image::ECC.png[EC2 Dashboard]
 
 
 &nbsp;
