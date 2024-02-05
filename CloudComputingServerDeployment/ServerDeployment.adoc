@@ -9,7 +9,6 @@ This lab is to introduce Cloud Computing using the AWS EC2 environment from Amaz
 .AWS Dashboard
 image::0h.png[AWS Dashboard]
 
-&nbsp;
 .EC2 Dashboard
 image::ECC.png[EC2 Dashboard]
 
