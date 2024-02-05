@@ -6,8 +6,12 @@ endif::[]
 
 This lab is to introduce Cloud Computing using the AWS EC2 environment from Amazon. Use your AWS Academy account. When you first login to AWS, you will see the AWS dashboard as described in the previous lab. This is all of the services that are provided via your account. On the dashboard, clicking on the EC2 link. This link open up the AWS dashboard page as shown below. This dashboard will enable us to launch a virtual machine (instance) in the AWS environment. 
 
+.AWS Dashboard
+image::AWSDashboard.png[AWS Dashboard]
+
+&nbsp;
 .EC2 Dashboard
-image::IMG1.png[AWS Dashboard]
+image::IMG1.png[EC2 Dashboard]
 
 
 &nbsp;
