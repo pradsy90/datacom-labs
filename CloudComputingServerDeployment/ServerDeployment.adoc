@@ -102,7 +102,7 @@ image::IMG12.png[Create Second Identical Instance]
 ************************************************************
 &nbsp;
 
-Go to your EC2 Dashbaord, click on an instance and then click on the security group link on the left navigation bar. Get to the screen that shows the security rules for that security group. The screenshot below shows three rules, BUT , you should really see only one rule. You need to add the other two rules. 
+Go to your EC2 Dashboard, click on an instance and then click on the security group link on the left navigation bar. Get to the screen that shows the security rules for that security group. The screenshot below shows three rules, BUT , you should really see only one rule. You need to add the other two rules. 
 
 .Security Group
 image::sec_img.jpg[Security Group Rules]
@@ -111,7 +111,7 @@ image::sec_img.jpg[Security Group Rules]
 ************************************************************
 &nbsp;
 
-Once in the security group, you can Edit Inbound Rules. The reason that we couldn't ping is because we didn't enable the ping protocol. Let's do that. 
+Once in the security group, you can Edit Inbound Rules. We need to add SSH, ICMP(for the ping protocol). Let's do that. 
 
 .Edit Inbound Rules
 image::IMG18.png[Edit Inbound Rules]
@@ -120,7 +120,8 @@ image::IMG18.png[Edit Inbound Rules]
 ************************************************************
 &nbsp;
 
-Add a rule. Select ICMP. From Anywhere. Save the Rule. 
+Add a rule. Select ICMP. From Anywhere- IPV4. Save the Rule with a meaningful name. 
+Add another rule. Selct SSH. From Anywhere- IPV4. Savne the rule with a meaningful name.
 
 .Add ICMP
 image::IMG19.png[Add ICMP]
