@@ -139,7 +139,7 @@ image::IMG14.png[Copy Connection Information]
 ************************************************************
 &nbsp;
 
-Now, try SSHing into the machines, pinging each machine separately, and then pinging between machines again. Also try pinging from your own personal machine. What are the results? 
+Now, try SSHing into the machines, pinging each machine separately, and then pinging between machines again. Also try pinging from your own personal machine. What are the results? Take the screenshots of the individual ping, individual SSH, and the ping from one instance to another.
 
 .Ping #2
 image::IMG20.png[Ping #2]
