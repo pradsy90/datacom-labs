@@ -105,7 +105,7 @@ image::IMG12.png[Create Second Identical Instance]
 Go to your EC2 Dashboard, click on an instance and then click on the security group link on the left navigation bar. Get to the screen that shows the security rules for that security group. The screenshot below shows three rules, BUT , you should really see only one rule. You need to add the other two rules. 
 
 .Security Group
-image::sec_img.jpg[Security Group Rules]
+image::secgrp_img.jpg[Security Group Rules]
 
 &nbsp;
 ************************************************************
