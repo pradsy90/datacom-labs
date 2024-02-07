@@ -102,29 +102,10 @@ image::IMG12.png[Create Second Identical Instance]
 ************************************************************
 &nbsp;
 
-This screen shows you how you can simply assign the second computer to an existing security group. You created this exisiting security group when you created the first instance. 
-
-.Assigning to the Same Security Group 
-image::IMG13.png[Assigning to the Same Security Group ]
-
-&nbsp;
-
-************************************************************
-&nbsp;
-
-Once you have connected to both machines, trying pinging each other. Should this work? They are on the same subnets. 
-
-.First Ping Doesn't Work
-image::IMG15.png[First Ping Doesn't Work]
-
-&nbsp;
-************************************************************
-&nbsp;
-
-To fix this, return to your EC2 dashboard and either click on an instance or click on the security group link on the left navigation bar. These screens show the first route. Clicking on an instance will enable you to click on the Security tab. Click on the security group. 
+Go to your EC2 Dashbaord, click on an instance and then click on the security group link on the left navigation bar. Get to the screen that shows the security rules for that security group. The screenshot below shows three rules, BUT , you should really see only one rule. You need to add the other two rules. 
 
 .Security Group
-image::IMG17.png[Security Group]
+image::sec_img.jpg[Security Group Rules]
 
 &nbsp;
 ************************************************************
