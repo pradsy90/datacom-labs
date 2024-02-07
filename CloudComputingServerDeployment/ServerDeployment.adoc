@@ -44,15 +44,7 @@ image::SelectInstance.jpg[Instance Details]
 
 &nbsp;
 ************************************************************
-&nbsp;
 
-Configure Details -- Notice the choices under subnet. Choose a specific subnet and write down the name of the subnet becasue you will be creating another virtual machine and you will be placing it in the same subnet --> and click Next. 
-
-.Subnet
-image::IMG5.png[Subnet]
-
-&nbsp;
-************************************************************
 &nbsp;
 
 Storage -- Leave the defaults and click Next. 
@@ -70,15 +62,7 @@ Tags -- Leave the defaults and click Next.
 image::IMG7.png[Tags]
 
 &nbsp;
-************************************************************
-&nbsp;
 
-For Configure Security Group, set up an IT_Infrastrcuture Security Group. This group will give you the ability to run SSH traffic. Then click Review and Launch. 
-
-.Security
-image::IMG8.png[Security]
-
-&nbsp;
 ************************************************************
 &nbsp;
 
@@ -91,7 +75,7 @@ image::IMG9.png[Launch]
 ************************************************************
 &nbsp;
 
-Create a new key pair and enter your name for the key pair and download them. Then Click Launch!!
+Create a new key pair and enter your name for the key pair and download them. Make sure you download the .ppk (For Windows) or the .pem (For MacOs).. Then Click Launch!!
 
 .Create Key Pair
 image::IMG10.png[Create Key Pair]
@@ -124,15 +108,7 @@ This screen shows you how you can simply assign the second computer to an existi
 image::IMG13.png[Assigning to the Same Security Group ]
 
 &nbsp;
-************************************************************
-&nbsp;
 
-Great job!! You've created to virtual machines in AWS using a variety of different tools. Now copy your Public IP address or your public IPv4 DNS. You will use these to SSH into both of your running machines. I showed how to do this in earlier class videos ;) 
-
-.Copy Connection Information
-image::IMG14.png[Copy Connection Information]
-
-&nbsp;
 ************************************************************
 &nbsp;
 
@@ -172,7 +148,16 @@ image::IMG19.png[Add ICMP]
 ************************************************************
 &nbsp;
 
-Finally, try pinging between machines again. Also try pinging from your own personal machine. What are the results? 
+Great job!! You've created to virtual machines in AWS using a variety of different tools. Now copy your Public IP address or your public IPv4 DNS. You will use these to SSH into both of your running machines. I showed how to do this in earlier class videos ;) 
+
+.Copy Connection Information
+image::IMG14.png[Copy Connection Information]
+
+&nbsp;
+************************************************************
+&nbsp;
+
+Now, try SSHing into the machines, pinging each machine separately, and then pinging between machines again. Also try pinging from your own personal machine. What are the results? 
 
 .Ping #2
 image::IMG20.png[Ping #2]
