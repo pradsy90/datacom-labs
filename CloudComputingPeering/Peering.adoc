@@ -2,7 +2,7 @@ ifndef::bound[]
 :imagesdir: img
 endif::[]
 
-This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, we will be setting up two machines and having them connect with each other. This lab is a bit different from the rest in that you will be sending me a request -- so we have work together just a bit. That is, you will need to request a peering connection on your end. I will say that I'm heading out of town this week (March 23, 2022) so I may not respond to your request but that's okay! There is still a way for you to demonstrate that you successfully made the request.
+This lab is intended to give you just a bit more insight with respect to AWS cloud computing. In this lab, we will be setting up two machines and having them connect with each other. This lab is a bit different from the rest in that you will be sending me a request -- so we have work together just a bit. That is, you will need to request a peering connection on your end. There is still a way for you to demonstrate that you successfully made the request.
 
 To start, login to your AWS account. There you will see VPCs along with other services in the VPC dashboard. 
 
