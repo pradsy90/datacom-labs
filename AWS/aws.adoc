@@ -34,6 +34,8 @@ image::amzn95352.png[Modules]
 {nbsp} +
 {nbsp} +
 
+Click on the learner lab in the modules
+
 .Learner Lab
 image::LearnerLab_Image4.jpg[Learner Lab]
 
