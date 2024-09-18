@@ -1,0 +1,129 @@
+= Amazon Web Services
+Pradhip Swaminathan <pradhip.swaminathan@accenture.com>
+v1.1, Sept 1, 2021
+ifndef::bound[:imagesdir: img]
+:source-highlighter: rouge
+:rouge-style: github
+:icons: font
+:experimental:
+
+This lab will help you get oriented with Amazon Web Services. This will give you exposure to the environment (AWS Learner Lab) that we will be using the for the remainder of the class. 
+
+== Learning Objectives
+
+This lab is meant to get you to start interacting with your AWS account. In particular, we will be exploring the specific technologies that the rest of our labs will be based on. In these labs, I ask that you (1) follow the instructions below, (2) provide screen shots of your work, (3) provide a brief (1-2 sentence) description of what you are seeing, and (4) submit your screen shots and descriptions as a single PDF document to the UNO Canvas.
+
+In each of these cases, you will perhaps need to do a little more research as to what the technologies are. In all cases, focus your description on what the technology is. Your answer certainly won't be perfect and we will learn more as we interact with the technologies throughout the term. However, please make an attempt as to what you believe each technology to be -- either through the descriptions on AWS or as found elsewhere on the internet. 
+
+== Steps
+
+=== Step 1: Login to your AWS Account
+
+By this point, you have received an invitation from me to login to your AWS Academy account. This screenshot shows your successful login to AWS Academy. Here, click on LMS to get us to the AWS Academy course. 
+
+.AWS Account
+image::0a.png[AWS Account]
+
+{nbsp} +
+
+In this next screen, simply click on Learner Lab course [95352 course]. 
+
+.Modules
+image::amzn95352.png[Modules]
+
+{nbsp} +
+{nbsp} +
+
+Click on the Launch AWS learner lab in the modules
+
+.Learner Lab
+image::LearnerLab_Image4.jpg[Learner Lab]
+
+{nbsp} +
+
+Accept terms and conditions as needed. Will be needed for the first time.
+{nbsp} +
+
+image::LearnerLab_Image5.jpg[T&Cs]
+
+Once in the Learner Lab, click 'Start'. You should see a big 'V' with an arrow spinning for a while. But! After a while the AWS (green dot) will appear. Simply click on the underlined AWS. 
+
+.Start Lab
+image::0e.png[Start Lab]
+
+{nbsp} +
+{nbsp} +
+
+.Green Dot
+image::0f.png[Green Dot]
+
+{nbsp} +
+{nbsp} +
+
+From clicking on this link, you will be able to get to the console page (opens in a separate tab) to explore the various technologies that you have available through AWS, as well as see the technologies that we'll be using throughout the term. For this step take a screen shot of your AWS Console page 
+
+.Console
+image::0g.png[Console]
+
+{nbsp} +
+{nbsp} +
+
+.All Services
+image::0h.png[All Services]
+
+{nbsp} +
+{nbsp} +
+
+What do you see here? Do you recognize any of the technologies? 
+
+{nbsp} +
+
+## Sample Technologies in AWS
+
+1. EC2
+This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
+
+.EC2
+image::0i.png[EC2]
+
+{nbsp} +
+{nbsp} +
+
+2. Lambda
+This is Lambda. Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
+
+.Lamda
+image::0j.png[Lamda]
+
+{nbsp} +
+{nbsp} +
+
+3. RDS
+This is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. To note, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
+
+.RDS
+image::0k.png[RDS]
+
+{nbsp} +
+{nbsp} +
+
+4. DynamoDB
+Finally, this is DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
+
+.DynamoDB
+image::0l.png[DynamoDB]
+
+{nbsp} +
+{nbsp} +
+
+5. I can call all of these as middlewares which you can use to build distributed applications. Would you agree? Pick about 11 of these applications in addition to the 4 listed above and describe how you think they can act as an middleware for a distributed application.
+
+Great job! You are done with this lab. Remember to take screenshots and provide narrative for each. This is really important for your submissions. A few notes: 
+
+- Follow the rubrik's cube so you know what to discuss to get full points
+- Make sure that your screenshots are readable. Sometimes people provide really low quality images or the images simply have too much information, making it hard to see what is going on. 
+- Make sure to submit your assignment as a SINGLE PDF. This is really important and I won't grade your assignment if you submit it in any other way. Again, SINGLE PDF. 
+- Include your name in your PDF. Sometimes I download the entire class set of submissions and work off of my local machine. If you don't include your name, it's pretty hard for me to figure out who completed the submission 
+
+
+If you have any questions, please don't hesitate to reach out to me. I'm happy to help. 
