@@ -26,14 +26,7 @@ image::0a.png[AWS Account]
 
 {nbsp} +
 
-In this next screen, simply click on your course. 
-
-.Class
-image::LearnerLab_Image2.jpg[Class]
-
-{nbsp} +
-
-In the course, click on 'Modules' and then Learner Lab. 
+In this next screen, simply click on Learner Lab course [95352 course]. 
 
 .Modules
 image::amzn95352.png[Modules]
