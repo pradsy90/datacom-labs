@@ -80,7 +80,7 @@ What do you see here? Do you recognize any of the technologies?
 
 ## Sample Technologies in AWS
 
-1. EC2
+A). EC2
 This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
 
 .EC2
@@ -89,7 +89,7 @@ image::0i.png[EC2]
 {nbsp} +
 {nbsp} +
 
-2. Lambda
+B). Lambda
 This is Lambda. Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
 .Lamda
@@ -98,7 +98,7 @@ image::0j.png[Lamda]
 {nbsp} +
 {nbsp} +
 
-3. RDS
+C). RDS
 This is RDS which is going to be a more traditional database system -- perhaps one that you are familar with from your other classes. To note, cloud environments are not only about servers but can also be useful when deploying things like databases. Again, take a screenshot of your RDS environment and describe what RDS is in your own words. 
 
 .RDS
@@ -107,7 +107,7 @@ image::0k.png[RDS]
 {nbsp} +
 {nbsp} +
 
-4. DynamoDB
+D). DynamoDB
 Finally, this is DynamoDB. This is a bit different than RDS from a design perspective. This is what is called a NoSQL database. Like the rest, take a screenshot of your DynamoDB and describe what DynamoDB is in your own words. 
 
 .DynamoDB
@@ -116,7 +116,7 @@ image::0l.png[DynamoDB]
 {nbsp} +
 {nbsp} +
 
-5. I can call all of these as middlewares which you can use to build distributed applications. Would you agree? Pick about 11 of these applications in addition to the 4 listed above and describe how you think they can act as an middleware for a distributed application.
+E). I can call all of these above as middlewares which you can use to build distributed applications. Would you agree? Pick about 6 more of these applications in addition to the 4 listed above and describe how you think they can act as an middleware for a distributed application.
 
 Great job! You are done with this lab. Remember to take screenshots and provide narrative for each. This is really important for your submissions. A few notes: 
 
