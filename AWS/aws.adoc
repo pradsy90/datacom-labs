@@ -36,7 +36,7 @@ image::LearnerLab_Image2.jpg[Class]
 In the course, click on 'Modules' and then Learner Lab. 
 
 .Modules
-image::LearnerLab_Image3.png[Modules]
+image::amzn95352.png[Modules]
 
 {nbsp} +
 {nbsp} +
