@@ -80,7 +80,7 @@ What do you see here? Do you recognize any of the technologies?
 
 ## Sample Technologies in AWS - Let's take a look at 4 popular ones (EC2, Lambda, RDS, DynamoDB)
 {nbsp} +
-{b} EC2
+##EC2
 {nbsp} +
 This is the Elastic Cloud Compute (EC2) interface. You can get here by searching in the console for EC2. EC2 is the primary service we will use when launching vitrual machines -- as described in earlier videos. Take a screenshot of your own EC2 envirnoment, and describe what you are seeing in the EC2 environment. Is anything familiar? 
 
@@ -90,6 +90,8 @@ image::0i.png[EC2]
 {nbsp} +
 {nbsp} +
 
+##EC2
+{nbsp} +
 This is Lambda. Lamda is a server-less environment but this time, instead of a website, it is focused on applications. Again, take a screenshop of your Lamba environment and describe what Lamda is in your own words. 
 
 .Lamda
