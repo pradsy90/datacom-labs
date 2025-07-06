@@ -29,7 +29,7 @@ image::0a.png[AWS Account]
 In this next screen, simply click on Learner Lab course [127396 course]. 
 
 .Modules
-image::screenshot_1.jpg[Modules]
+image::Screenshot_1.jpg[Modules]
 
 {nbsp} +
 {nbsp} +
