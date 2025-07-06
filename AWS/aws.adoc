@@ -1,6 +1,6 @@
 = Amazon Web Services
 Pradhip Swaminathan <pradhip.swaminathan@accenture.com>
-v1.1, Sept 1, 2021
+v1.2, July 6, 2025
 ifndef::bound[:imagesdir: img]
 :source-highlighter: rouge
 :rouge-style: github
@@ -26,7 +26,7 @@ image::0a.png[AWS Account]
 
 {nbsp} +
 
-In this next screen, simply click on Learner Lab course [95352 course]. 
+In this next screen, simply click on Learner Lab course [127396 course]. 
 
 .Modules
 image::amzn95352.png[Modules]
