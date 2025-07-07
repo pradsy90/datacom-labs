@@ -118,6 +118,11 @@ image::0l.png[DynamoDB]
 {nbsp} +
 {nbsp} +
 
+Pick three more applications that strike your fancy and explore them. Do a one - two paragraph write up of these components with screenshots.
+
+{nbsp} +
+{nbsp} +
+
 Great job! You are done with this lab. Remember to take screenshots and provide narrative for each. This is really important for your submissions. A few notes: 
 
 - Make sure that your screenshots are readable. Sometimes people provide really low quality images or the images simply have too much information, making it hard to see what is going on. 
