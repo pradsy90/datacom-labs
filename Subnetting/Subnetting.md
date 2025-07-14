@@ -8,8 +8,8 @@ Learning Objectives
 --------------------------
 By the end of this lesson, you will be able to:
 
-1. Determine the subnet mask.
-2. Change the subnet for a deployed instance
+1. Determine the subnet mask that the servers you set up in EC2 are being assigned.
+2. Change the subnet for a deployed instance for what you want it to be.
 3. Explain how subnetting effects the ability of computers on a network to communicate.
 
 It is really, really important that you watch the videos this week to see the visuals of what is going on inside of AWS. I am not providing pictures here as I really need you to watch the videos to get oriented with the lab. 
